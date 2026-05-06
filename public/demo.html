@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pune Trusted Neuro and physiotherapy | Apricot Care</title>
+    <meta name="description" content="Apricot Care, Pune, expert neuro rehab, Physiotherapy & pain management | Personalized Therapies Help - Heal & Regain Your Independence">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/images/home/Logo/AC logo.png">
+    
+    <!-- CRITICAL: Inline ALL critical CSS for above-the-fold content -->
+    <style>
+        /* CSS Reset */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;color:#333}
+        img{max-width:100%;height:auto;display:block}
+        a{text-decoration:none;color:inherit}
+        
+        /* Header - Critical */
+        .main-header{background:teal;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+        .main-header__inner{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;max-width:1400px;margin:0 auto}
+        .main-header__logo img{width:auto;height:50px}
+        .main-header__nav{display:none}
+        .sifoxen-btn{background:#fa9111;color:#fff;padding:10px 20px;border-radius:4px;border:none;cursor:pointer;font-size:14px}
+        .mobile-nav__btn{display:block;cursor:pointer}
+        .mobile-nav__btn span{display:block;width:25px;height:3px;background:#fff;margin:5px 0}
+        
+        /* Hero Slider - Critical for LCP */
+        .heroX-slider{position:relative;width:100%;height:450px;overflow:hidden;border-radius:0 0 20px 20px}
+        .heroX-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity .8s}
+        .heroX-slide.active{opacity:1;z-index:1}
+        .heroX-gradient{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);z-index:2}
+        .heroX-content{position:absolute;bottom:60px;left:0;right:0;text-align:center;color:#fff;z-index:3;padding:0 20px}
+        .heroX-content h5{font-size:14px;margin-bottom:8px}
+        .heroX-content h1{font-size:24px;font-weight:800;color:#fa9111;margin-bottom:10px;line-height:1.2}
+        .heroX-content p{font-size:14px;margin-bottom:15px;opacity:.9}
+        .heroX-btn{background:#ff8c00;color:#fff;padding:10px 24px;border-radius:4px;display:inline-block;font-size:14px}
+        .heroX-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);border:none;color:#fff;font-size:20px;padding:10px 15px;cursor:pointer;z-index:10;border-radius:50%}
+        .heroX-prev{left:10px}
+        .heroX-next{right:10px}
+        .heroX-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:10}
+        .heroX-dot{width:8px;height:8px;background:rgba(255,255,255,.5);border-radius:50%;cursor:pointer}
+        .heroX-dot.active{background:#fff}
+        
+        /* Stats Strip */
+        .stats-strip{display:grid;grid-template-columns:repeat(2,1fr);background:linear-gradient(90deg,#077646,#1f8a68);border-radius:12px;margin:20px 15px;overflow:hidden;gap:1px}
+        .stats-strip__item{padding:20px 10px;text-align:center;background:rgba(255,255,255,.05)}
+        .stats-strip__number{font-size:1.8rem;font-weight:bold;color:#fff;margin-bottom:5px}
+        .stats-strip__title{font-size:.9rem;color:#fff;line-height:1.3}
+        
+        /* Container */
+        .container{max-width:1200px;margin:0 auto;padding:0 15px}
+        .section-space{padding:40px 0}
+        
+        /* Desktop adjustments */
+        @media(min-width:768px){
+            .heroX-slider{height:600px;border-radius:0 0 36px 36px}
+            .heroX-content{bottom:90px}
+            .heroX-content h1{font-size:42px}
+            .heroX-content p{font-size:18px}
+            .heroX-nav{font-size:24px;padding:12px 18px}
+            .heroX-prev{left:20px}
+            .heroX-next{right:20px}
+            .stats-strip{grid-template-columns:repeat(4,1fr);margin:30px auto;max-width:1200px}
+            .stats-strip__number{font-size:2.3rem}
+            .main-header__nav{display:block}
+            .mobile-nav__btn{display:none}
+        }
+    </style>
+    
+    <!-- Preload ONLY the LCP image -->
+    <link rel="preload" as="image" href="assets/images/backgrounds/IMG_20250722_124156_11zon.webp" fetchpriority="high">
+    
+    <!-- Defer ALL non-critical CSS -->
+    <link rel="preload" href="assets/vendors/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="assets/css/sifoxen.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/sifoxen.css">
+    </noscript>
+    
+    <!-- Defer fonts completely -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="main-header__inner">
+            <div class="main-header__logo">
+                <a href="/">
+                    <img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" 
+                         alt="Apricot Care Logo" 
+                         width="153" 
+                         height="60"
+                         fetchpriority="high">
+                </a>
+            </div>
+            <nav class="main-header__nav">
+                <!-- Navigation menu here -->
+            </nav>
+            <div class="mobile-nav__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <a href="contact" class="sifoxen-btn">Book Appointment</a>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="heroX-slider">
+        <div class="heroX-slide active" style="background-image:url('assets/images/backgrounds/IMG_20250722_124156_11zon.webp')">
+            <div class="heroX-gradient"></div>
+            <div class="heroX-content container">
+                <h5>Holistic Healing Starts Here</h5>
+                <h1>Specialized Therapeutic Care For Faster Healing</h1>
+                <p>Apricot Care Assisted Living and Rehabilitation helps you recover with advanced therapy...</p>
+                <a href="contact" class="heroX-btn">Book Appointment</a>
+            </div>
+        </div>
+        
+        <div class="heroX-slide" style="background-image:url('assets/images/Apricot/Home banner images/ap-2.webp')">
+            <div class="heroX-gradient"></div>
+            <div class="heroX-content container">
+                <h5>Holistic Healing Starts Here</h5>
+                <h1>Advanced Pain Management</h1>
+                <p>We stay in tune with the latest advancements in therapy...</p>
+                <a href="contact" class="heroX-btn">Book Appointment</a>
+            </div>
+        </div>
+        
+        <div class="heroX-slide" style="background-image:url('assets/images/backgrounds/IMG_20250916_154524 (1).jpg')">
+            <div class="heroX-gradient"></div>
+            <div class="heroX-content container">
+                <h5>Holistic Healing Starts Here</h5>
+                <h1>Personalized Care Plans</h1>
+                <p>Our experts prepare personalized care plans for every patient...</p>
+                <a href="contact" class="heroX-btn">Book Appointment</a>
+            </div>
+        </div>
+        
+        <button class="heroX-nav heroX-prev" aria-label="Previous slide">❮</button>
+        <button class="heroX-nav heroX-next" aria-label="Next slide">❯</button>
+        
+        <div class="heroX-dots">
+            <span class="heroX-dot active"></span>
+            <span class="heroX-dot"></span>
+            <span class="heroX-dot"></span>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <div class="container">
+        <div class="stats-strip">
+            <div class="stats-strip__item">
+                <div class="stats-strip__number">3,500+</div>
+                <h3 class="stats-strip__title">Patients Helped</h3>
+            </div>
+            <div class="stats-strip__item">
+                <div class="stats-strip__number">18,000+</div>
+                <h3 class="stats-strip__title">Therapy Hours Provided</h3>
+            </div>
+            <div class="stats-strip__item">
+                <div class="stats-strip__number">15+</div>
+                <h3 class="stats-strip__title">Neurological Conditions Treated</h3>
+            </div>
+            <div class="stats-strip__item">
+                <div class="stats-strip__number">96%</div>
+                <h3 class="stats-strip__title">Client Satisfaction</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of content here -->
+    <div class="container section-space">
+        <p style="text-align:center;color:#666;">Additional sections loading...</p>
+    </div>
+
+    <!-- CRITICAL: Inline essential JavaScript -->
+    <script>
+        // Hero slider - inline to prevent layout shift
+        let heroIndex = 0;
+        const heroSlides = document.querySelectorAll('.heroX-slide');
+        const heroDots = document.querySelectorAll('.heroX-dot');
+        
+        function showSlide(n) {
+            heroSlides.forEach(s => s.classList.remove('active'));
+            heroDots.forEach(d => d.classList.remove('active'));
+            heroSlides[n].classList.add('active');
+            heroDots[n].classList.add('active');
+        }
+        
+        function nextSlide() {
+            heroIndex = (heroIndex + 1) % heroSlides.length;
+            showSlide(heroIndex);
+        }
+        
+        document.querySelector('.heroX-next').onclick = nextSlide;
+        document.querySelector('.heroX-prev').onclick = () => {
+            heroIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+            showSlide(heroIndex);
+        };
+        
+        heroDots.forEach((dot, i) => {
+            dot.onclick = () => {
+                heroIndex = i;
+                showSlide(heroIndex);
+            };
+        });
+        
+        // Auto-slide every 5 seconds (not 3, to reduce CPU usage)
+        setInterval(nextSlide, 5000);
+    </script>
+
+    <!-- Defer ALL other JavaScript -->
+    <script>
+        // Load non-critical resources after page is interactive
+        window.addEventListener('load', function() {
+            // Load fonts
+            const fontLink = document.createElement('link');
+            fontLink.href = 'https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap';
+            fontLink.rel = 'stylesheet';
+            document.head.appendChild(fontLink);
+            
+            // Load jQuery and other scripts after idle
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadScripts);
+            } else {
+                setTimeout(loadScripts, 2000);
+            }
+        });
+        
+        function loadScripts() {
+            const scripts = [
+                'assets/vendors/jquery/jquery-3.7.0.min.js',
+                'assets/vendors/bootstrap/js/bootstrap.bundle.min.js',
+                'assets/vendors/owl-carousel/js/owl.carousel.min.js',
+                'assets/js/sifoxen.js'
+            ];
+            
+            scripts.forEach((src, index) => {
+                setTimeout(() => {
+                    const script = document.createElement('script');
+                    script.src = src;
+                    script.defer = true;
+                    document.body.appendChild(script);
+                }, index * 200);
+            });
+        }
+    </script>
+   <script>
+            // Show locations only when toggled
+            (function() {
+                var btn = document.getElementById('footerLocationToggleBtn');
+                var list = document.getElementById('footerLocationList');
+                var chevron = document.getElementById('footerLocationChevron');
+                btn.addEventListener('click', function() {
+                    var isOpen = list.style.display === "block";
+                    // Toggle display
+                    list.style.display = isOpen ? "none" : "block";
+                    // Toggle aria
+                    btn.setAttribute('aria-expanded', !isOpen);
+                    // Animate chevron
+                    chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+                });
+            })();
+        </script>
+</body>
+</html>

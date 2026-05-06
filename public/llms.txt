@@ -1,0 +1,115 @@
+# LLMs.txt for neurorehabilitationcentre.com
+
+This file describes the content and structure of neurorehabilitationcentre.com, a website for a neurological rehabilitation center in Pune, India, offering various therapies and care programs for neurological conditions, injuries, and post-operative recovery. The site provides information about their services, conditions treated, advanced care programs, caregiver services, home nursing, online therapy, and clinic locations. The site's purpose is to provide information and resources for patients, families, and caregivers seeking neurological rehabilitation services.
+
+**Main Sections:**
+
+- **Home:** [Neurological Rehabilitation Centre in Pune | Stroke, Brain & Spinal Injury Rehab](https://neurorehabilitationcentre.com/)
+
+- **Medical Rehabilitation:**
+    - [Expert Stroke Care in Pune | Stroke Treatment, Rehab & Physiotherapy](https://neurorehabilitationcentre.com/medical-rehabilitation/stroke-treatment-rehab-physiotherapy)
+    - [Advanced Spine Care & Rehabilitation in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/spine-care-in-pune)
+    - [Compassionate Trauma Care & Recovery in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/trauma-care-in-pune)
+    - [Orthopedic Rehabilitation Centre in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/orthopedic-care-in-pune)
+    - [Professional Postoperative Care in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/postoperative-care-in-pune)
+    - [Compassionate Oncology Care & Support in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/oncology-care-in-pune)
+    - [Comprehensive Neuro Care in Pune](https://neurorehabilitationcentre.com/medical-rehabilitation/neuro-care-in-pune)
+    - [Best Paralysis Care Center in Pune | Apricot Care](https://neurorehabilitationcentre.com/medical-rehabilitation/paralysis-care-in-pune)
+
+- **Specialized Therapies:**
+    - [Expert Physiotherapy Clinic in Pune](https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune)
+    - [Advanced Respiratory Therapy in Pune](https://neurorehabilitationcentre.com/specialized-therapies/respiratory-therapy-in-pune)
+    - [Clinical Nutrition Therapy in Pune](https://neurorehabilitationcentre.com/specialized-therapies/nutrition-therapy-in-pune)
+    - [Occupational Therapy in Pune](https://neurorehabilitationcentre.com/specialized-therapies/occupational-therapy-in-pune)
+    - [Psychological Rehabilitation & Counseling in Pune](https://neurorehabilitationcentre.com/specialized-therapies/psychological-rehabilitation-therapy-in-pune)
+    - [Integrative & Holistic Therapy in Pune](https://neurorehabilitationcentre.com/specialized-therapies/integrative-therapy-in-pune)
+    - [Speech & Swallow Therapy in Pune](https://neurorehabilitationcentre.com/specialized-therapies/speech-and-swallow-therapy-in-pune)
+
+- **Condition Based Recovery:**
+    - [Stroke Recovery Programs in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/stroke-recovery-in-pune)
+    - [Spinal Cord Injury Rehabilitation in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/spinal-cord-injury-in-pune)
+    - [Brain Injury Recovery & Rehab in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/brain-injury-recovery-in-pune)
+    - [Multiple Sclerosis (MS) Care in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/multiple-sclerosis-in-pune)
+    - [Parkinson's Disease Care & Therapy in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/parkinsons-disease-in-pune)
+    - [Cerebral Palsy (CP) Therapy & Care in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/cerebral-palsy-in-pune)
+    - [Chronic Pain Management Clinic in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/pain-management-in-pune)
+    - [Limb Loss & Amputee Rehabilitation in Pune](https://neurorehabilitationcentre.com/condition-based-recovery/limb-loss-and-impairment-in-pune)
+
+- **Advanced Care Programs:**
+    - [Expert Feeding Tube Care in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/feeding-tube-care-in-pune)
+    - [Cardiac Rehabilitation Program in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/cardiac-rehabilitation-in-pune)
+    - [Compassionate Senior & Geriatric Care in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/senior-care-in-pune)
+    - [Alzheimer's & Dementia Care in Pune | Support for Patients & Families](https://neurorehabilitationcentre.com/advanced-care-programs/alzheimers-dementia-care-in-pune)
+    - [Compassionate Parkinson's Disease Care in Pune | Support for Patients & Families](https://neurorehabilitationcentre.com/advanced-care-programs/parkinsons-care-in-pune)
+    - [Post-Craniotomy Recovery & Care in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/craniotomy-care-in-pune)
+    - [Oncology Rehabilitation in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/oncology-rehabilitation-in-pune)
+    - [Professional Tracheostomy Care in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/tracheostomy-care-in-pune)
+    - [Post Knee/Hip Replacement Care in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune)
+    - [Expert Bedsore (Pressure Ulcer) Management in Pune](https://neurorehabilitationcentre.com/advanced-care-programs/bedsore-management-in-pune)
+
+- **Caregiver Services:**
+    - [Compassionate Caregiver Services in Pune | At-Home Patient & Elderly Care](https://neurorehabilitationcentre.com/caregiver-services)
+
+- **Home Nursing:**
+    - [Professional Home Nursing Services in Pune | Skilled Nurse at Home](https://neurorehabilitationcentre.com/nursing-care-at-home-in-pune)
+
+- **ICU at Home:**
+    - [ICU at Home Service in Pune | Critical Care at Home | Apricot Rehab](https://neurorehabilitationcentre.com/icu-care-at-home)
+
+- **Online Therapy:**
+    - [Online Therapy & Virtual Rehabilitation in Pune | Apricot Rehab](https://neurorehabilitationcentre.com/online-therapy)
+
+- **About Us:**
+    - [About Us | Apricot](https://neurorehabilitationcentre.com/about)
+    - [About Us | Apricot](https://neurorehabilitationcentre.com/neuro-physiotherapist-in-pune)
+
+- **Blogs:**
+    - [Blogs | Apricot Care - Pune](https://neurorehabilitationcentre.com/blogs)
+    - [Spinal Cord Injury Rehab Pune: Best Recovery Outcomes 2025](https://neurorehabilitationcentre.com/blogs/spinal-cord-injury-rehabilitation-pune-best-outcomes)
+    - [Spinal Cord Injury: Your Essential Caregiver Checklist](https://neurorehabilitationcentre.com/blogs/spinal-cord-injury-caregiver-guide-pune)
+    - [How Robotic Therapy Speeds Stroke Recovery in Pune](https://neurorehabilitationcentre.com/blogs/robotic-therapy-stroke-rehabilitation-pune)
+    - [Knee Replacement Recovery Timeline: A Guide for Pune](https://neurorehabilitationcentre.com/blogs/post-knee-replacement-physiotherapy-pune)
+    - [Parkinson's Home Modifications | Safe Living Guide](https://neurorehabilitationcentre.com/blogs/life-with-parkinsons-home-modifications)
+    - [10 Home Exercises for Stroke Recovery: Therapist-Approved](https://neurorehabilitationcentre.com/blogs/10-essential-home-exercises-stroke-patients-therapist-approved-recovery)
+    - [Subtle Stroke Symptoms in Women | Know the Signs](https://neurorehabilitationcentre.com/blogs/subtle-stroke-signs-women)
+    - [Robotic Physiotherapy in Pune: Benefits & Costs Guide](https://neurorehabilitationcentre.com/blogs/robotic-physiotherapy-pune-benefits-costs)
+    - [Personal Care Assistance: Maintaining Dignity](https://neurorehabilitationcentre.com/blogs/personal-care-bathing-grooming-dressing-dignity)
+    - [Multimodal Pain Management in Pune | Better Relief](https://neurorehabilitationcentre.com/blogs/multimodal-pain-management-one-treatment-not-enough)
+    - [Robotic Arm Therapy in Pune for Faster Stroke Recovery](https://neurorehabilitationcentre.com/blogs/robotic-arm-therapy-in-pune-stroke-orthopedic-rehab)
+    - [Signs of a Stroke in Men: Early Warning Signals, Hidden Risks & the Road to Full Recovery](https://neurorehabilitationcentre.com/blogs/signs-of-stroke-in-men-recovery-pune)
+    - [Bedridden Patient Care at Home: Guide for Families & Caregivers in Pune](https://neurorehabilitationcentre.com/blogs/bedridden-patient-care-at-home-complete-guide-for-families-caregivers)
+    - [SCI Recovery: How Your Injury Level Matters](https://neurorehabilitationcentre.com/blogs/understanding-sci-levels-c-spine-t-spine)
+    - [Best Parkinson's Exercises: Complete 4-Type Guide](https://neurorehabilitationcentre.com/blogs/the-4-types-of-exercise-for-parkinsons-disease)
+    - [Neuroplasticity: How Your Brain Rewires After Stroke](https://neurorehabilitationcentre.com/blogs/neuroplasticity-brain-rewire-stroke-recovery-pune)
+    - [Exercise Slows Parkinson's: How to Start Now](https://neurorehabilitationcentre.com/blogs/exercise-slows-parkinsons-how-to-start)
+    - [Improve Grip Strength at Home | Easy Hand Exercises](https://neurorehabilitationcentre.com/blogs/exercises-to-improve-hand-dexterity-and-grip-strength-at-home)
+    - [Cerebral Palsy in Adults: Can Therapy Help?](https://neurorehabilitationcentre.com/blogs/can-cerebral-palsy-symptoms-improve-adulthood-consistent-therapy)
+    - [Neuro Rehab in Pune: A Guide to Regaining Your Life](https://neurorehabilitationcentre.com/blogs/regaining-mobility-after-spinal-cord-injury-modern-approaches-and-hope)
+    - [Physio vs OT: Neuro Rehab Difference Explained](https://neurorehabilitationcentre.com/blogs/physiotherapy-vs-occupational-therapy-neuro-rehab)
+    - [Stroke Recovery Timeline: What to Expect at 3, 6, 12 Months](https://neurorehabilitationcentre.com/blogs/how-stroke-recovery-works-first-3-6-12-months)
+    - [Faster Recovery? Neuro Rehab with Robotics & VR in Pune](https://neurorehabilitationcentre.com/blogs/technology-neurorehab-robotics-vr-ai-pune)
+    - [The Ultimate Guide to Child Neuro Rehab in Pune](https://neurorehabilitationcentre.com/blogs/parents-guide-neuro-rehabilitation-children-pune)
+    - [Reclaim Your Voice: Speech Therapy for Neuro Rehab in Pune](https://neurorehabilitationcentre.com/blogs/speech-therapy-neuro-rehabilitation-pune)
+    - [Neuro Rehab in Pune: A Guide to Regaining Your Life](https://neurorehabilitationcentre.com/blogs/neurorehabilitation-guide-pune)
+    - [Beyond Meds: Manage Parkinson's with Physio in Pune](https://neurorehabilitationcentre.com/blogs/parkinsons-management-physiotherapy-pune)
+
+- **Contact Us:**
+    - [Contact Us | Apricot](https://neurorehabilitationcentre.com/contact)
+
+- **Doctors:**
+    - [Dr. Amol Kathar | Neurophysiotherapist in Kharadi, Pune](https://neurorehabilitationcentre.com/doctor/dr-amol-kathar)
+    - [Dr. Arpita Ganguly – Neuro Physiotherapist in Pune](https://neurorehabilitationcentre.com/doctor/dr-arpita-ganguly)
+    - [Dr. Sneha Bawiskar | Neuro Physiotherapist in Kharadi](https://neurorehabilitationcentre.com/doctor/dr-sneha-bawiskar)
+    - [Dr. Swapnil Paikrao (PT) | Neurophysiotherapist in Kharadi, Pune](https://neurorehabilitationcentre.com/doctor/dr-swapnil-paikrao)
+    - [Dr. Vaishnavi Misar | Clinical Physiotherapist in Kharadi, Pune](https://neurorehabilitationcentre.com/doctor/dr-vaishnavi-misar)
+    - [Dr. Manaswi Dekate – Neuro Physiotherapist in Pune](https://neurorehabilitationcentre.com/doctor/dr-manaswi-dekate)
+    - [Dr. Prajakta Joshi – Neuro Physiotherapist in Pune](https://neurorehabilitationcentre.com/doctor/dr-prajakta-joshi)
+    - [Dr. Ruchita Chilka | Neurophysiotherapist in Kharadi, Pune](https://neurorehabilitationcentre.com/doctor/dr-ruchita-chilka)
+    - [Dr. Kunal Rajendra Kadam | Physiotherapist in Kharadi, Pune](https://neurorehabilitationcentre.com/doctor/dr-kunal-rajendra-kadam)
+
+- **Physiotherapy Clinics:**
+    - [Advanced Physiotherapy Clinic Near Chandan Nagar | Apricot Care](https://neurorehabilitationcentre.com/physiotherapy-clinic-chandan-nagar)
+    - [Premium Physiotherapy clinic & Rehabilitation Near Magarpatta City](https://neurorehabilitationcentre.com/physiotherapy-clinic-magarpatta-city)
+    - [Advanced Physiotherapy clinic Near Viman Nagar | Robotic Rehab & Inpatient Care](https://neurorehabilitationcentre.com/physiotherapy-clinic-viman-nagar)
+    - [Specialized Physiotherapy Clinic Near Wadgaon Sheri | Apricot Care](https://neurorehabilitationcentre.com/physiotherapy-clinic-wadgaon-sheri)
+    - [Advanced Physiotherapy clinic Near Wagholi | Robotic Rehab & Inpatient Care](https://neurorehabilitationcentre.com/physiotherapy-clinic-wagholi)
