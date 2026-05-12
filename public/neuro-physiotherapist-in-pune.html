@@ -11,25 +11,21 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    
     gtag('config', 'G-BBJT82BKJ1');
     </script>
-    <title>About Us | Apricot</title>
-    <!-- favicons Icons -->
+    <title>Neuro Physiotherapists in Pune | Expert Team – Apricot Rehab</title>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/home/Logo/AC logo.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Discover Dr. Divya Rajendra Mulay, leading physiotherapist in Pune specializing in neuro rehabilitation, stroke recovery, gait training, and comprehensive physiotherapy care at Apricot Care." />
+    <meta name="description" content="Looking for a neuro physiotherapist in Pune? Apricot Rehab's expert team offers personalized rehabilitation for stroke, Parkinson's & spinal injuries." />
     <link rel="canonical" href="https://neurorehabilitationcentre.com/neuro-physiotherapist-in-pune">
 
-    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,700&display=swap" rel="stylesheet">
-
 
     <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendors/bootstrap-select/bootstrap-select.min.css" />
@@ -44,13 +40,506 @@
     <link rel="stylesheet" href="assets/vendors/sifoxen-icons/style.css" />
     <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
-
-    <!-- template styles -->
     <link rel="stylesheet" href="assets/css/sifoxen.css" />
     <script src="assets/js/header.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-
     <script src="assets/js/header.js"></script>
+
+    <style>
+        /* ============================================================
+           GRID STYLES
+        ============================================================ */
+        .therapist-grid-container {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-top: 24px;
+        }
+
+        .therapist-grid-track {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            grid-auto-rows: minmax(280px, auto);
+            grid-auto-flow: dense;
+        }
+
+        .therapist-grid-slide {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .therapist-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .08);
+            transition: all .3s cubic-bezier(.4, 0, .2, 1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .therapist-card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
+        }
+
+        .therapist-card__image {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .therapist-card__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+            display: block;
+        }
+
+        .therapist-card:hover .therapist-card__image img {
+            transform: scale(1.06);
+        }
+
+        .therapist-card__info {
+            flex-shrink: 0;
+            background: #fff;
+            padding: 14px 16px 16px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .therapist-card__name {
+            font-size: 15px;
+            font-weight: 700;
+            margin: 0 0 4px 0;
+            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .therapist-card__name a {
+            color: #12183a;
+            text-decoration: none;
+            transition: color .3s ease;
+        }
+
+        .therapist-card__name a:hover {
+            color: #fa9111;
+        }
+
+        .therapist-card__designation {
+            font-size: 12px;
+            color: #fa9111;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            display: block;
+        }
+
+        /* Masonry span rules — UNCHANGED */
+        .therapist-carousel-slide:nth-child(1) .therapist-card { grid-row: span 2; }
+        .therapist-carousel-slide:nth-child(2) .therapist-card { grid-column: span 2; grid-row: span 1; }
+        .therapist-carousel-slide:nth-child(4) .therapist-card { grid-row: span 2; }
+        .therapist-carousel-slide:nth-child(7) .therapist-card { grid-column: span 2; }
+        .therapist-carousel-slide:nth-child(10) .therapist-card { grid-row: span 2; }
+        .therapist-carousel-slide:nth-child(13) .therapist-card { grid-column: span 2; }
+
+        @media (max-width: 1399px) {
+            .therapist-grid-track { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        }
+        @media (max-width: 1199px) {
+            .therapist-grid-track { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+            .therapist-carousel-slide:nth-child(2) .therapist-card,
+            .therapist-carousel-slide:nth-child(7) .therapist-card,
+            .therapist-carousel-slide:nth-child(13) .therapist-card { grid-column: span 1; }
+        }
+        @media (max-width: 991px) {
+            .therapist-grid-track { grid-template-columns: repeat(2, 1fr); gap: 16px; grid-auto-rows: minmax(250px, auto); }
+            .therapist-carousel-slide:nth-child(2) .therapist-card,
+            .therapist-carousel-slide:nth-child(7) .therapist-card,
+            .therapist-carousel-slide:nth-child(13) .therapist-card { grid-column: span 1; }
+        }
+        @media (max-width: 767px) {
+            .therapist-grid-track { grid-template-columns: 1fr; gap: 20px; grid-auto-rows: minmax(300px, auto); }
+            .therapist-carousel-slide:nth-child(1) .therapist-card,
+            .therapist-carousel-slide:nth-child(4) .therapist-card,
+            .therapist-carousel-slide:nth-child(10) .therapist-card { grid-row: span 1; }
+            .therapist-card:hover { transform: translateY(-4px); }
+            .therapist-carousel-slide:nth-child(11) { grid-column: auto; }
+        }
+
+        .sec-h2 { font-size: 2.6rem; }
+
+        /* ============================================================
+           CONTENT STYLES
+        ============================================================ */
+        .np-section { padding: 70px 0; }
+        .np-section--alt { background: #f7f9fc; }
+
+        .np-section__label {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #fa9111;
+            margin-bottom: 12px;
+        }
+
+        .np-section__title {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #12183a;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .np-section__lead {
+            font-size: 1.05rem;
+            color: #4a5568;
+            line-height: 1.85;
+            max-width: 100%;
+            text-align: justify;
+        }
+
+        .np-section__body {
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.85;
+            text-align: justify;
+        }
+
+        .np-section__body + .np-section__body { margin-top: 14px; }
+
+        .np-intro {
+            background: linear-gradient(135deg, #f0f4ff 0%, #fff7ee 100%);
+            padding: 80px 0 60px;
+            border-bottom: 1px solid #e8edf5;
+        }
+
+        .np-intro__inner { width: 100%; }
+
+        .np-intro__title {
+            font-family: 'EB Garamond', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #12183a;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .np-highlight {
+            background: #fff;
+            border-left: 4px solid #fa9111;
+            border-radius: 0 12px 12px 0;
+            padding: 22px 28px;
+            margin: 30px 0;
+            box-shadow: 0 2px 16px rgba(250,145,17,.08);
+        }
+
+        .np-highlight p {
+            margin: 0;
+            font-size: 1rem;
+            color: #3a4460;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .np-prose-section { margin-bottom: 48px; }
+
+        .np-prose-section h2 {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #12183a;
+            margin-bottom: 16px;
+        }
+
+        .np-steps { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+
+        .np-step {
+            display: flex;
+            gap: 24px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 26px 28px;
+            box-shadow: 0 2px 18px rgba(0,0,0,.06);
+            align-items: flex-start;
+            transition: box-shadow .3s ease, transform .3s ease;
+        }
+
+        .np-step:hover { box-shadow: 0 6px 30px rgba(250,145,17,.13); transform: translateY(-2px); }
+
+        .np-step__num {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fa9111, #f97316);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 14px rgba(250,145,17,.35);
+        }
+
+        .np-step__content h3 { font-size: 1.05rem; font-weight: 700; color: #12183a; margin-bottom: 6px; }
+        .np-step__content p { font-size: 0.95rem; color: #5a6480; line-height: 1.75; margin: 0; text-align: justify; }
+
+        .np-conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .np-condition-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 30px;
+            box-shadow: 0 2px 20px rgba(0,0,0,.06);
+            border-top: 3px solid #fa9111;
+            transition: box-shadow .3s ease, transform .3s ease;
+        }
+
+        .np-condition-card:hover { box-shadow: 0 8px 32px rgba(250,145,17,.15); transform: translateY(-3px); }
+
+        .np-condition-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #12183a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .np-condition-card h3 .np-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #fff5e8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fa9111;
+            font-size: 15px;
+            flex-shrink: 0;
+        }
+
+        .np-condition-card p { font-size: 0.93rem; color: #5a6480; line-height: 1.75; margin: 0; text-align: justify; }
+
+        @media (max-width: 767px) { .np-conditions-grid { grid-template-columns: 1fr; } }
+
+        .np-features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .np-feature {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 2px 18px rgba(0,0,0,.06);
+            transition: box-shadow .3s ease, transform .3s ease;
+        }
+
+        .np-feature:hover { box-shadow: 0 8px 32px rgba(250,145,17,.15); transform: translateY(-4px); }
+
+        .np-feature__icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fff5e8, #fde8c8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            color: #fa9111;
+            font-size: 24px;
+        }
+
+        .np-feature h3 { font-size: 1rem; font-weight: 700; color: #12183a; margin-bottom: 10px; }
+        .np-feature p { font-size: 0.9rem; color: #5a6480; line-height: 1.7; margin: 0; text-align: justify; }
+
+        @media (max-width: 991px) { .np-features { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 575px) { .np-features { grid-template-columns: 1fr; } }
+
+        .np-cta {
+            background: linear-gradient(135deg, #12183a 0%, #1e2d6b 100%);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 60px 0 0;
+        }
+
+        .np-cta h2 { font-family: 'EB Garamond', serif; font-size: 1.9rem; color: #fff; margin-bottom: 14px; }
+        .np-cta p { color: rgba(255,255,255,.8); font-size: 1rem; margin-bottom: 28px; line-height: 1.7; text-align: justify; }
+
+        .np-cta__btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fa9111;
+            color: #fff;
+            padding: 14px 34px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
+            box-shadow: 0 6px 24px rgba(250,145,17,.45);
+        }
+
+        .np-cta__btn:hover { background: #e07d00; transform: translateY(-2px); color: #fff; text-decoration: none; }
+
+        /* ============================================================
+           FAQ — 2-column grid with green + toggle
+        ============================================================ */
+        .np-faq {
+            max-width: 100%;
+            margin: 32px 0 0;
+        }
+
+        .np-faq__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 767px) { .np-faq__grid { grid-template-columns: 1fr; } }
+
+        .np-faq__item {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,.04);
+        }
+
+        .np-faq__q {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 18px 20px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #12183a;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: background .2s ease;
+        }
+
+        .np-faq__q:hover { background: #f7fbf9; }
+
+        .np-faq__q .np-faq__arrow {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            background: #1a6b4a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            transition: background .3s ease, transform .3s ease;
+            order: -1;
+        }
+
+        .np-faq__item.open .np-faq__arrow {
+            background: #145a3d;
+            transform: rotate(45deg);
+        }
+
+        .np-faq__q .np-faq__text {
+            flex: 1;
+            font-size: 0.97rem;
+            font-weight: 600;
+            color: #12183a;
+            line-height: 1.4;
+        }
+
+        .np-faq__a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .35s ease, padding .35s ease;
+            padding: 0 20px 0 76px;
+        }
+
+        .np-faq__item.open .np-faq__a {
+            max-height: 400px;
+            padding: 0 20px 20px 76px;
+        }
+
+        .np-faq__a p { font-size: 0.93rem; color: #5a6480; line-height: 1.8; margin: 0; text-align: justify; }
+
+        /* Center last 3 cards in 5-col grid */
+        .therapist-carousel-slide:nth-child(11) { grid-column: 2 / 3; }
+
+        @media (max-width: 1399px) { .therapist-carousel-slide:nth-child(11) { grid-column: auto; } }
+        @media (max-width: 1199px) { .therapist-carousel-slide:nth-child(11) { grid-column: auto; } }
+        @media (max-width: 991px)  { .therapist-carousel-slide:nth-child(11) { grid-column: auto; } }
+
+        /* Scroll button */
+        .np-scroll-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #fa9111;
+            color: #fff;
+            padding: 13px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.97rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 22px rgba(250,145,17,.4);
+            transition: background .3s ease, transform .3s ease, box-shadow .3s ease;
+        }
+
+        .np-scroll-btn:hover {
+            background: #e07d00;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 28px rgba(250,145,17,.5);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .np-scroll-btn i { font-size: 14px; animation: bounceDown 1.4s infinite; }
+
+        @keyframes bounceDown {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(4px); }
+        }
+
+        @media (max-width: 767px) {
+            .np-intro__title { font-size: 1.9rem; }
+            .np-section__title { font-size: 1.7rem; }
+            .np-prose-section h2 { font-size: 1.4rem; }
+            .np-section { padding: 50px 0; }
+            .np-intro { padding: 60px 0 40px; }
+            .np-cta { padding: 36px 24px; }
+            .np-cta h2 { font-size: 1.5rem; }
+        }
+    </style>
 </head>
 
 <body class="custom-cursor">
@@ -61,771 +550,620 @@
     <div class="preloader">
         <div class="preloader__image" style="background-image: url(assets/images/home/Logo/AC\ logo.png);"></div>
     </div>
-    <!-- /.preloader -->
     <div class="page-wrapper">
 
+        <main-header></main-header>
 
-       <main-header></main-header>
+        <!-- SECTION 1 — INTRO HERO -->
+        <section class="np-intro">
+            <div class="container">
+                <div class="np-intro__inner">
+                    <span class="np-section__label">Expert Neuro Physiotherapy Team</span>
+                    <h1 class="np-intro__title">Meet Our Expert Neuro Physiotherapists in Pune</h1>
+                    <p class="np-section__lead">At Apricot Care, we know that finding the right neuro physiotherapist in Pune is one of the most important decisions you'll make for yourself or your loved one. Neurological conditions are complex, deeply personal, and demand a level of clinical expertise that goes far beyond general physiotherapy. That's why our centre is built around a team of certified neurophysiotherapists who dedicate their entire practice to understanding and rehabilitating the nervous system.</p>
+                    <div class="np-highlight">
+                        <p>Whether you are recovering from a stroke, managing Parkinson's disease, rebuilding strength after a spinal cord injury, or living with any condition that has affected your movement and independence, you deserve specialists who truly know what they are doing. At Apricot Care, that is exactly what you get.</p>
+                    </div>
+                    <div style="display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:28px;">
+                        <button class="np-scroll-btn" onclick="document.getElementById('therapist').scrollIntoView({behavior:'smooth'})">
+                            <i class="fas fa-chevron-down"></i>
+                            Explore Our Neuro Physiotherapists
+                        </button>
+                        <div class="service-sidebar__contact__button">
+                            <a href="#book-appointment-section" class="sifoxen-btn sifoxen-btn--primary"
+                                style="border-radius: 10px; display: inline-block; width: 100%; text-align: center;">
+                                Book Appointment
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- SECTION 2 — ABOUT THE TEAM + APPROACH -->
+        <section class="np-section">
+            <div class="container">
+
+                <div class="np-prose-section">
+                    <span class="np-section__label">Across All of Pune</span>
+                    <h2>Expert Neurophysiotherapists Serving Patients Across Pune</h2>
+                    <p class="np-section__body">Our team serves patients from every corner of Pune, from Kharadi and Viman Nagar to Hadapsar, Nagar Road, Kalyani Nagar, and beyond. Each member of our neurophysiotherapy team has been selected not only for their qualifications but for their commitment to patient-centred, evidence-based rehabilitation.</p>
+                    <p class="np-section__body">We are not a high-volume clinic where you are passed between assistants or left alone with machines. At Apricot Care, every patient is seen, assessed, and treated by a qualified neurophysiotherapist who takes personal ownership of your recovery.</p>
+                </div>
+
+                <div class="np-prose-section">
+                    <h2>A Team That Treats the Nervous System, Not Just the Symptom</h2>
+                    <p class="np-section__body">Most clinics treat what they can see: the limp, the stiff arm, the poor balance. Our team goes deeper. We are trained to understand why those symptoms exist at a neurological level, and we build your treatment around correcting the root cause, not just managing the surface presentation.</p>
+                    <div class="np-highlight">
+                        <p>This means your sessions are designed around neuroplasticity, the brain and nervous system's proven ability to rewire, adapt, and recover, rather than simply stretching a tight muscle or applying a machine to a sore area. When you come to Apricot Care, you are getting care that is built on the science of how the nervous system actually heals.</p>
+                    </div>
+                </div>
+
+                <div class="np-prose-section" style="margin-bottom:0;">
+                    <h2>How Our Neuro Physiotherapy Doctors in Pune Approach Your Recovery</h2>
+                    <p class="np-section__body">Recovery from a neurological condition is not linear, and no two patients follow the same path. Our approach begins with a thorough clinical assessment that maps your current neurological function, movement ability, muscle tone, balance, coordination, and daily activity limitations. From there, your neurophysiotherapist builds a structured, personalised treatment plan with clear milestones and goals.</p>
+                    <p class="np-section__body">We use internationally recognised neurological rehabilitation methods including task-specific training, proprioceptive neuromuscular facilitation (PNF), Bobath and NDT techniques, gait retraining, and progressive functional exercise. Every technique we use is backed by clinical evidence and adapted specifically to your condition and recovery stage.</p>
+                    <p class="np-section__body">We also believe recovery does not end when your session does. Your neurophysiotherapist will design a home programme, train your caregiver if needed, and track your progress closely between visits to keep your recovery moving forward at every stage.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3 — WHAT HAPPENS IN A SESSION -->
+        <section class="np-section np-section--alt">
+            <div class="container">
+                <span class="np-section__label">Your First Visit</span>
+                <h2 class="np-section__title">What Happens in a Neuro Physiotherapy Session at Our Pune Clinic</h2>
+                <p class="np-section__lead">Many patients and their families are unsure what to expect from their first neuro physiotherapy session. Here is what a typical visit at Apricot Care looks like.</p>
+
+                <div class="np-steps">
+                    <div class="np-step">
+                        <div class="np-step__num">1</div>
+                        <div class="np-step__content">
+                            <h3>Detailed Assessment</h3>
+                            <p>Your first session is a comprehensive neurological and functional evaluation. Your therapist will assess your movement patterns, strength, tone, reflexes, balance, sensation, and how your condition currently affects your daily life. This gives us the full picture before we begin treatment.</p>
+                        </div>
+                    </div>
+                    <div class="np-step">
+                        <div class="np-step__num">2</div>
+                        <div class="np-step__content">
+                            <h3>Goal Setting</h3>
+                            <p>Based on your assessment, your therapist will sit with you and your family to define clear, achievable goals, whether that's walking independently, using your affected arm again, reducing fall risk, or returning to work.</p>
+                        </div>
+                    </div>
+                    <div class="np-step">
+                        <div class="np-step__num">3</div>
+                        <div class="np-step__content">
+                            <h3>Hands-On Treatment</h3>
+                            <p>Every session combines manual therapy techniques, active movement retraining, and targeted exercises. Your therapist works directly with you throughout: no machines running unsupervised, no assistants taking over.</p>
+                        </div>
+                    </div>
+                    <div class="np-step">
+                        <div class="np-step__num">4</div>
+                        <div class="np-step__content">
+                            <h3>Home Programme</h3>
+                            <p>At the end of each session, you receive guidance on exercises and activities to continue at home. This is critical: the progress you make between sessions is just as important as the work done in the clinic.</p>
+                        </div>
+                    </div>
+                    <div class="np-step">
+                        <div class="np-step__num">5</div>
+                        <div class="np-step__content">
+                            <h3>Progress Review</h3>
+                            <p>Your treatment plan is regularly reviewed and updated as you improve. We adjust your programme as your nervous system responds and your function advances.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4 — CONDITIONS -->
+        <section class="np-section">
+            <div class="container">
+                <span class="np-section__label">Clinical Specialisations</span>
+                <h2 class="np-section__title">Conditions We Specialise In — Our Neuro Physiotherapy Clinic Near You</h2>
+                <p class="np-section__lead">Our neurophysiotherapy team has deep clinical experience across the full range of neurological conditions. If you or someone in your family has been diagnosed with any of the following, our team is equipped and ready to help.</p>
+
+                <div class="np-conditions-grid">
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-brain"></i></span>Stroke &amp; Hemiplegia Rehabilitation</h3>
+                        <p>Stroke is one of the most common reasons patients seek neuro physiotherapy in Pune. Whether you experienced a stroke weeks, months, or years ago, our team can help you regain movement in your affected arm and leg, improve your walking pattern, reduce spasticity, and rebuild functional independence for daily activities. Early intervention gives the best results, but it is never too late to start.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-walking"></i></span>Parkinson's Disease Physiotherapy</h3>
+                        <p>Parkinson's disease progressively affects movement, balance, and coordination. Our physiotherapy programme for Parkinson's patients focuses on maintaining mobility for as long as possible, improving walking safety, reducing the risk of falls, managing freezing episodes, and preserving quality of life through targeted exercise and movement strategies.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-bone"></i></span>Spinal Cord Injury Recovery</h3>
+                        <p>A spinal cord injury can be devastating, but the right rehabilitation programme makes a profound difference in what a patient is able to achieve. Our team works with both complete and incomplete spinal cord injuries, focusing on maximising remaining function, improving transfers and posture, developing upper limb strength, and building the greatest possible degree of independence.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-head-side-virus"></i></span>Traumatic Brain Injury (TBI) Rehabilitation</h3>
+                        <p>Recovering from a traumatic brain injury requires patience, precision, and a therapist who understands the complex and unpredictable nature of brain recovery. We focus on rebuilding motor control, coordination, and functional strength, helping patients regain the ability to perform everyday tasks and move safely in their environment.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-child"></i></span>Cerebral Palsy Management Across All Ages</h3>
+                        <p>Cerebral palsy affects movement, muscle tone, and posture, and the right physiotherapy support at every stage of life makes a significant difference. We work with children, adolescents, and adults living with cerebral palsy to improve movement quality, manage spasticity, enhance posture, and support greater participation in daily life and activities.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-shield-virus"></i></span>Multiple Sclerosis — Maintaining Mobility and Independence</h3>
+                        <p>MS is an unpredictable, progressive condition, and physiotherapy plays a vital role in managing its impact. Our approach focuses on reducing fatigue, improving balance and walking ability, maintaining strength, and empowering patients with strategies to stay as active and independent as possible through every phase of the condition.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-bolt"></i></span>Guillain-Barré Syndrome Recovery</h3>
+                        <p>GBS can cause rapid, severe weakness across the body, but with the right rehabilitation, most patients make significant recoveries. Our programme focuses on progressive strength restoration, endurance rebuilding, sensory retraining, and carefully graded functional reactivation as your nervous system recovers.</p>
+                    </div>
+                    <div class="np-condition-card">
+                        <h3><span class="np-icon"><i class="fas fa-hand-holding-medical"></i></span>Peripheral Neuropathy and Nerve Damage Physiotherapy</h3>
+                        <p>Peripheral neuropathy causes weakness, numbness, tingling, and balance problems that significantly impact daily life. Our team addresses these through targeted strengthening exercises, balance and proprioception retraining, sensory stimulation techniques, and education on managing symptoms safely at home.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5 — DOCTOR GRID -->
         <section class="therapist-three section-space" id="therapist">
             <div class="container">
                 <div class="sec-title sec-title--center">
                     <div class="sec-title__top">
-
                         <img src="assets/images/shapes/sec-title-s-1-1.png" alt="expert therapist members" class="sec-title__img">
+                        <h6 class="sec-title__tagline">expert therapist members</h6>
+                    </div>
+                    <h3 class="sec-title__title">Our Neuro Physiotherapy Doctors in Pune</h3>
+                </div>
+                <div class="therapist-grid-container">
+                    <div class="therapist-grid-track">
 
-
-                        <h6 class="sec-title__tagline">expert Physiotherapist members</h6><!-- /.sec-title__tagline -->
-
-                    </div><!-- /.sec-title__top -->
-                    <h1 class="sec-title__title  text-center " style=" margin-bottom: 100px;">Meet Our Expert Physiotherapist</h1><!-- /.sec-title__title -->
-                </div><!-- /.sec-title -->
-                <div class="therapist-three__carousel sifoxen-owl__carousel sifoxen-owl__carousel--basic-nav owl-carousel owl-theme" data-owl-options='{
-			"items": 1,
-			"margin": 10,
-			"loop": true,
-			"smartSpeed": 700,
-			"nav": true,
-			"navText": ["<span class=\"icon-arrow-left\"></span>","<span class=\"icon-arrow-right\"></span>"],
-			"dots": false,
-			"autoplay": true,
-			"responsive": {
-				"0": {
-					"items": 1,
-					"margin": 10
-				},
-				"768": {
-					"items": 2,
-					"margin": 30
-				},
-				"992": {
-					"items": 3,
-					"margin": 30
-				}
-			}
-		}'>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-amol-kathar" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Amol-Kathar.webp" alt="Dr. Amol Kathar"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/the_brain_rehab/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-amol-kathar">Dr. Amol Kathar</a></h3>
-                                <span class="therapist-card__designation">Jr. therapist</span>
+                        <!-- Card 1 -->
+                        <div class="therapist-grid-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-amol-kathar">
+                                        <img src="assets/images/doctor/Dr.-Amol-Kathar.webp" alt="Dr. Amol Kathar" loading="lazy ">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-amol-kathar">Dr. Amol Kathar</a></h3>
+                                    <span class="therapist-card__designation">Jr. Therapist</span>
+                                </div>
                             </div>
                         </div>
+
+                        <!-- Card 2 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-arpita-ganguly">
+                                        <img src="assets/images/doctor/Dr.-Arpita-Ganguly.webp" alt="Dr. Arpita Ganguly (PT)" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-arpita-ganguly">Dr. Arpita Ganguly (PT)</a></h3>
+                                    <span class="therapist-card__designation">Sr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-sneha-bawiskar">
+                                        <img src="assets/images/doctor/Dr.-Sneha-Bawiskar.webp" alt="Dr. Sneha Bawiskar" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-sneha-bawiskar">Dr. Sneha Bawiskar</a></h3>
+                                    <span class="therapist-card__designation">Jr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 — image path fixed to match name link -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-swapnil-paikrao">
+                                        <img src="assets/images/doctor/Dr.-Swapnil-Paikrao.webp" alt="Dr. Swapnil Paikrao" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-swapnil-paikrao">Dr. Swapnil Paikrao</a></h3>
+                                    <span class="therapist-card__designation">Sr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5 — image path fixed to match name link -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-vaishnavi-misar">
+                                        <img src="assets/images/doctor/Dr.-Vaishanvi-Misar.webp" alt="Dr. Vaishanvi Misar" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-vaishnavi-misar">Dr. Vaishanvi Misar</a></h3>
+                                    <span class="therapist-card__designation">Jr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-manaswi-dekate">
+                                        <img src="assets/images/doctor/Dr.-Manaswi-Dekate.webp" alt="Dr. Manaswi Dekate" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-manaswi-dekate">Dr. Manaswi Dekate</a></h3>
+                                    <span class="therapist-card__designation">Jr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-prajakta-joshi">
+                                        <img src="assets/images/doctor/Dr.-Prajakta-Joshi (2).webp" alt="Dr. Prajakta Joshi" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-prajakta-joshi">Dr. Prajakta Joshi</a></h3>
+                                    <span class="therapist-card__designation">Sr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-ruchita-chilka">
+                                        <img src="assets/images/doctor/Dr-ruchita.webp" alt="Dr. Ruchita Chilka" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-ruchita-chilka">Dr. Ruchita Chilka</a></h3>
+                                    <span class="therapist-card__designation">Sr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-kunal-rajendra-kadam">
+                                        <img src="assets/images/doctor/Dr.-Kunal-Kadam.webp" alt="Dr. Kunal Rajendra Kadam" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-kunal-rajendra-kadam">Dr. Kunal Rajendra Kadam</a></h3>
+                                    <span class="therapist-card__designation">Sr. Therapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-harshada-labade">
+                                        <img src="assets/images/doctor/dr-harshada-labade.webp" alt="Dr. Harshada Labade" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-harshada-labade">Dr. Harshada Labade</a></h3>
+                                    <span class="therapist-card__designation">Clinical Physiotherapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 11 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-divya-rajendra-mulay">
+                                        <img src="assets/images/doctors/Dr Divya website image.png" alt="Dr. Divya Rajendra Mulay" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-divya-rajendra-mulay">Dr. Divya Rajendra Mulay</a></h3>
+                                    <span class="therapist-card__designation">Clinical Physiotherapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 12 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-krutika-bhadane">
+                                        <img src="assets/images/doctor/dr-krutika.webp" alt="Dr. Krutika Bhadane" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-krutika-bhadane">Dr. Krutika Bhadane (PT)</a></h3>
+                                    <span class="therapist-card__designation">Neurophysiotherapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 13 -->
+                        <div class="therapist-carousel-slide">
+                            <div class="therapist-card">
+                                <div class="therapist-card__image">
+                                    <a href="./doctor/dr-vishal-gupta">
+                                        <img src="assets/images/doctor/dr-vishal-gupta.webp" alt="Dr. Vishal Gupta" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="therapist-card__info">
+                                    <h3 class="therapist-card__name"><a href="./doctor/dr-vishal-gupta">Dr. Vishal Gupta</a></h3>
+                                    <span class="therapist-card__designation">Clinical Physiotherapist</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /.therapist-grid-track -->
+                </div>
+
+                <!-- Team note box -->
+                <div style="margin-top:40px; max-width:860px; margin-left:auto; margin-right:auto; background:#fff; border-radius:14px; border-left:4px solid #fa9111; box-shadow:0 4px 24px rgba(0,0,0,0.07); padding:28px 36px; display:flex; align-items:flex-start; gap:18px;">
+                    <span style="flex-shrink:0; width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,#fa9111,#f97316); display:flex; align-items:center; justify-content:center; box-shadow:0 4px 14px rgba(250,145,17,.35); margin-top:2px;">
+                        <i class="fas fa-users" style="color:#fff; font-size:16px;"></i>
+                    </span>
+                    <p style="margin:0; font-size:0.97rem; color:#3a4460; line-height:1.9; text-align:justify;">
+                        Our team includes senior therapists with advanced clinical specialisations in neurological rehabilitation, as well as junior therapists trained under close supervision in the same evidence-based methods. Together, they bring a depth of skill and a collaborative approach that ensures every patient at Apricot Care receives consistently high-quality care regardless of which team member leads their session.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6 — WHY PATIENTS PICK US -->
+        <section class="np-section np-section--alt">
+            <div class="container">
+                <span class="np-section__label">Why Apricot Care</span>
+                <h2 class="np-section__title">Looking for the Best Physiotherapy Doctor Near Me? Here's Why Patients Pick Us</h2>
+                <p class="np-section__lead">When you search for the best physiotherapy doctor near you in Pune, you'll find many options. Here is what consistently brings patients to Apricot Care and keeps them coming back.</p>
+
+                <div class="np-features">
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-user-md"></i></div>
+                        <h3>One-on-One Sessions — Your Therapist, Your Full Hour</h3>
+                        <p>Every session at Apricot Care is conducted exclusively between you and your assigned neurophysiotherapist. You receive focused, expert attention for your entire appointment, every time.</p>
+                    </div>
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-flask"></i></div>
+                        <h3>Evidence-Based Neuro Rehab Protocols Only</h3>
+                        <p>We do not use outdated methods or rely on passive treatments. Every technique used at Apricot Care is grounded in current clinical evidence and neurological rehabilitation science.</p>
+                    </div>
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-home"></i></div>
+                        <h3>Home Physiotherapy Available Across Pune</h3>
+                        <p>For patients unable to travel to our clinic, our neurophysiotherapists are available for home visits across Pune, delivering the same quality of specialist neurophysiotherapy in your home.</p>
+                    </div>
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-users"></i></div>
+                        <h3>Family and Caregiver Training Included</h3>
+                        <p>We actively involve your family members and caregivers in your treatment, teaching them how to assist you safely with exercises, daily movements, transfers, and positioning.</p>
+                    </div>
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-calendar-check"></i></div>
+                        <h3>No Referral Needed — Walk In or Book Online</h3>
+                        <p>You do not need a doctor's referral to see our neuro physiotherapy team. Simply call us, send a WhatsApp message, or book online to schedule your initial assessment.</p>
+                    </div>
+                    <div class="np-feature">
+                        <div class="np-feature__icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <h3>Serving Kharadi, Viman Nagar, Hadapsar &amp; All of Pune</h3>
+                        <p>We regularly treat patients from Kharadi, Viman Nagar, Hadapsar, Kalyani Nagar, Nagar Road, Wagholi, Mundhwa, and surrounding areas. Home visits extend our reach further.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-arpita-ganguly" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Arpita-Ganguly.webp" alt="Dr. Arpita Ganguly (PT)"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/rehabrhapsodyy/">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/dr-arpita-ganguly-pt-661b31133/">
-                                <i class="fab fa-linkedin-in" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-arpita-ganguly">Dr. Arpita Ganguly (PT)</a>
-                                </h3>
-                                <span class="therapist-card__designation">Sr. therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-sneha-bawiskar" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Sneha-Bawiskar.webp" alt="Dr. Sneha Bawiskar"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-sneha-bawiskar">Dr. Sneha Bawiskar</a>
-                                </h3>
-                                <span class="therapist-card__designation">Jr. therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="/doctor/dr-swapnil-paikrao" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Swapnil-Paikrao.webp" alt="Dr. Swapnil Paikrao"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-swapnil-paikrao">Dr. Swapnil Paikrao</a>
-                                </h3>
-                                <span class="therapist-card__designation">Sr. therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="/doctor/dr-vaishnavi-misar" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Vaishanvi-Misar.webp" alt="Dr. Vaishanvi Misar"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-vaishnavi-misar">Dr. Vaishanvi Misar</a>
-                                </h3>
-                                <span class="therapist-card__designation">Jr. therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-manaswi-dekate" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Manaswi-Dekate.webp" alt="Dr. Manaswi Dekate"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-manaswi-dekate">Dr. Manaswi Dekate</a></h3>
-                                <span class="therapist-card__designation">Jr. therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-prajakta-joshi" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Prajakta-Joshi (2).webp" alt="Dr. Prajakta Joshi"
-                            loading="lazy">
+        <!-- SECTION 7 — CTA -->
+        <section class="np-section">
+            <div class="container">
+                <div class="np-cta">
+                    <h2>Explore All Physiotherapy Services Available at Our Pune Centre</h2>
+                    <p>Our expertise extends well beyond neurological rehabilitation. At Apricot Care, we offer a comprehensive range of physiotherapy services in Pune to address a wide variety of conditions, all delivered with the same standard of one-on-one, specialist care. Whether you are managing joint pain, recovering from surgery, dealing with chronic back pain, or returning from a sports injury, our team has the training and experience to help you recover fully and stay well.</p>
+                    <a href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune" class="np-cta__btn">
+                        <i class="fas fa-arrow-right"></i>
+                        Explore Our Complete Physiotherapy Services in Pune
                     </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-prajakta-joshi">Dr. Prajakta Joshi</a></h3>
-                                <span class="therapist-card__designation">Sr. Therapist</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8 — FAQs -->
+        <section class="np-section np-section--alt">
+            <div class="container">
+                <span class="np-section__label">Common Questions</span>
+                <h2 class="np-section__title" style="text-align:center;">Frequently Asked Questions (FAQ)</h2>
+
+                <div class="np-faq">
+                    <div class="np-faq__grid">
+
+                        <div class="np-faq__item">
+                            <button class="np-faq__q" aria-expanded="false">
+                                <span class="np-faq__arrow"><i class="fas fa-plus"></i></span>
+                                <span class="np-faq__text">What does a neuro physiotherapist do?</span>
+                            </button>
+                            <div class="np-faq__a">
+                                <p>A neuro physiotherapist helps patients recover movement, balance, coordination, and mobility after neurological conditions like stroke, Parkinson's disease, spinal cord injury, or brain injury. At Apricot Care, our specialised neuro physiotherapists use evidence-based rehabilitation techniques and personalised one-on-one therapy to improve daily function and independence.</p>
                             </div>
                         </div>
+
+                        <div class="np-faq__item">
+                            <button class="np-faq__q" aria-expanded="false">
+                                <span class="np-faq__arrow"><i class="fas fa-plus"></i></span>
+                                <span class="np-faq__text">Is home visit physiotherapy available in Pune?</span>
+                            </button>
+                            <div class="np-faq__a">
+                                <p>Yes. Apricot Care provides home physiotherapy services across Pune for patients who have difficulty travelling due to stroke recovery, mobility issues, surgery, or neurological conditions. Our therapists deliver professional neuro rehabilitation treatment at home with the same quality of care as in-clinic sessions.</p>
+                            </div>
+                        </div>
+
+                        <div class="np-faq__item">
+                            <button class="np-faq__q" aria-expanded="false">
+                                <span class="np-faq__arrow"><i class="fas fa-plus"></i></span>
+                                <span class="np-faq__text">Which is the best physiotherapy clinic near me in Pune?</span>
+                            </button>
+                            <div class="np-faq__a">
+                                <p>If you are looking for a trusted neuro physiotherapy clinic in Pune, Apricot Care is known for specialised neuro rehabilitation, experienced physiotherapists, personalised treatment plans, and one-on-one patient care. We serve patients across Kharadi, Viman Nagar, Hadapsar, Kalyani Nagar, and nearby areas in Pune.</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-ruchita-chilka" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr-ruchita.webp" alt="Dr. Ruchita Chilka"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-ruchita-chilka">Dr. Ruchita Chilka</a></h3>
-                                <span class="therapist-card__designation">Sr. Therapist</span>
+        <!-- APPOINTMENT SECTION -->
+        <section class="appointment-one appointment-one--home section-space">
+            <div class="appointment-one__bg" style="background-image: url(assets/images/shapes/appointment-bg-1-1.png);"></div>
+            <div class="container">
+                <div class="row gutter-y-60 align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="00ms">
+                        <div class="appointment-one__content">
+                            <div class="sec-title @@extraClassName">
+                                <div class="sec-title__top">
+                                    <img src="assets/images/shapes/sec-title-s-1-1.png" alt="get appointment" class="sec-title__img">
+                                    <h6 class="sec-title__tagline">Your Road To Recovery</h6>
+                                </div>
+                                <h3 id="book-appointment-section" class="sec-title__title">Book An Appointment To Kickstart Your Recovery Journey</h3>
+                            </div>
+                            <div class="appointment-one__service">
+                                <div class="appointment-one__service__item">
+                                    <div class="appointment-one__service__icon-box">
+                                        <span class="appointment-one__service__icon"><i class="icon-massage-1"></i></span>
+                                    </div>
+                                    <div class="appointment-one__service__content">
+                                        <h4 class="appointment-one__service__title">Seamless On-site Rehabilitation</h4>
+                                        <p class="appointment-one__service__text">Visit our neuro and physiotherapy center in Pune to meet our professionals and start your treatment.</p>
+                                    </div>
+                                </div>
+                                <div class="appointment-one__service__item">
+                                    <div class="appointment-one__service__icon-box">
+                                        <span class="appointment-one__service__icon"><i class="icon-cupping"></i></span>
+                                    </div>
+                                    <div class="appointment-one__service__content">
+                                        <h4 class="appointment-one__service__title">Personalized Online And Home Care Services</h4>
+                                        <p class="appointment-one__service__text">Begin with a personalized consultation for online therapies and home healthcare services. Our professionals will help you heal without leaving your house.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-kunal-rajendra-kadam" class="therapist-card__image__link">
-                        <img src="assets/images/doctor/Dr.-Kunal-Kadam.webp" alt="Dr. Kunal Rajendra Kadam"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-kunal-rajendra-kadam">Dr. Kunal Rajendra Kadam</a></h3>
-                                <span class="therapist-card__designation">Sr. Therapist</span>
-                            </div>
-                        </div>
+                    <div class="col-lg-6">
+                        <form action="assets/inc/sendemail.php" class="appointment-one__form contact-form-validated form-one wow fadeInRight" data-wow-duration="1500ms">
+                            <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                            <div class="hs-form-frame" data-region="na2" data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368"></div>
+                        </form>
+                        <div class="result"></div>
                     </div>
                 </div>
             </div>
-        </div>
+            <img src="assets/images/Apricot/Your-Road-To-Recovery/Your-Road-To-Recovery.webp" alt="appointment" class="appointment-one__right-image">
+        </section>
 
-
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-divya-rajendra-mulay" class="therapist-card__image__link">
-                        <img src="/assets/images/doctors/Dr Divya website image.png" alt="Dr. Kunal Rajendra Kadam"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-divya-rajendra-mulay">Dr. Divya Rajendra Mulay</a></h3>
-                                <span class="therapist-card__designation">Sr. Therapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-vishal-gupta" class="therapist-card__image__link">
-                        <img src="/assets/images/doctor/dr-vishal-gupta.webp" alt="Dr. Vishal Gupta"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-vishal-gupta">Dr. Vishal Gupta
-                                </a></h3>
-                                <span class="therapist-card__designation">Clinical Physiotherapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-krutika-bhadane" class="therapist-card__image__link">
-                        <img src="/assets/images/doctor/dr-krutika.webp" alt="Dr. Vishal Gupta"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-krutika-bhadane">Dr. Krutika Bhadane (PT)
-                                </a></h3>
-                                <span class="therapist-card__designation">Neurophysiotherapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="therapist-carousel-slide">
-            <div class="therapist-card">
-                <div class="therapist-card__image">
-                    <a href="./doctor/dr-harshada-labade" class="therapist-card__image__link">
-                        <img src="/assets/images/doctor/dr-harshada-labade.webp" alt="Dr. Harshada Labade"
-                            loading="lazy">
-                    </a>
-                    <div class="therapist-card__hover">
-                        <div class="social-links">
-                            <a href="https://www.facebook.com/apricotcare">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                    class="sr-only">Facebook</span>
-                            </a>
-                            <a href="https://x.com/care_apricot">
-                                <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                    class="sr-only">Twitter</span>
-                            </a>
-                            <a
-                                href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                                <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                    class="sr-only">Instagram</span>
-                            </a>
-                            <a href="https://www.youtube.com/@ApricotCare">
-                                <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                    class="sr-only">Youtube</span>
-                            </a>
-                        </div>
-                        <div class="therapist-card__identity">
-                            <div class="therapist-card__identity__inner">
-                                <h3 class="therapist-card__name"><a href="./doctor/dr-harshada-labade">Dr. Harshada Labade
-                                </a></h3>
-                                <span class="therapist-card__designation">Clinical Physiotherapist</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-                    
-                </div><!-- /.therapist-three__carousel -->
-            </div><!-- /.container -->
-        </section><!-- /.therapist-three section-space -->
-
-     
-       <main-footer></main-footer>
+        <main-footer></main-footer>
     </div><!-- /.page-wrapper -->
 
     <div class="mobile-nav__wrapper">
         <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-        <!-- /.mobile-nav__overlay -->
         <div class="mobile-nav__content">
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
-
             <div class="logo-box logo-retina">
-                <a href="index" aria-label="logo image"><img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="143"   /></a>
+                <a href="index" aria-label="logo image"><img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="143" /></a>
             </div>
-            <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
-            <!-- /.mobile-nav__container -->
-
             <ul class="mobile-nav__contact list-unstyled">
-                <li>
-                    <span class="mobile-nav__contact__icon">
-                        <i class="fa fa-envelope"></i>
-                    </span>
-                    <a href="mailto:hello@apricotcare.in">hello@apricotcare.in</a>
-                </li>
-                <li>
-                    <span class="mobile-nav__contact__icon">
-                        <i class="fa fa-phone-alt"></i>
-                    </span>
-                    <a href="tel:+917387641462">+917387641462</a>
-                </li>
-            </ul><!-- /.mobile-nav__contact -->
+                <li><span class="mobile-nav__contact__icon"><i class="fa fa-envelope"></i></span><a href="mailto:hello@apricotcare.in">hello@apricotcare.in</a></li>
+                <li><span class="mobile-nav__contact__icon"><i class="fa fa-phone-alt"></i></span><a href="tel:+917387641462">+917387641462</a></li>
+            </ul>
             <div class="mobile-nav__social">
-                <a href="https://www.facebook.com/apricotcare">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                    <span class="sr-only">Facebook</span>
-                </a>
-                <a href="https://x.com/care_apricot">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                    <span class="sr-only">Twitter</span>
-                </a>
-                <a href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                    <span class="sr-only">Instagram</span>
-                </a>
-                <a href="https://www.youtube.com/@ApricotCare">
-                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                    <span class="sr-only">Youtube</span>
-                </a>
-            </div><!-- /.mobile-nav__social -->
+                <a href="https://www.facebook.com/apricotcare"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+                <a href="https://x.com/care_apricot"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+                <a href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+                <a href="https://www.youtube.com/@ApricotCare"><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">Youtube</span></a>
+            </div>
         </div>
-        <!-- /.mobile-nav__content -->
     </div>
-     
+
     <aside class="sidebar-one">
-        <div class="sidebar-one__overlay sidebar-btn__toggler"></div><!-- /.siderbar-ovarlay -->
+        <div class="sidebar-one__overlay sidebar-btn__toggler"></div>
         <div class="sidebar-one__content">
             <span class="sidebar-one__close sidebar-btn__toggler"><i class="fa fa-times"></i></span>
             <div class="sidebar-one__logo sidebar-one__item logo-retina">
-                <a href="index" aria-label="logo image"><img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="143" alt="logo" /></a>
-            </div><!-- /.sidebar-one__logo -->
+                <a href="index" aria-label="logo image"><img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="143" /></a>
+            </div>
             <div class="sidebar-one__about sidebar-one__item">
                 <p class="sidebar-one__about__text">Here is main text quis nostrud exercitation ullamco laboris nisi here is itealic aliquip ex ea com</p>
-            </div><!-- /.sidebar-one__about -->
+            </div>
             <div class="sidebar-one__info sidebar-one__item">
                 <h4 class="sidebar-one__title">Contact</h4>
                 <ul class="sidebar-one__info__list">
-                    <li>
-                        <span class="sidebar-one__info__icon sidebar-one__info__icon--location">
-                            <i class="icon-location-2"></i>
-                        </span>
-                        <address>85 Ketch Harbour Road Bensal
-                            PA 19020</address>
-                    </li>
-                    <li>
-                        <span class="sidebar-one__info__icon">
-                            <i class="icon-paper-plane"></i>
-                        </span>
-                        <a href="mailto:hello@apricotcare.in">hello@apricotcare.in</a>
-                    </li>
-                    <li>
-                        <span class="sidebar-one__info__icon">
-                            <i class="icon-telephone"></i>
-                        </span>
-                        <a href="tel:+917387641462">+917387641462</a>
-                    </li>
-                </ul><!-- /.sidebar-one__info__list -->
-            </div><!-- /.sidebar-one__info -->
+                    <li><span class="sidebar-one__info__icon sidebar-one__info__icon--location"><i class="icon-location-2"></i></span><address>85 Ketch Harbour Road Bensal PA 19020</address></li>
+                    <li><span class="sidebar-one__info__icon"><i class="icon-paper-plane"></i></span><a href="mailto:hello@apricotcare.in">hello@apricotcare.in</a></li>
+                    <li><span class="sidebar-one__info__icon"><i class="icon-telephone"></i></span><a href="tel:+917387641462">+917387641462</a></li>
+                </ul>
+            </div>
             <div class="sidebar-one__social sidebar-one__item">
-                <a href="https://www.facebook.com/apricotcare">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                    <span class="sr-only">Facebook</span>
-                </a>
-                <a href="https://x.com/care_apricot">
-                    <i class="fab fa-twitter" aria-hidden="true"></i>
-                    <span class="sr-only">Twitter</span>
-                </a>
-                <a href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect">
-                    <i class="fab fa-instagram" aria-hidden="true"></i>
-                    <span class="sr-only">Instagram</span>
-                </a>
-                <a href="https://www.youtube.com/@ApricotCare">
-                    <i class="fab fa-youtube" aria-hidden="true"></i>
-                    <span class="sr-only">Youtube</span>
-                </a>
-                
-            </div><!-- /sidebar-one__social -->
+                <a href="https://www.facebook.com/apricotcare"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
+                <a href="https://x.com/care_apricot"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
+                <a href="https://www.instagram.com/accounts/login/?next=%2Fapricotcare_neurorehab_pune%2F&source=omni_redirect"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
+                <a href="https://www.youtube.com/@ApricotCare"><i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">Youtube</span></a>
+            </div>
             <div class="sidebar-one__newsletter sidebar-one__item">
                 <label class="sidebar-one__title" for="sidebar-email">Newsletter</label>
                 <form action="#" class="sidebar-one__newsletter__inner mc-form" data-url="MAILCHIMP_FORM_URL">
                     <input type="email" name="EMAIL" id="sidebar-email" class="sidebar-one__newsletter__input" placeholder="Email Address">
                     <button type="submit" class="sidebar-one__newsletter__btn"><span class="icon-mail" aria-hidden="true"></span></button>
                 </form>
-                <div class="mc-form__response"></div><!-- /.mc-form__response -->
-            </div><!-- /.sidebar-one__form -->
-        </div><!-- /.sidebar__content -->
-    </aside><!-- /.sidebar-one -->
+                <div class="mc-form__response"></div>
+            </div>
+        </div>
+    </aside>
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
         <span class="scroll-to-top__wrapper"><span class="scroll-to-top__inner"></span></span>
     </a>
 
-
     <style>
         @media (max-width: 767.98px) {
-            .mobile-bottom-bar {
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                width: 100%;
-                background: #fff;
-                box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.07);
-                z-index: 9999;
-                display: flex;
-                justify-content: space-between;
-                padding: 0;
-                border-top: 1px solid #e1e1e1;
-                height: 60px;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn {
-                flex: 1 1 0;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                margin: 0;
-                font-size: 1.1rem;
-                font-weight: 600;
-                color: #fff;
-                border: none;
-                outline: none;
-                height: 60px;
-                transition: background 0.18s;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn.whatsapp {
-                background: #25D366;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn.whatsapp:hover {
-                background: #1bb953;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn.call {
-                background: #fd7a39;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn.call:hover {
-                background: #d04f0f;
-            }
-
-            .mobile-bottom-bar .mobile-bar-btn i {
-                margin-right: 8px;
-                font-size: 1.3em;
-            }
+            .mobile-bottom-bar { position: fixed; left: 0; right: 0; bottom: 0; width: 100%; background: #fff; box-shadow: 0 -2px 20px rgba(0,0,0,0.07); z-index: 9999; display: flex; justify-content: space-between; padding: 0; border-top: 1px solid #e1e1e1; height: 60px; }
+            .mobile-bottom-bar .mobile-bar-btn { flex: 1 1 0; display: flex; align-items: center; justify-content: center; padding: 0; margin: 0; font-size: 1.1rem; font-weight: 600; color: #fff; border: none; outline: none; height: 60px; transition: background 0.18s; }
+            .mobile-bottom-bar .mobile-bar-btn.whatsapp { background: #25D366; }
+            .mobile-bottom-bar .mobile-bar-btn.whatsapp:hover { background: #1bb953; }
+            .mobile-bottom-bar .mobile-bar-btn.call { background: #fd7a39; }
+            .mobile-bottom-bar .mobile-bar-btn.call:hover { background: #d04f0f; }
+            .mobile-bottom-bar .mobile-bar-btn i { margin-right: 8px; font-size: 1.3em; }
         }
-
-        @media (min-width: 768px) {
-            .mobile-bottom-bar {
-                display: none !important;
-            }
-        }
+        @media (min-width: 768px) { .mobile-bottom-bar { display: none !important; } }
     </style>
-        <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <script>
-            // Fallback in case Font Awesome doesn't load
-            window.addEventListener('DOMContentLoaded', function(){
-                var testDiv = document.createElement('div');
-                testDiv.innerHTML = '<i class="fa fa-check"></i>';
-                document.body.appendChild(testDiv);
-                var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
-                    window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
-                document.body.removeChild(testDiv);
-                if (!faLoaded) {
-                    var fallback = document.createElement('link');
-                    fallback.rel = 'stylesheet';
-                    fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
-                    document.head.appendChild(fallback);
-                }
-            });
-        </script>
-        <div class="mobile-bottom-bar">
-            <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
-                aria-label="Contact via WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
-                <i class="fa-solid fa-phone"></i> Call
-            </a>
-        </div>
-    <!-- Font Awesome 6 CDN -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        window.addEventListener('DOMContentLoaded', function(){
+            var testDiv = document.createElement('div');
+            testDiv.innerHTML = '<i class="fa fa-check"></i>';
+            document.body.appendChild(testDiv);
+            var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') || window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
+            document.body.removeChild(testDiv);
+            if (!faLoaded) { var fallback = document.createElement('link'); fallback.rel = 'stylesheet'; fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css'; document.head.appendChild(fallback); }
+        });
+    </script>
+
+    <div class="mobile-bottom-bar">
+        <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener" aria-label="Contact via WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now"><i class="fa-solid fa-phone"></i> Call</a>
+    </div>
 
     <script src="assets/vendors/jquery/jquery-3.7.0.min.js"></script>
     <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -847,97 +1185,70 @@
     <script src="assets/vendors/countdown/countdown.min.js"></script>
     <script src="assets/vendors/jquery-circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
-    <!-- template js -->
     <script src="assets/js/sifoxen.js"></script>
 
-    <!-- ----------------------------------------- -->
-     <script>
-       
-       document.addEventListener('DOMContentLoaded', function() {
-    // Initialize all sliders
-    document.querySelectorAll('.services-two__image-slider').forEach(slider => {
-        const wrapper = slider.querySelector('.slider-wrapper');
-        const slides = wrapper.children;
-        const slideCount = slides.length;
-        
-        // Clone first slide and append to end for infinite effect
-        const firstSlide = slides[0].cloneNode(true);
-        wrapper.appendChild(firstSlide);
-        
-        let currentIndex = 0;
-        const slideWidth = 464; // Fixed width of slides
-        
-        function nextSlide() {
-            currentIndex++;
-            wrapper.style.transition = 'transform 0.5s ease';
-            wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-            
-            // If we're at the cloned slide, instantly (no transition) reset to first slide
-            if (currentIndex === slideCount) {
-                setTimeout(() => {
-                    wrapper.style.transition = 'none';
-                    wrapper.style.transform = 'translateX(0)';
-                    currentIndex = 0;
-                }, 500);
-            }
-        }
-        
-        // Change slide every 3 seconds
-        let slideInterval = setInterval(nextSlide, 3000);
-        
-        // Pause on hover
-        slider.addEventListener('mouseenter', () => {
-            clearInterval(slideInterval);
-        });
-        
-        slider.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 3000);
-        });
-    });
-});
-    </script>
-      <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const accordionBtns = document.querySelectorAll('.neuro-rehab-accordion__btn');
-            
-            accordionBtns.forEach(btn => {
+            // Services slider
+            document.querySelectorAll('.services-two__image-slider').forEach(slider => {
+                const wrapper = slider.querySelector('.slider-wrapper');
+                const slides = wrapper.children;
+                const slideCount = slides.length;
+                const firstSlide = slides[0].cloneNode(true);
+                wrapper.appendChild(firstSlide);
+                let currentIndex = 0;
+                const slideWidth = 464;
+                function nextSlide() {
+                    currentIndex++;
+                    wrapper.style.transition = 'transform 0.5s ease';
+                    wrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+                    if (currentIndex === slideCount) { setTimeout(() => { wrapper.style.transition = 'none'; wrapper.style.transform = 'translateX(0)'; currentIndex = 0; }, 500); }
+                }
+                let slideInterval = setInterval(nextSlide, 3000);
+                slider.addEventListener('mouseenter', () => clearInterval(slideInterval));
+                slider.addEventListener('mouseleave', () => { slideInterval = setInterval(nextSlide, 3000); });
+            });
+
+            // Accordion
+            document.querySelectorAll('.neuro-rehab-accordion__btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const item = this.closest('.neuro-rehab-accordion__item');
                     const isActive = item.classList.contains('neuro-rehab-accordion__item--active');
-                    
-                    // Close all items first
-                    document.querySelectorAll('.neuro-rehab-accordion__item').forEach(el => {
-                        el.classList.remove('neuro-rehab-accordion__item--active');
+                    document.querySelectorAll('.neuro-rehab-accordion__item').forEach(el => el.classList.remove('neuro-rehab-accordion__item--active'));
+                    if (!isActive) item.classList.add('neuro-rehab-accordion__item--active');
+                });
+            });
+
+            // Footer location toggle
+            var btn = document.getElementById('footerLocationToggleBtn');
+            var list = document.getElementById('footerLocationList');
+            var chevron = document.getElementById('footerLocationChevron');
+            if (btn && list && chevron) {
+                btn.addEventListener('click', function() {
+                    var isOpen = list.style.display === "block";
+                    list.style.display = isOpen ? "none" : "block";
+                    btn.setAttribute('aria-expanded', !isOpen);
+                    chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+                });
+            }
+
+            // FAQ accordion
+            document.querySelectorAll('.np-faq__q').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var item = this.closest('.np-faq__item');
+                    var isOpen = item.classList.contains('open');
+                    document.querySelectorAll('.np-faq__item').forEach(function(el) {
+                        el.classList.remove('open');
+                        el.querySelector('.np-faq__q').setAttribute('aria-expanded', 'false');
                     });
-                    
-                    // Open current if it wasn't active
-                    if (!isActive) {
-                        item.classList.add('neuro-rehab-accordion__item--active');
+                    if (!isOpen) {
+                        item.classList.add('open');
+                        this.setAttribute('aria-expanded', 'true');
                     }
                 });
             });
         });
-        </script>
+    </script>
 
-
-   
-   <script>
-            // Show locations only when toggled
-            (function() {
-                var btn = document.getElementById('footerLocationToggleBtn');
-                var list = document.getElementById('footerLocationList');
-                var chevron = document.getElementById('footerLocationChevron');
-                btn.addEventListener('click', function() {
-                    var isOpen = list.style.display === "block";
-                    // Toggle display
-                    list.style.display = isOpen ? "none" : "block";
-                    // Toggle aria
-                    btn.setAttribute('aria-expanded', !isOpen);
-                    // Animate chevron
-                    chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-                });
-            })();
-        </script>
 </body>
-
 </html>
