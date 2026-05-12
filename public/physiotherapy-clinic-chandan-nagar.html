@@ -67,59 +67,6 @@
     <link rel="stylesheet" href="../assets/vendors/owl-carousel/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="../assets/vendors/owl-carousel/css/owl.theme.default.min.css" />
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-              {
-                "opens": "08:00",
-                "closes": "20:00"
-              },
-              {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": "Sunday",
-                "opens": "08:00",
-                "closes": "20:00"
-              },
-              {
-                "areaServed": "",
-                "aggregateRating": {
-                  "@type": "AggregateRating",
-                  "ratingValue": "5.0",
-                  "reviewCount": "100",
-                  "bestRating": "5",
-                  "worstRating": "1"
-                },
-                "medicalSpecialty": [
-                  "Physiotherapy",
-                  "Neurologic",
-                  "Orthopedic",
-                  "Geriatric"
-                ],
-                "availableService": ""
-              },
-              {
-                "@type": "FAQPage",
-                "@id": "https://neurorehabilitationcentre.com/physiotherapy-clinic-chandan-nagar/#faq",
-                "mainEntity": ""
-              },
-              {
-                "@type": "WebPage",
-                "@id": "https://neurorehabilitationcentre.com/physiotherapy-clinic-chandan-nagar/#webpage",
-                "url": "https://neurorehabilitationcentre.com/physiotherapy-clinic-chandan-nagar",
-                "name": "Advanced Physiotherapy Clinic Near Chandan Nagar | Apricot Care",
-                "description": "Looking for a Physiotherapy clinic in Chandan Nagar? Apricot Care (Kharadi) offers specialized Robotic Rehab, Neuro, and Ortho care just 10 minutes away.",
-                "isPartOf": {
-                  "@id": "https://neurorehabilitationcentre.com/#website"
-                },
-                "about": {
-                  "@id": "https://neurorehabilitationcentre.com/physiotherapy-clinic-chandan-nagar/#clinic"
-                }
-              }
-            ]
-        }
-          
-    </script>
 
     <!-- template styles -->
     <link rel="stylesheet" href="../assets/css/sifoxen.css" />
@@ -134,6 +81,22 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is physiotherapy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Physiotherapy is a healthcare profession that helps restore movement and function when someone is affected by injury, illness, or disability. It uses physical methods like exercise, manual therapy, and education to treat musculoskeletal conditions and improve overall health."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What conditions do physiotherapists treat?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Physiotherapists treat a wide range of conditions including sports injuries, back pain, arthritis, neurological conditions, post-surgical recovery, and chronic pain conditions."
+                }
+            },
             {
                 "@type": "Question",
                 "name": "Is it better to visit a local clinic in Chandan Nagar or come to Apricot Care?",
@@ -215,8 +178,7 @@
             "longitude": 73.9147
         },
         "openingHours": [
-            "Mo-Sa 09:00-20:00",
-            "Su 09:00-14:00"
+            "Mo-Sa 09:00-20:00"
         ],
         "priceRange": "$$",
         "image": "https://neurorehabilitationcentre.com/assets/images/home/Logo/Apricot%20Care%20Physiotherapy%20&%20Wellness,%20Kharad%20Pune%20(1).webp",
@@ -443,6 +405,12 @@
                                         </div><!-- /.service-sidebar__contact__content -->
                                     </div><!-- /.service-sidebar__contact__inner -->
                                 </div><!-- /.service-sidebar__contact -->
+                                 <div class="service-sidebar__contact__button" style="margin-top: 25px;">
+                                    <a href="#book-appointment-section" class="sifoxen-btn sifoxen-btn--primary"
+                                        style="border-radius: 10px; display: inline-block; width: 100%; text-align: center;">
+                                        Book Appointment
+                                    </a>
+                                </div>
                             </div><!-- /.service-sidebar__info service-sidebar__single -->
 
                         </div><!-- /.sidebar -->
@@ -1216,7 +1184,7 @@
                                 <h6 class="sec-title__tagline">Your Road To Recovery</h6><!-- /.sec-title__tagline -->
 
                             </div><!-- /.sec-title__top -->
-                            <h3 class="sec-title__title">Book An Appointment To Kickstart Your Recovery Journey</h3>
+                            <h3 id="book-appointment-section" class="sec-title__title">Book An Appointment To Kickstart Your Recovery Journey</h3>
                             <!-- /.sec-title__title -->
                         </div><!-- /.sec-title -->
                         <div class="appointment-one__service">
