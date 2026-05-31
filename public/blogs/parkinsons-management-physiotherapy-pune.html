@@ -80,6 +80,215 @@
             }
         }
     </style>
+    <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
+        }
+    </style>
 
     <!-- JSON-LD Structured Data Schemas -->
     <script type="application/ld+json">
@@ -380,7 +589,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -403,6 +612,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -958,35 +1170,40 @@
 
 
                     </div><!-- /.col-lg-8 -->
-                     <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -1139,6 +1356,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -1291,7 +1511,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" alt="logo" /></a>
+                        width="153" alt="logo" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>

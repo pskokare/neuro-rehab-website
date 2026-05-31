@@ -1,3 +1,28 @@
+(function injectApricotMainNavUi() {
+    if (document.getElementById('apricot-main-nav-ui')) return;
+    const style = document.createElement('style');
+    style.id = 'apricot-main-nav-ui';
+    style.textContent = `
+/* Home + Rehabilitation: same default ink as other top-level links; brand orange only on hover */
+.main-header .main-menu .main-menu__list > li.megamenu > a,
+.main-header .main-menu .main-menu__list > li.megamenu + li.dropdown > a,
+.sticky-header--cloned .main-menu .main-menu__list > li.megamenu > a,
+.sticky-header--cloned .main-menu .main-menu__list > li.megamenu + li.dropdown > a {
+  color: var(--sifoxen-black, #362048);
+  text-shadow: none;
+  transition: color 0.35s ease;
+}
+.main-header .main-menu .main-menu__list > li.megamenu:hover > a,
+.main-header .main-menu .main-menu__list > li.megamenu + li.dropdown:hover > a,
+.sticky-header--cloned .main-menu .main-menu__list > li.megamenu:hover > a,
+.sticky-header--cloned .main-menu .main-menu__list > li.megamenu + li.dropdown:hover > a {
+  color: var(--sifoxen-base, #f89f21);
+  text-shadow: 0 0 0.5px currentColor;
+}
+`;
+    document.head.appendChild(style);
+})();
+
 class Header extends HTMLElement {
     connectedCallback() {
 
@@ -28,7 +53,7 @@ class Header extends HTMLElement {
                                 <span class="topbar-one__open__icon">
                                     <i class="icon-clock"></i>
                                 </span>
-                                <p class="topbar-one__open__text text-white">Mon to Fri 9:00am to 6:00pm</p><!-- /.topbar-one__open__text -->
+                                <p class="topbar-one__open__text text-white">Mon to Sun 8:00am to 8:00pm</p><!-- /.topbar-one__open__text -->
                             </div><!-- /.topbar-one__open -->
                             <div class="topbar-one__social">
                                 <a href="https://www.facebook.com/apricotcare">
@@ -54,9 +79,9 @@ class Header extends HTMLElement {
             </div><!-- /.topbar-one -->
             <div class="container-fluid">    
                 <div class="main-header__inner">
-                    <div class="main-header__logo logo-retina">
-                        <a href="index">
-                            <img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" alt="Sifoxen HTML" width="153">
+                    <div class="main-header__logo">
+                        <a href="/">
+                            <img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" alt="Sifoxen HTML" width="153" height="60">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -85,7 +110,7 @@ class Header extends HTMLElement {
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="">Specialized Therapies</a>
+                                            <a href="#">Specialized Therapies</a>
                                             <ul class="sub-menu drpdwn-container">
                                                 <li><a href="/specialized-therapies/physiotherapy-in-pune">Physiotherapy</a></li>
                                                 <li><a href="/specialized-therapies/respiratory-therapy-in-pune">Respiratory Therapy</a></li>
@@ -111,7 +136,7 @@ class Header extends HTMLElement {
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="/advanced-care-programs/feeding-tube-care-in-pune">Feeding Tube Care</a></li>
                                                 <li><a href="/advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac Rehabilitation Care</a></li>
                                                 <li><a href="/advanced-care-programs/senior-care-in-pune">Senior Care</a></li>
@@ -122,6 +147,8 @@ class Header extends HTMLElement {
                                                 <li><a href="/advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy Care</a></li>
                                                 <li><a href="/advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune">TKR/THR (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="/advanced-care-programs/bedsore-management-in-pune">Bedsore Management</a></li>
+                                               <li><a href="/advanced-care-programs/transitional-care-in-pune">Transitional Care</a></li> 
+
                                             </ul>
                                         </li>
                                     </ul>
@@ -175,7 +202,7 @@ class Header extends HTMLElement {
         </header>`
 
 
-      
+
     }
 }
 
@@ -190,8 +217,8 @@ class Footer extends HTMLElement {
                 <div class="main-footer__top wow fadeInUp" data-wow-duration="1500ms">
                     <div class="main-footer__top__bg" style="background-image: url(assets/images/shapes/footer-top-bg.png);"></div><!-- /.main-footer__top__bg -->
                     <div class="main-footer__logo">
-                        <a href="index">
-                            <img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="161" alt="Sifoxen HTML Template">
+                        <a href="/">
+                            <img src="assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="logo" width="153" height="60" alt="Sifoxen HTML Template">
                         </a>
                     </div><!-- /.main-footer__logo -->
                     <div class="main-footer__newsletter">
@@ -242,7 +269,8 @@ class Footer extends HTMLElement {
                                 <li><a href="/advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune"
                                     class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="/advanced-care-programs/bedsore-management-in-pune" class="text-white">Bedsore Management</a></li>
-                            </ul><!-- /.list-unstyled footer-widget__links -->
+                               <li><a href="/advanced-care-programs/transitional-care-in-pune" class="text-white">Transitional Care</a></li>                             
+                                </ul><!-- /.list-unstyled footer-widget__links -->
                         </div><!-- /.footer-widget -->
                     </div>
                   
@@ -327,11 +355,11 @@ class Footer extends HTMLElement {
                     </span>
                 </button>
                 <ul id="footerLocationList" class="list-unstyled footer-widget__links" style="display:none; margin-top:15px;">
-                    <li><a href="physiotherapy-clinic-chandan-nagar" class="text-white">Kharadi, Pune</a></li>
-                    <li><a href="physiotherapy-clinic-magarpatta-city" class="text-white">Magarpatta, Pune</a></li>
-                    <li><a href="physiotherapy-clinic-viman-nagar" class="text-white">Viman Nagar, Pune</a></li>
-                    <li><a href="physiotherapy-clinic-wadgaon-sheri" class="text-white">Wadgaon Sheri, Pune</a></li>
-                    <li><a href="physiotherapy-clinic-wagholi" class="text-white">Wagholi, Pune</a></li>
+                    <li><a href="physiotherapy-clinic-chandan-nagar" class="text-white">Physiotherapy Clinic in Kharadi, Pune</a></li>
+                    <li><a href="physiotherapy-clinic-magarpatta-city" class="text-white">Physiotherapy Clinic in Magarpatta, Pune</a></li>
+                    <li><a href="physiotherapy-clinic-viman-nagar" class="text-white">Physiotherapy Clinic in Viman Nagar, Pune</a></li>
+                    <li><a href="physiotherapy-clinic-wadgaon-sheri" class="text-white">Physiotherapy Clinic in Wadgaon Sheri, Pune</a></li>
+                    <li><a href="physiotherapy-clinic-wagholi" class="text-white">Physiotherapy Clinic in Wagholi, Pune</a></li>
                 </ul>
             </div>
            
@@ -369,11 +397,11 @@ class Footer extends HTMLElement {
             </div><!-- /.main-footer__bottom -->
         </footer>`;
     }
- 
- 
- }
 
- class ServiceFooter extends HTMLElement {
+
+}
+
+class ServiceFooter extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
           
@@ -385,7 +413,7 @@ class Footer extends HTMLElement {
                     <div class="main-footer__top__bg" style="background-image: url(../assets/images/shapes/footer-top-bg.png);"></div><!-- /.main-footer__top__bg -->
                     <div class="main-footer__logo">
                         <a href="../">
-                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" width="161" alt="Sifoxen HTML Template">
+                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" width="153" height="60" alt="Sifoxen HTML Template">
                         </a>
                     </div><!-- /.main-footer__logo -->
                     <div class="main-footer__newsletter">
@@ -433,6 +461,8 @@ class Footer extends HTMLElement {
                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune" class="text-white">Tracheostomy Care</a></li>
                                 <li><a href="../advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune" class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune" class="text-white">Bedsore Management</a></li>
+                               <li><a href="../advanced-care-programs/transitional-care-in-pune" class="text-white">Transitional Care</a></li> 
+
                             </ul><!-- /.list-unstyled footer-widget__links -->
                         </div><!-- /.footer-widget -->
                     </div>
@@ -517,11 +547,11 @@ class Footer extends HTMLElement {
                     </span>
                 </button>
                 <ul id="footerLocationList" class="list-unstyled footer-widget__links" style="display:none; margin-top:15px;">
-                    <li><a href="../physiotherapy-clinic-chandan-nagar" class="text-white">Kharadi, Pune</a></li>
-                    <li><a href="../physiotherapy-clinic-magarpatta-city" class="text-white">Magarpatta, Pune</a></li>
-                    <li><a href="../physiotherapy-clinic-viman-nagar" class="text-white">Viman Nagar, Pune</a></li>
-                    <li><a href="../physiotherapy-clinic-wadgaon-sheri" class="text-white">Wadgaon Sheri, Pune</a></li>
-                    <li><a href="../physiotherapy-clinic-wagholi" class="text-white">Wagholi, Pune</a></li>
+                    <li><a href="../physiotherapy-clinic-chandan-nagar" class="text-white">Physiotherapy Clinic in Kharadi, Pune</a></li>
+                    <li><a href="../physiotherapy-clinic-magarpatta-city" class="text-white">Physiotherapy Clinic in Magarpatta, Pune</a></li>
+                    <li><a href="../physiotherapy-clinic-viman-nagar" class="text-white">Physiotherapy Clinic in Viman Nagar, Pune</a></li>
+                    <li><a href="../physiotherapy-clinic-wadgaon-sheri" class="text-white">Physiotherapy Clinic in Wadgaon Sheri, Pune</a></li>
+                    <li><a href="../physiotherapy-clinic-wagholi" class="text-white">Physiotherapy Clinic in Wagholi, Pune</a></li>
                 </ul>
             </div>
            
@@ -557,11 +587,11 @@ class Footer extends HTMLElement {
             </div><!-- /.main-footer__bottom -->
         </footer>`;
     }
- 
- 
- }
 
- class ServiceHeader extends HTMLElement {
+
+}
+
+class ServiceHeader extends HTMLElement {
     connectedCallback() {
 
         this.innerHTML = `
@@ -591,7 +621,7 @@ class Footer extends HTMLElement {
                                 <span class="topbar-one__open__icon">
                                     <i class="icon-clock"></i>
                                 </span>
-                                <p class="topbar-one__open__text text-white">Mon to Fri 9:00am to 6:00pm</p><!-- /.topbar-one__open__text -->
+                                <p class="topbar-one__open__text text-white">Mon to Sun 8:00am to 8:00pm</p><!-- /.topbar-one__open__text -->
                             </div><!-- /.topbar-one__open -->
                             <div class="topbar-one__social">
                                 <a href="https://www.facebook.com/apricotcare">
@@ -617,9 +647,9 @@ class Footer extends HTMLElement {
             </div><!-- /.topbar-one -->
             <div class="container-fluid">    
                 <div class="main-header__inner">
-                    <div class="main-header__logo logo-retina">
+                    <div class="main-header__logo">
                         <a href="../">
-                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153">
+                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153" height="60">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -648,7 +678,7 @@ class Footer extends HTMLElement {
                                             </ul>
                                         </li>
                                          <li class="dropdown">
-                                            <a href="">Specialized Therapies</a>
+                                            <a href="#">Specialized Therapies</a>
                                             <ul class="sub-menu drpdwn-container">
                                                 <li><a href="../specialized-therapies/physiotherapy-in-pune">Physiotherapy</a></li>
                                                 <li><a href="../specialized-therapies/respiratory-therapy-in-pune">Respiratory Therapy</a></li>
@@ -674,7 +704,7 @@ class Footer extends HTMLElement {
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac Rehabilitation Care</a></li>
                                                 <li><a href="../advanced-care-programs/senior-care-in-pune">Senior Care</a></li>
@@ -685,6 +715,7 @@ class Footer extends HTMLElement {
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy Care</a></li>
                                                 <li><a href="../advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune">TKR/THR (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore Management</a></li>
+                                               <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional Care</a></li> 
                                             </ul>
                                         </li>
                                     </ul>
@@ -701,7 +732,7 @@ class Footer extends HTMLElement {
 
                                 <li class="dropdown">
                                     <a href="/online-therapy/">Online Therapy</a>
-                                    <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container" >
                                         <li><a href="../online-therapy#online-consultation">Online Consultation</a></li>
                                         <li><a href="../online-therapy#video-therapy-session">Video Therapy Sessions</a></li>
                                         <li><a href="../online-therapy#psychological-consuling">Online Psychological Counseling</a></li>
@@ -738,7 +769,7 @@ class Footer extends HTMLElement {
         </header>`
 
 
-      
+
     }
 }
 
@@ -772,7 +803,7 @@ class ServiceHeader2 extends HTMLElement {
                                 <span class="topbar-one__open__icon">
                                     <i class="icon-clock"></i>
                                 </span>
-                                <p class="topbar-one__open__text text-white">Mon to Fri 9:00am to 6:00pm</p><!-- /.topbar-one__open__text -->
+                                <p class="topbar-one__open__text text-white">Mon to Sun 8:00am to 8:00pm</p><!-- /.topbar-one__open__text -->
                             </div><!-- /.topbar-one__open -->
                             <div class="topbar-one__social">
                                 <a href="https://www.facebook.com/apricotcare">
@@ -798,9 +829,9 @@ class ServiceHeader2 extends HTMLElement {
             </div><!-- /.topbar-one -->
             <div class="container-fluid">    
                 <div class="main-header__inner">
-                    <div class="main-header__logo logo-retina">
+                    <div class="main-header__logo">
                         <a href="/">
-                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153">
+                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153" height="60">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -830,7 +861,7 @@ class ServiceHeader2 extends HTMLElement {
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="">Specialized Therapies</a>
+                                            <a href="#">Specialized Therapies</a>
                                             <ul class="sub-menu drpdwn-container">
                                                 <li><a href="./physiotherapy-in-pune">Physiotherapy</a></li>
                                                 <li><a href="./respiratory-therapy-in-pune">Respiratory Therapy</a></li>
@@ -856,7 +887,7 @@ class ServiceHeader2 extends HTMLElement {
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac Rehabilitation Care</a></li>
                                                 <li><a href="../advanced-care-programs/senior-care-in-pune">Senior Care</a></li>
@@ -867,6 +898,7 @@ class ServiceHeader2 extends HTMLElement {
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy Care</a></li>
                                                 <li><a href="../advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune">TKR/THR (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore Management</a></li>
+                                               <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional Care</a></li> 
                                             </ul>
                                         </li>
                                     </ul>
@@ -920,7 +952,7 @@ class ServiceHeader2 extends HTMLElement {
         </header>`
 
 
-      
+
     }
 }
 
@@ -954,7 +986,7 @@ class ServiceHeader3 extends HTMLElement {
                                 <span class="topbar-one__open__icon">
                                     <i class="icon-clock"></i>
                                 </span>
-                                <p class="topbar-one__open__text text-white">Mon to Fri 9:00am to 6:00pm</p><!-- /.topbar-one__open__text -->
+                                <p class="topbar-one__open__text text-white">Mon to Sun 8:00am to 8:00pm</p><!-- /.topbar-one__open__text -->
                             </div><!-- /.topbar-one__open -->
                             <div class="topbar-one__social">
                                 <a href="https://www.facebook.com/apricotcare">
@@ -980,10 +1012,9 @@ class ServiceHeader3 extends HTMLElement {
             </div><!-- /.topbar-one -->
             <div class="container-fluid">    
                 <div class="main-header__inner">
-                    <div class="main-header__logo logo-retina">
+                    <div class="main-header__logo">
                         <a href="../">
-                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153">
-                        </a>
+                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153" height="60">                        </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
                         <nav class="main-header__nav main-menu">
@@ -1012,7 +1043,7 @@ class ServiceHeader3 extends HTMLElement {
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="">Specialized Therapies</a>
+                                            <a href="#">Specialized Therapies</a>
                                             <ul class="sub-menu drpdwn-container">
                                                 <li><a href="../specialized-therapies/physiotherapy-in-pune">Physiotherapy</a></li>
                                                 <li><a href="../specialized-therapies/respiratory-therapy-in-pune">Respiratory Therapy</a></li>
@@ -1038,7 +1069,7 @@ class ServiceHeader3 extends HTMLElement {
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac Rehabilitation Care</a></li>
                                                 <li><a href="../advanced-care-programs/senior-care-in-pune">Senior Care</a></li>
@@ -1049,6 +1080,7 @@ class ServiceHeader3 extends HTMLElement {
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy Care</a></li>
                                                 <li><a href="../advanced-care-programs/tkr-thr-knee-hip-replacement-care-in-pune">TKR/THR (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore Management</a></li>
+                                               <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional Care</a></li> 
                                             </ul>
                                         </li>
                                     </ul>
@@ -1102,7 +1134,7 @@ class ServiceHeader3 extends HTMLElement {
         </header>`
 
 
-      
+
     }
 }
 
@@ -1136,7 +1168,7 @@ class ServiceHeader4 extends HTMLElement {
                                 <span class="topbar-one__open__icon">
                                     <i class="icon-clock"></i>
                                 </span>
-                                <p class="topbar-one__open__text text-white">Mon to Fri 9:00am to 6:00pm</p><!-- /.topbar-one__open__text -->
+                                <p class="topbar-one__open__text text-white">Mon to Sun 8:00am to 8:00pm</p><!-- /.topbar-one__open__text -->
                             </div><!-- /.topbar-one__open -->
                             <div class="topbar-one__social">
                                 <a href="https://www.facebook.com/apricotcare">
@@ -1162,9 +1194,9 @@ class ServiceHeader4 extends HTMLElement {
             </div><!-- /.topbar-one -->
             <div class="container-fluid">    
                 <div class="main-header__inner">
-                    <div class="main-header__logo logo-retina">
+                    <div class="main-header__logo">
                         <a href="../">
-                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153">
+                            <img src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp" alt="Sifoxen HTML" width="153" height="60">
                         </a>
                     </div><!-- /.main-header__logo -->
                     <div class="main-header__right">
@@ -1194,7 +1226,7 @@ class ServiceHeader4 extends HTMLElement {
                                             </ul>
                                         </li>
                                         <li class="dropdown">
-                                            <a href="">Specialized Therapies</a>
+                                            <a href="#">Specialized Therapies</a>
                                             <ul class="sub-menu drpdwn-container">
                                                 <li><a href="../specialized-therapies/physiotherapy-in-pune">Physiotherapy</a></li>
                                                 <li><a href="../specialized-therapies/respiratory-therapy-in-pune">Respiratory Therapy</a></li>
@@ -1220,7 +1252,7 @@ class ServiceHeader4 extends HTMLElement {
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="./feeding-tube-care-in-pune">Feeding Tube Care</a></li>
                                                 <li><a href="./cardiac-rehabilitation-in-pune">Cardiac Rehabilitation Care</a></li>
                                                 <li><a href="./senior-care-in-pune">Senior Care</a></li>
@@ -1231,6 +1263,7 @@ class ServiceHeader4 extends HTMLElement {
                                                 <li><a href="./tracheostomy-care-in-pune">Tracheostomy Care</a></li>
                                                 <li><a href="./tkr-thr-knee-hip-replacement-care-in-pune">TKR/THR (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="./bedsore-management-in-pune">Bedsore Management</a></li>
+                                               <li><a href="./transitional-care-in-pune">Transitional Care</a></li> 
                                             </ul>
                                         </li>
                                     </ul>
@@ -1284,7 +1317,7 @@ class ServiceHeader4 extends HTMLElement {
         </header>`
 
 
-      
+
     }
 }
 

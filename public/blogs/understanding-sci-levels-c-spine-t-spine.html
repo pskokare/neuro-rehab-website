@@ -12,8 +12,7 @@
     <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
     <meta name="description"
         content="Understand how C-spine vs T-spine injuries affect your body. Learn recovery potential, independence levels, and what quality rehabilitation can achieve" />
-    <link rel="canonical"
-        href="https://neurorehabilitationcentre.com/blogs/understanding-sci-levels-c-spine-t-spine">
+    <link rel="canonical" href="https://neurorehabilitationcentre.com/blogs/understanding-sci-levels-c-spine-t-spine">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,6 +77,38 @@
         @media (max-width: 992px) {
             .author-avatar {
                 margin: 0 auto 20px;
+            }
+        }
+
+
+        /* Done for the sidebar scrolling on this page copy as it is this script and uppe styling on other blog page   */
+
+        /* ===================================================
+           BLOG SCROLL FIX — DESKTOP ONLY
+           Same pattern as service-details pages:
+           Only the content column gets a fixed height + scroll.
+           The right sidebar column is completely untouched.
+        =================================================== */
+        @media (min-width: 992px) {
+
+            /* Row: flex-start so sidebar only takes its natural height, no stretch */
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            /* LEFT content column: height set by JS to match sidebar, independent scroll */
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+
+            /* RIGHT sidebar column: zero changes — shows exactly as-is */
+        }
+
+        /* MOBILE: Reset the content column height to auto */
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
             }
         }
     </style>
@@ -170,9 +201,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -182,7 +215,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -215,8 +249,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -233,7 +266,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -247,8 +280,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -257,6 +289,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -284,7 +319,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -335,8 +370,8 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img
-                                        src="../assets/images/blogs/understanding-sci-levels-c-spine-t-spine.webp" alt="Understanding SCI Levels c Spine t Spine">
+                                    <img src="../assets/images/blogs/understanding-sci-levels-c-spine-t-spine.webp"
+                                        alt="Understanding SCI Levels c Spine t Spine">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">11</span>
                                         <span class="blog-card__date__month">Nov</span>
@@ -480,143 +515,150 @@
                                         <h2 id="heading-7">C-Spine vs. T-Spine. The Direct Comparison</h2>
                                         <section class="spinal-injury-comparison">
                                             <div class="spinal-table-container">
-                                              <table class="spinal-table">
-                                                <thead>
-                                                  <tr>
-                                                    <th class="functional-col"><span>Functional Area</span></th>
-                                                    <th><span>C-Spine Injuries</span></th>
-                                                    <th><span>T-Spine Injuries</span></th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Arm &amp; Hand Function</span></td>
-                                                    <td><span>Lost or severely limited</span></td>
-                                                    <td><span>Fully preserved</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Leg Function</span></td>
-                                                    <td><span>Lost</span></td>
-                                                    <td><span>Lost</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Independent Breathing</span></td>
-                                                    <td><span>C6-C8 yes; C1-C5 no</span></td>
-                                                    <td><span>Yes, always</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Self-Care Tasks</span></td>
-                                                    <td><span>Limited (C1-C5); possible (C6-C8)</span></td>
-                                                    <td><span>Highly possible</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Wheelchair Use</span></td>
-                                                    <td><span>Power chair typical; manual possible (C7+)</span></td>
-                                                    <td><span>Manual wheelchair typical</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Employment Prospects</span></td>
-                                                    <td><span>Challenging; desk work hard</span></td>
-                                                    <td><span>Better; many options</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Autonomic Dysreflexia Risk</span></td>
-                                                    <td><span>Up to 90%</span></td>
-                                                    <td><span>48-91% (high thoracic); rare below T10</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Hours of Daily Care Needed</span></td>
-                                                    <td><span>C1-C4: 24 hours; C5+: variable</span></td>
-                                                    <td><span>Usually none; independent</span></td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td class="functional-col"><span>Quality of Life Independence</span></td>
-                                                    <td><span>Lower</span></td>
-                                                    <td><span>Higher</span></td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
+                                                <table class="spinal-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="functional-col"><span>Functional Area</span></th>
+                                                            <th><span>C-Spine Injuries</span></th>
+                                                            <th><span>T-Spine Injuries</span></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Arm &amp; Hand
+                                                                    Function</span></td>
+                                                            <td><span>Lost or severely limited</span></td>
+                                                            <td><span>Fully preserved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Leg Function</span></td>
+                                                            <td><span>Lost</span></td>
+                                                            <td><span>Lost</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Independent
+                                                                    Breathing</span></td>
+                                                            <td><span>C6-C8 yes; C1-C5 no</span></td>
+                                                            <td><span>Yes, always</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Self-Care Tasks</span></td>
+                                                            <td><span>Limited (C1-C5); possible (C6-C8)</span></td>
+                                                            <td><span>Highly possible</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Wheelchair Use</span></td>
+                                                            <td><span>Power chair typical; manual possible (C7+)</span>
+                                                            </td>
+                                                            <td><span>Manual wheelchair typical</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Employment Prospects</span>
+                                                            </td>
+                                                            <td><span>Challenging; desk work hard</span></td>
+                                                            <td><span>Better; many options</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Autonomic Dysreflexia
+                                                                    Risk</span></td>
+                                                            <td><span>Up to 90%</span></td>
+                                                            <td><span>48-91% (high thoracic); rare below T10</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Hours of Daily Care
+                                                                    Needed</span></td>
+                                                            <td><span>C1-C4: 24 hours; C5+: variable</span></td>
+                                                            <td><span>Usually none; independent</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="functional-col"><span>Quality of Life
+                                                                    Independence</span></td>
+                                                            <td><span>Lower</span></td>
+                                                            <td><span>Higher</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
-                                          
+
                                             <style>
-                                              .spinal-injury-comparison {
-                                                margin: 2rem 0;
-                                                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-                                                color: #333;
-                                              }
-                                              
-                                              .spinal-table-container {
-                                                overflow-x: auto;
-                                                margin: 0 auto;
-                                                max-width: 100%;
-                                                box-shadow: 0 0 0 1px #333;
-                                                border-radius: 4px;
-                                              }
-                                              
-                                              .spinal-table {
-                                                width: 100%;
-                                                border-collapse: collapse;
-                                                background-color: #fff;
-                                              }
-                                              
-                                              .spinal-table th,
-                                              .spinal-table td {
-                                                border: 1px solid #333;
-                                                padding: 0.75rem;
-                                                text-align: left;
-                                                vertical-align: top;
-                                              }
-                                              
-                                              .spinal-table thead th {
-                                                background-color: #f5f5f5;
-                                                font-weight: 700;
-                                                position: sticky;
-                                                top: 0;
-                                              }
-                                              
-                                              .spinal-table .functional-col {
-                                                background-color: #f9f9f9;
-                                                font-weight: 600;
-                                                width: 25%;
-                                              }
-                                              
-                                              .spinal-table tbody tr:nth-child(even) {
-                                                background-color: #fafafa;
-                                              }
-                                              
-                                              .spinal-table tbody tr:hover {
-                                                background-color: #f0f0f0;
-                                                transition: background-color 0.2s ease;
-                                              }
-                                              
-                                              /* Responsive styles */
-                                              @media (max-width: 768px) {
-                                                .spinal-table {
-                                                  font-size: 0.875rem;
+                                                .spinal-injury-comparison {
+                                                    margin: 2rem 0;
+                                                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+                                                    color: #333;
                                                 }
-                                                
+
+                                                .spinal-table-container {
+                                                    overflow-x: auto;
+                                                    margin: 0 auto;
+                                                    max-width: 100%;
+                                                    box-shadow: 0 0 0 1px #333;
+                                                    border-radius: 4px;
+                                                }
+
+                                                .spinal-table {
+                                                    width: 100%;
+                                                    border-collapse: collapse;
+                                                    background-color: #fff;
+                                                }
+
                                                 .spinal-table th,
                                                 .spinal-table td {
-                                                  padding: 0.5rem;
+                                                    border: 1px solid #333;
+                                                    padding: 0.75rem;
+                                                    text-align: left;
+                                                    vertical-align: top;
                                                 }
-                                                
+
+                                                .spinal-table thead th {
+                                                    background-color: #f5f5f5;
+                                                    font-weight: 700;
+                                                    position: sticky;
+                                                    top: 0;
+                                                }
+
                                                 .spinal-table .functional-col {
-                                                  width: 30%;
+                                                    background-color: #f9f9f9;
+                                                    font-weight: 600;
+                                                    width: 25%;
                                                 }
-                                              }
-                                              
-                                              @media (max-width: 480px) {
-                                                .spinal-table {
-                                                  font-size: 0.8rem;
+
+                                                .spinal-table tbody tr:nth-child(even) {
+                                                    background-color: #fafafa;
                                                 }
-                                                
-                                                .spinal-table th,
-                                                .spinal-table td {
-                                                  padding: 0.35rem;
+
+                                                .spinal-table tbody tr:hover {
+                                                    background-color: #f0f0f0;
+                                                    transition: background-color 0.2s ease;
                                                 }
-                                              }
+
+                                                /* Responsive styles */
+                                                @media (max-width: 768px) {
+                                                    .spinal-table {
+                                                        font-size: 0.875rem;
+                                                    }
+
+                                                    .spinal-table th,
+                                                    .spinal-table td {
+                                                        padding: 0.5rem;
+                                                    }
+
+                                                    .spinal-table .functional-col {
+                                                        width: 30%;
+                                                    }
+                                                }
+
+                                                @media (max-width: 480px) {
+                                                    .spinal-table {
+                                                        font-size: 0.8rem;
+                                                    }
+
+                                                    .spinal-table th,
+                                                    .spinal-table td {
+                                                        padding: 0.35rem;
+                                                    }
+                                                }
                                             </style>
-                                          </section>
+                                        </section>
                                         <p>This table tells a story. Preserved arm function changes everything. It's the
                                             single biggest factor determining whether someone regains independence.</p>
                                         <h2 id="heading-8">What Happens to Your Body Functions</h2>
@@ -769,32 +811,37 @@
                     <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -939,7 +986,8 @@
                             <ul class="list-unstyled footer-widget__links">
                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune"
                                         class="text-white">Carniotomy Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Rehabilitation</a></li>
                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune"
                                         class="text-white">Tracheostomy Care</a></li>
@@ -947,6 +995,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -962,7 +1013,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -972,7 +1024,8 @@
                                         class="text-white">Orthopedic Care</a></li>
                                 <li><a href="../medical-rehabilitation/postoperative-care-in-pune"
                                         class="text-white">Postoperative Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/neuro-care-in-pune" class="text-white">Neuro
                                         Care</a></li>
@@ -1099,7 +1152,7 @@
             <div class="logo-box logo-retina">
                 <a href="//" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1140,8 +1193,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
@@ -1211,34 +1264,34 @@
             }
         }
     </style>
-        <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <script>
-            // Fallback in case Font Awesome doesn't load
-            window.addEventListener('DOMContentLoaded', function(){
-                var testDiv = document.createElement('div');
-                testDiv.innerHTML = '<i class="fa fa-check"></i>';
-                document.body.appendChild(testDiv);
-                var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
-                    window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
-                document.body.removeChild(testDiv);
-                if (!faLoaded) {
-                    var fallback = document.createElement('link');
-                    fallback.rel = 'stylesheet';
-                    fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
-                    document.head.appendChild(fallback);
-                }
-            });
-        </script>
-        <div class="mobile-bottom-bar">
-            <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
-                aria-label="Contact via WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
-                <i class="fa-solid fa-phone"></i> Call
-            </a>
-        </div>
+    <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        // Fallback in case Font Awesome doesn't load
+        window.addEventListener('DOMContentLoaded', function () {
+            var testDiv = document.createElement('div');
+            testDiv.innerHTML = '<i class="fa fa-check"></i>';
+            document.body.appendChild(testDiv);
+            var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
+                window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
+            document.body.removeChild(testDiv);
+            if (!faLoaded) {
+                var fallback = document.createElement('link');
+                fallback.rel = 'stylesheet';
+                fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
+                document.head.appendChild(fallback);
+            }
+        });
+    </script>
+    <div class="mobile-bottom-bar">
+        <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
+            aria-label="Contact via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
+            <i class="fa-solid fa-phone"></i> Call
+        </a>
+    </div>
     <!-- Font Awesome 6 CDN -->
 
     <script src="../assets/vendors/jquery/jquery-3.7.0.min.js"></script>
@@ -1263,23 +1316,40 @@
     <script src="../assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
     <!-- template js -->
     <script src="../assets/js/sifoxen.js"></script>
-   <script>
-            // Show locations only when toggled
-            (function() {
-                var btn = document.getElementById('footerLocationToggleBtn');
-                var list = document.getElementById('footerLocationList');
-                var chevron = document.getElementById('footerLocationChevron');
-                btn.addEventListener('click', function() {
-                    var isOpen = list.style.display === "block";
-                    // Toggle display
-                    list.style.display = isOpen ? "none" : "block";
-                    // Toggle aria
-                    btn.setAttribute('aria-expanded', !isOpen);
-                    // Animate chevron
-                    chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-                });
-            })();
-        </script>
+
+    <!-- Done for the sidebar scrolling on this page copy as it is this script and uppe styling on other blog page  -->
+    <script>
+        (function () {
+            var btn = document.getElementById('footerLocationToggleBtn');
+            if (!btn) return;
+            var list = document.getElementById('footerLocationList');
+            var chevron = document.getElementById('footerLocationChevron');
+            btn.addEventListener('click', function () {
+                var isOpen = list.style.display === "block";
+                list.style.display = isOpen ? "none" : "block";
+                btn.setAttribute('aria-expanded', !isOpen);
+                chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+            });
+        })();
+
+        function syncBlogColumnHeight() {
+            var sidebar = document.querySelector('.blog-details-page .row.gutter-y-60 > .col-lg-4');
+            var content = document.querySelector('.blog-details-page .row.gutter-y-60 > .col-lg-8');
+            if (!sidebar || !content) return;
+
+            if (window.innerWidth >= 992) {
+                content.style.height = 'auto';
+                var sidebarHeight = sidebar.scrollHeight;
+                content.style.height = sidebarHeight + 'px';
+            } else {
+                content.style.height = 'auto';
+                content.style.overflowY = 'visible';
+            }
+        }
+
+        window.addEventListener('load', syncBlogColumnHeight);
+        window.addEventListener('resize', syncBlogColumnHeight);
+    </script>
 </body>
 
 </html>

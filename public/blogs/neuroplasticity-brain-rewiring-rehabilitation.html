@@ -98,7 +98,217 @@
             }
         }
     </style>
-   
+
+    <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
+        }
+    </style>
+
 
 </head>
 
@@ -189,9 +399,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -201,7 +413,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -234,8 +447,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -252,7 +464,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -266,8 +478,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -276,6 +487,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -303,7 +517,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -355,8 +569,8 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img
-                                        src="../assets/images/blogs/neuroplasticity-brain-rewiring-rehabilitation.webp" alt="neuroplasticity-brain-rewiring-rehabilitation">
+                                    <img src="../assets/images/blogs/neuroplasticity-brain-rewiring-rehabilitation.webp"
+                                        alt="neuroplasticity-brain-rewiring-rehabilitation">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">14</span>
                                         <span class="blog-card__date__month">JAN</span>
@@ -369,12 +583,13 @@
                                             <div class="author-avatar my-auto"
                                                 style="width:40px;height:40px;margin-right:5px;">
                                                 <img src="../assets/images/doctors/Dr.-arpita - Copy.jpg" alt="admin">
-                                            </div> 
+                                            </div>
                                             <span style="font-size:13px; line-height:16px;">
                                                 <b>Medically Reviewed By</b><br>
                                                 <a href="../doctor/dr-arpita-ganguly">Dr. Arpita Ganguly</a><br>
                                                 <span style="font-size:12px; color:#666;">
-                                                    BPT, MPT (Neuro), 6+ years clinical <br> experience in neuro rehabilitation & functional recovery
+                                                    BPT, MPT (Neuro), 6+ years clinical <br> experience in neuro
+                                                    rehabilitation & functional recovery
                                                 </span>
                                             </span>
                                         </div>
@@ -386,294 +601,301 @@
                                         </div>
                                     </div>
                                     <div class="blog-card__content__inner" style="text-align: justify;">
-                                            <p>Imagine a man named Raj. After his stroke, his right side felt like a
-                                                stranger. It was weak and unresponsive. The doctors explained the damage
-                                                in his brain. Hope felt thin. Then, at his new therapy sessions,
-                                                something small but miraculous happened. One day, a finger that had been
-                                                still for weeks twitched. That twitch was not just a muscle movement. It
-                                                was a signal. It was his brain, whispering, "I am finding a new way."
-                                                This silent, inner remodeling is the heart of recovery. It is called
-                                                neuroplasticity.</p>
-                                            <p>Neuroplasticity is your brain's lifelong ability to form new neural
-                                                connections. This allows it to reorganize pathways, heal from injury,
-                                                and learn new skills, especially through targeted rehabilitation.</p>
-                                            <p>For years, science believed the adult brain was fixed and unchangeable.
-                                                Today, we know this is completely wrong. Your brain is dynamic,
-                                                adaptable, and constantly responding to your experiences. This is not
-                                                just positive thinking. It is the solid, biological foundation of all
-                                                effective neuro rehabilitation. At Apricot Care, we do not just
-                                                work&nbsp;<i>around</i> your injury. We collaborate with your brain's
-                                                innate plasticity to guide your recovery journey.</p>
-                                            <h2><strong>The Surprising Truth: Your Brain Is Built for Change</strong>
-                                            </h2>
-                                            <p>What most people do not realize is that neuroplasticity is not a single
-                                                event. It is an ongoing process. It happens every time you learn a new
-                                                recipe, memorize a phone number, or find a new route home. After a
-                                                neurological event like a stroke, brain injury, or with a condition like
-                                                Parkinson's, this natural ability becomes the most critical tool for
-                                                recovery.</p>
-                                            <h3><strong>Two Powerful Types of Plasticity at Work</strong></h3>
-                                            <p>Your brain uses two main strategies to rewire itself, especially after an
-                                                injury.</p>
-                                            <ul>
-                                                <li><span class="ck-list-bogus-paragraph">Structural Plasticity: Think
-                                                        of this as your brain's actual construction crew. With
-                                                        consistent practice, the brain can grow new dendritic spines.
-                                                        These are the tiny branches that connect neurons. It can even
-                                                        strengthen the physical connections between brain cells. This is
-                                                        the "hardware" upgrade.</span></li>
-                                                <li><span class="ck-list-bogus-paragraph">Functional Plasticity: This is
-                                                        your brain's brilliant software manager. If one network is
-                                                        damaged, functional plasticity allows a different, healthy part
-                                                        of the brain to take over some of its jobs. This is why
-                                                        repetitive, task-specific practice in therapy is so powerful. It
-                                                        actively trains new brain areas to handle lost functions.</span>
-                                                </li>
-                                            </ul>
-                                            <h3><strong>The "Use It or Improve It" Principle</strong></h3>
-                                            <p>A foundational rule in neurorehabilitation is that specific, repeated
-                                                practice drives specific brain change. You cannot wish for a better golf
-                                                swing and get it. You have to practice. The same is true for recovering
-                                                hand movement or speech. The neural circuits you activate most
-                                                frequently become stronger and more efficient. This is why a generic
-                                                exercise routine is not enough. Therapy must be&nbsp;<i>highly
-                                                    personalized</i> and&nbsp;<i>intensely focused</i> on your unique
-                                                goals. These goals might be taking a step or holding a spoon.</p>
-                                            <h2><strong>What Most Rehabilitation Centres Do Not Talk About</strong></h2>
-                                            <p>Many discussions on neuroplasticity stop at "practice makes perfect." But
-                                                to truly harness your brain's potential, you need to understand the
-                                                deeper factors. These factors can speed up or slow down your progress,
-                                                and they are often overlooked.</p>
-                                            <h3><strong>The Hidden Role of "Passive" Therapy</strong></h3>
-                                            <p>When you think of hard work, you think of active effort. But here is a
-                                                surprising truth: advanced modalities like&nbsp;<a
-                                                    href="https://neurorehabilitationcentre.com/blogs/robotic-therapy-stroke-rehabilitation-pune"><strong>robotic
-                                                        therapy</strong></a> and functional electrical stimulation (FES)
-                                                are not passive. They are powerful plasticity primers.</p>
-                                            <p>These technologies do two critical things.</p>
-                                            <ol>
-                                                <li><span class="ck-list-bogus-paragraph">They provide high-intensity,
-                                                        repetitive movement. This might be impossible for you to do
-                                                        alone yet.</span></li>
-                                                <li><span class="ck-list-bogus-paragraph">They send a flood of correct
-                                                        sensory feedback to your brain.</span></li>
-                                            </ol>
-                                            <p>This feedback is like a GPS for your neurons. It tells your brain, "This
-                                                is what walking&nbsp;<i>should</i> feel like." This clear signal helps
-                                                your brain map out the new pathways it needs to build. It makes your
-                                                active efforts later much more productive.</p>
-                                                <section class="neuroplasticity-therapy-table">
-                                                    <style>
-                                                        .neuroplasticity-therapy-table {
-                                                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                                            margin: 20px 0;
-                                                            overflow-x: auto;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table table {
-                                                            width: 100%;
-                                                            border-collapse: collapse;
-                                                            background: white;
-                                                            border: 1px solid #000;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table th {
-                                                            background: #000;
-                                                            color: white;
-                                                            font-weight: 600;
-                                                            padding: 16px 12px;
-                                                            text-align: left;
-                                                            border-bottom: 2px solid #000;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table td {
-                                                            padding: 14px 12px;
-                                                            border-bottom: 1px solid #ddd;
-                                                            vertical-align: top;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table tr:nth-child(even) {
-                                                            background: #f9f9f9;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table tr:hover {
-                                                            background: #f0f0f0;
-                                                        }
-                                                        
-                                                        .neuroplasticity-therapy-table .therapy-type {
-                                                            font-weight: 600;
-                                                            background: #f5f5f5;
-                                                        }
-                                                        
-                                                        @media (max-width: 768px) {
-                                                            .neuroplasticity-therapy-table table {
-                                                                font-size: 0.9em;
-                                                            }
-                                                            
-                                                            .neuroplasticity-therapy-table th, 
-                                                            .neuroplasticity-therapy-table td {
-                                                                padding: 10px 8px;
-                                                            }
-                                                            
-                                                            .neuroplasticity-therapy-table th:nth-child(1),
-                                                            .neuroplasticity-therapy-table td:nth-child(1) {
-                                                                position: sticky;
-                                                                left: 0;
-                                                                background: #f5f5f5;
-                                                                z-index: 1;
-                                                            }
-                                                        }
-                                                        
-                                                        @media (max-width: 480px) {
-                                                            .neuroplasticity-therapy-table table {
-                                                                font-size: 0.82em;
-                                                            }
-                                                            
-                                                            .neuroplasticity-therapy-table th, 
-                                                            .neuroplasticity-therapy-table td {
-                                                                padding: 8px 6px;
-                                                            }
-                                                        }
-                                                    </style>
-                                                    
-                                                    <table>
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Therapy Type</th>
-                                                                <th>How It Promotes Neuroplasticity</th>
-                                                                <th>The Overlooked Benefit</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td class="therapy-type">Active, Repetitive Practice (e.g., grasping objects, step-training)</td>
-                                                                <td>Directly strengthens new neural circuits through focused use.</td>
-                                                                <td>Builds strength and confidence. It is the "main driver" of change.</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td class="therapy-type">Technology-Assisted Therapy (e.g., Robotic gait trainers, FES)</td>
-                                                                <td>Provides perfect sensory feedback and high repetition to "teach" the brain the correct pattern.</td>
-                                                                <td>Prevents your brain from learning compensatory (and often harmful) movements. It does this by reinforcing the ideal movement pathway from day one.</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </section>
-                                            <h3><strong>Your Caregiver: Your Brain's Essential Partner</strong></h3>
-                                            <p>Your therapy session might be 60 minutes a day. What happens in the other
-                                                23 hours is equally important for your brain's rewiring. Family and
-                                                caregivers are not just helpers. They are co-therapists in your
-                                                neuroplastic journey.</p>
-                                            <p>A caregiver who knows how to cue your movements correctly is vital. They
-                                                can encourage the use of your affected side and integrate therapeutic
-                                                principles into daily activities. These activities include dressing or
-                                                meal preparation. This creates a 24/7 healing environment. This
-                                                constant, integrated practice leads to faster, more durable rewiring. At
-                                                our neuro rehabilitation centre in Pune, we insist on training and
-                                                involving families. We do this because their role is that powerful.</p>
-                                            <h3><strong>The Mindset That Builds New Pathways</strong></h3>
-                                            <p>If you are stressed, anxious, or depressed, your brain enters a "survival
-                                                mode." In this state, resources are diverted away from learning and
-                                                growth. This means they move away from plasticity and toward basic
-                                                coping. Your emotional state is a direct regulator of your brain's
-                                                plasticity chemicals.</p>
-                                            <p>Motivation, celebration of small wins, and a supportive environment are
-                                                not just nice. They are&nbsp;<i>neurologically necessary</i>. They boost
-                                                neurotransmitters like dopamine and BDNF (Brain-Derived Neurotrophic
-                                                Factor). These act like fertilizer for new neural connections. A
-                                                holistic neuro rehabilitation centre must address your emotional
-                                                well-being. It must be taken as seriously as your physical exercises.
-                                            </p>
-                                            <h2><strong>Practical Neuroplasticity: Actionable Hacks for Your
-                                                    Recovery</strong></h2>
-                                            <p>Knowing about plasticity is one thing. Applying it daily is another. Here
-                                                are concrete, often-missed strategies to actively engage your brain's
-                                                rewiring power.</p>
-                                            <h3><strong>1. The Power of Mental Practice (Motor Imagery)</strong></h3>
-                                            <p>Close your eyes. Vividly imagine yourself performing a movement. Imagine
-                                                lifting your arm or taking a step with perfect form. Do this for 5 to 10
-                                                minutes, several times a day.</p>
-                                            <ul>
-                                                <li><span class="ck-list-bogus-paragraph">The Science: Studies show that
-                                                        mental practice activates the same motor cortex regions as
-                                                        physical practice. It is a zero risk, high reward way to fire
-                                                        and wire those crucial neural circuits. This is especially
-                                                        helpful when fatigue or access to therapy limits physical
-                                                        practice.</span></li>
-                                            </ul>
-                                            <h3><strong>2. Embrace the "Good" Frustration of Challenge</strong></h3>
-                                            <p>Your brain only changes when it is challenged. If an exercise becomes
-                                                easy, your brain has already adapted. The key is to work at the "edge of
-                                                your ability."</p>
-                                            <ul>
-                                                <li><span class="ck-list-bogus-paragraph">The Application: A good
-                                                        therapist will constantly tweak your exercises. They might add a
-                                                        slight incline, a distraction, or a more complex sequence. This
-                                                        "good frustration" is the signal. It tells your brain, "We need
-                                                        to build a stronger network here."</span></li>
-                                            </ul>
-                                            <h3><strong>3. Prioritize Sleep as Therapy Time</strong></h3>
-                                            <p>Sleep is when the magic of consolidation happens. The motor skills you
-                                                practiced during the day are replayed and solidified in your brain
-                                                overnight. Poor sleep disrupts this essential process.</p>
-                                            <ul>
-                                                <li><span class="ck-list-bogus-paragraph">The Action: Protect your sleep
-                                                        hygiene. A dark, cool room and a consistent routine are not just
-                                                        for rest. They are a non-negotiable part of your brain injury
-                                                        recovery in Pune or anywhere else.</span></li>
-                                            </ul>
-                                            <h3><strong>4. Engage All Your Senses</strong></h3>
-                                            <p>Do not just focus on movement. When practicing a task, pay attention to
-                                                the&nbsp;<i>sensation</i>.</p>
-                                            <ul>
-                                                <li><span class="ck-list-bogus-paragraph">The Method: When reaching for
-                                                        a cup, notice its temperature, texture, and weight. Listen to
-                                                        the sound of your foot making contact with the floor during
-                                                        walking. This multisensory input gives your brain more data. It
-                                                        uses this data to build richer, more stable neural maps.</span>
-                                                </li>
-                                            </ul>
-                                            <h2><strong>Your Journey Forward: Partnering with Plasticity</strong></h2>
-                                            <p>Neuroplasticity turns the old, grim narrative of "permanent damage" on
-                                                its head. The journey is undoubtedly demanding. It requires consistency,
-                                                courage, and the right guidance. But the core message is one of profound
-                                                hope: your brain is on your team, waiting to be guided.</p>
-                                            <p>The key takeaways are simple but profound.</p>
-                                            <ol>
-                                                <li><span class="ck-list-bogus-paragraph">Your brain can rewire itself
-                                                        throughout life. This is a scientific fact, not wishful
-                                                        thinking.</span></li>
-                                                <li><span class="ck-list-bogus-paragraph">Specific, repetitive, and
-                                                        challenging practice is the primary driver of this
-                                                        change.</span></li>
-                                                <li><span class="ck-list-bogus-paragraph">True recovery leverages
-                                                        overlooked tools. These include advanced technology for perfect
-                                                        feedback and trained caregivers for 24/7 support. A positive
-                                                        mindset is also needed to fuel the brain's growth
-                                                        chemistry.</span></li>
-                                                <li><span class="ck-list-bogus-paragraph">You can participate actively
-                                                        every day. You can do this through mental practice, embracing
-                                                        challenge, prioritizing sleep, and engaging your senses.</span>
-                                                </li>
-                                            </ol>
-                                            <p>The question now is not&nbsp;<i>if</i> your brain can change. The
-                                                question is how will you guide that change today? Will you do five
-                                                minutes of mental practice? Will you focus on the sensation of your next
-                                                movement? Your next small, conscious effort is a direct instruction to
-                                                your neurons.</p>
-                                            <p>Are you ready to explore a rehabilitation program designed in partnership
-                                                with the principles of neuroplasticity? At&nbsp;<a
-                                                    href="https://neurorehabilitationcentre.com/"><strong>Apricot
-                                                        Care</strong></a>, our approach to Robotic Neuro Rehabilitation
-                                                in Pune and personalized therapy is built from the ground up. It is
-                                                designed to strategically harness your brain's amazing ability to
-                                                heal.&nbsp;<a
-                                                    href="https://neurorehabilitationcentre.com/contact"><strong>Let us
-                                                        have a conversation</strong></a>. We can discuss how to build a
-                                                recovery plan as unique and adaptable as your own brain.</p>
-                                        </div>
-                                    </div><!-- /.blog-card-four__content -->
-                                </div><!-- /.blog-card -->
-                                <div class="author-box"
+                                        <p>Imagine a man named Raj. After his stroke, his right side felt like a
+                                            stranger. It was weak and unresponsive. The doctors explained the damage
+                                            in his brain. Hope felt thin. Then, at his new therapy sessions,
+                                            something small but miraculous happened. One day, a finger that had been
+                                            still for weeks twitched. That twitch was not just a muscle movement. It
+                                            was a signal. It was his brain, whispering, "I am finding a new way."
+                                            This silent, inner remodeling is the heart of recovery. It is called
+                                            neuroplasticity.</p>
+                                        <p>Neuroplasticity is your brain's lifelong ability to form new neural
+                                            connections. This allows it to reorganize pathways, heal from injury,
+                                            and learn new skills, especially through targeted rehabilitation.</p>
+                                        <p>For years, science believed the adult brain was fixed and unchangeable.
+                                            Today, we know this is completely wrong. Your brain is dynamic,
+                                            adaptable, and constantly responding to your experiences. This is not
+                                            just positive thinking. It is the solid, biological foundation of all
+                                            effective neuro rehabilitation. At Apricot Care, we do not just
+                                            work&nbsp;<i>around</i> your injury. We collaborate with your brain's
+                                            innate plasticity to guide your recovery journey.</p>
+                                        <h2><strong>The Surprising Truth: Your Brain Is Built for Change</strong>
+                                        </h2>
+                                        <p>What most people do not realize is that neuroplasticity is not a single
+                                            event. It is an ongoing process. It happens every time you learn a new
+                                            recipe, memorize a phone number, or find a new route home. After a
+                                            neurological event like a stroke, brain injury, or with a condition like
+                                            Parkinson's, this natural ability becomes the most critical tool for
+                                            recovery.</p>
+                                        <h3><strong>Two Powerful Types of Plasticity at Work</strong></h3>
+                                        <p>Your brain uses two main strategies to rewire itself, especially after an
+                                            injury.</p>
+                                        <ul>
+                                            <li><span class="ck-list-bogus-paragraph">Structural Plasticity: Think
+                                                    of this as your brain's actual construction crew. With
+                                                    consistent practice, the brain can grow new dendritic spines.
+                                                    These are the tiny branches that connect neurons. It can even
+                                                    strengthen the physical connections between brain cells. This is
+                                                    the "hardware" upgrade.</span></li>
+                                            <li><span class="ck-list-bogus-paragraph">Functional Plasticity: This is
+                                                    your brain's brilliant software manager. If one network is
+                                                    damaged, functional plasticity allows a different, healthy part
+                                                    of the brain to take over some of its jobs. This is why
+                                                    repetitive, task-specific practice in therapy is so powerful. It
+                                                    actively trains new brain areas to handle lost functions.</span>
+                                            </li>
+                                        </ul>
+                                        <h3><strong>The "Use It or Improve It" Principle</strong></h3>
+                                        <p>A foundational rule in neurorehabilitation is that specific, repeated
+                                            practice drives specific brain change. You cannot wish for a better golf
+                                            swing and get it. You have to practice. The same is true for recovering
+                                            hand movement or speech. The neural circuits you activate most
+                                            frequently become stronger and more efficient. This is why a generic
+                                            exercise routine is not enough. Therapy must be&nbsp;<i>highly
+                                                personalized</i> and&nbsp;<i>intensely focused</i> on your unique
+                                            goals. These goals might be taking a step or holding a spoon.</p>
+                                        <h2><strong>What Most Rehabilitation Centres Do Not Talk About</strong></h2>
+                                        <p>Many discussions on neuroplasticity stop at "practice makes perfect." But
+                                            to truly harness your brain's potential, you need to understand the
+                                            deeper factors. These factors can speed up or slow down your progress,
+                                            and they are often overlooked.</p>
+                                        <h3><strong>The Hidden Role of "Passive" Therapy</strong></h3>
+                                        <p>When you think of hard work, you think of active effort. But here is a
+                                            surprising truth: advanced modalities like&nbsp;<a
+                                                href="https://neurorehabilitationcentre.com/blogs/robotic-therapy-stroke-rehabilitation-pune"><strong>robotic
+                                                    therapy</strong></a> and functional electrical stimulation (FES)
+                                            are not passive. They are powerful plasticity primers.</p>
+                                        <p>These technologies do two critical things.</p>
+                                        <ol>
+                                            <li><span class="ck-list-bogus-paragraph">They provide high-intensity,
+                                                    repetitive movement. This might be impossible for you to do
+                                                    alone yet.</span></li>
+                                            <li><span class="ck-list-bogus-paragraph">They send a flood of correct
+                                                    sensory feedback to your brain.</span></li>
+                                        </ol>
+                                        <p>This feedback is like a GPS for your neurons. It tells your brain, "This
+                                            is what walking&nbsp;<i>should</i> feel like." This clear signal helps
+                                            your brain map out the new pathways it needs to build. It makes your
+                                            active efforts later much more productive.</p>
+                                        <section class="neuroplasticity-therapy-table">
+                                            <style>
+                                                .neuroplasticity-therapy-table {
+                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                    margin: 20px 0;
+                                                    overflow-x: auto;
+                                                }
+
+                                                .neuroplasticity-therapy-table table {
+                                                    width: 100%;
+                                                    border-collapse: collapse;
+                                                    background: white;
+                                                    border: 1px solid #000;
+                                                }
+
+                                                .neuroplasticity-therapy-table th {
+                                                    background: #000;
+                                                    color: white;
+                                                    font-weight: 600;
+                                                    padding: 16px 12px;
+                                                    text-align: left;
+                                                    border-bottom: 2px solid #000;
+                                                }
+
+                                                .neuroplasticity-therapy-table td {
+                                                    padding: 14px 12px;
+                                                    border-bottom: 1px solid #ddd;
+                                                    vertical-align: top;
+                                                }
+
+                                                .neuroplasticity-therapy-table tr:nth-child(even) {
+                                                    background: #f9f9f9;
+                                                }
+
+                                                .neuroplasticity-therapy-table tr:hover {
+                                                    background: #f0f0f0;
+                                                }
+
+                                                .neuroplasticity-therapy-table .therapy-type {
+                                                    font-weight: 600;
+                                                    background: #f5f5f5;
+                                                }
+
+                                                @media (max-width: 768px) {
+                                                    .neuroplasticity-therapy-table table {
+                                                        font-size: 0.9em;
+                                                    }
+
+                                                    .neuroplasticity-therapy-table th,
+                                                    .neuroplasticity-therapy-table td {
+                                                        padding: 10px 8px;
+                                                    }
+
+                                                    .neuroplasticity-therapy-table th:nth-child(1),
+                                                    .neuroplasticity-therapy-table td:nth-child(1) {
+                                                        position: sticky;
+                                                        left: 0;
+                                                        background: #f5f5f5;
+                                                        z-index: 1;
+                                                    }
+                                                }
+
+                                                @media (max-width: 480px) {
+                                                    .neuroplasticity-therapy-table table {
+                                                        font-size: 0.82em;
+                                                    }
+
+                                                    .neuroplasticity-therapy-table th,
+                                                    .neuroplasticity-therapy-table td {
+                                                        padding: 8px 6px;
+                                                    }
+                                                }
+                                            </style>
+
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Therapy Type</th>
+                                                        <th>How It Promotes Neuroplasticity</th>
+                                                        <th>The Overlooked Benefit</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="therapy-type">Active, Repetitive Practice (e.g.,
+                                                            grasping objects, step-training)</td>
+                                                        <td>Directly strengthens new neural circuits through focused
+                                                            use.</td>
+                                                        <td>Builds strength and confidence. It is the "main driver" of
+                                                            change.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="therapy-type">Technology-Assisted Therapy (e.g.,
+                                                            Robotic gait trainers, FES)</td>
+                                                        <td>Provides perfect sensory feedback and high repetition to
+                                                            "teach" the brain the correct pattern.</td>
+                                                        <td>Prevents your brain from learning compensatory (and often
+                                                            harmful) movements. It does this by reinforcing the ideal
+                                                            movement pathway from day one.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </section>
+                                        <h3><strong>Your Caregiver: Your Brain's Essential Partner</strong></h3>
+                                        <p>Your therapy session might be 60 minutes a day. What happens in the other
+                                            23 hours is equally important for your brain's rewiring. Family and
+                                            caregivers are not just helpers. They are co-therapists in your
+                                            neuroplastic journey.</p>
+                                        <p>A caregiver who knows how to cue your movements correctly is vital. They
+                                            can encourage the use of your affected side and integrate therapeutic
+                                            principles into daily activities. These activities include dressing or
+                                            meal preparation. This creates a 24/7 healing environment. This
+                                            constant, integrated practice leads to faster, more durable rewiring. At
+                                            our neuro rehabilitation centre in Pune, we insist on training and
+                                            involving families. We do this because their role is that powerful.</p>
+                                        <h3><strong>The Mindset That Builds New Pathways</strong></h3>
+                                        <p>If you are stressed, anxious, or depressed, your brain enters a "survival
+                                            mode." In this state, resources are diverted away from learning and
+                                            growth. This means they move away from plasticity and toward basic
+                                            coping. Your emotional state is a direct regulator of your brain's
+                                            plasticity chemicals.</p>
+                                        <p>Motivation, celebration of small wins, and a supportive environment are
+                                            not just nice. They are&nbsp;<i>neurologically necessary</i>. They boost
+                                            neurotransmitters like dopamine and BDNF (Brain-Derived Neurotrophic
+                                            Factor). These act like fertilizer for new neural connections. A
+                                            holistic neuro rehabilitation centre must address your emotional
+                                            well-being. It must be taken as seriously as your physical exercises.
+                                        </p>
+                                        <h2><strong>Practical Neuroplasticity: Actionable Hacks for Your
+                                                Recovery</strong></h2>
+                                        <p>Knowing about plasticity is one thing. Applying it daily is another. Here
+                                            are concrete, often-missed strategies to actively engage your brain's
+                                            rewiring power.</p>
+                                        <h3><strong>1. The Power of Mental Practice (Motor Imagery)</strong></h3>
+                                        <p>Close your eyes. Vividly imagine yourself performing a movement. Imagine
+                                            lifting your arm or taking a step with perfect form. Do this for 5 to 10
+                                            minutes, several times a day.</p>
+                                        <ul>
+                                            <li><span class="ck-list-bogus-paragraph">The Science: Studies show that
+                                                    mental practice activates the same motor cortex regions as
+                                                    physical practice. It is a zero risk, high reward way to fire
+                                                    and wire those crucial neural circuits. This is especially
+                                                    helpful when fatigue or access to therapy limits physical
+                                                    practice.</span></li>
+                                        </ul>
+                                        <h3><strong>2. Embrace the "Good" Frustration of Challenge</strong></h3>
+                                        <p>Your brain only changes when it is challenged. If an exercise becomes
+                                            easy, your brain has already adapted. The key is to work at the "edge of
+                                            your ability."</p>
+                                        <ul>
+                                            <li><span class="ck-list-bogus-paragraph">The Application: A good
+                                                    therapist will constantly tweak your exercises. They might add a
+                                                    slight incline, a distraction, or a more complex sequence. This
+                                                    "good frustration" is the signal. It tells your brain, "We need
+                                                    to build a stronger network here."</span></li>
+                                        </ul>
+                                        <h3><strong>3. Prioritize Sleep as Therapy Time</strong></h3>
+                                        <p>Sleep is when the magic of consolidation happens. The motor skills you
+                                            practiced during the day are replayed and solidified in your brain
+                                            overnight. Poor sleep disrupts this essential process.</p>
+                                        <ul>
+                                            <li><span class="ck-list-bogus-paragraph">The Action: Protect your sleep
+                                                    hygiene. A dark, cool room and a consistent routine are not just
+                                                    for rest. They are a non-negotiable part of your brain injury
+                                                    recovery in Pune or anywhere else.</span></li>
+                                        </ul>
+                                        <h3><strong>4. Engage All Your Senses</strong></h3>
+                                        <p>Do not just focus on movement. When practicing a task, pay attention to
+                                            the&nbsp;<i>sensation</i>.</p>
+                                        <ul>
+                                            <li><span class="ck-list-bogus-paragraph">The Method: When reaching for
+                                                    a cup, notice its temperature, texture, and weight. Listen to
+                                                    the sound of your foot making contact with the floor during
+                                                    walking. This multisensory input gives your brain more data. It
+                                                    uses this data to build richer, more stable neural maps.</span>
+                                            </li>
+                                        </ul>
+                                        <h2><strong>Your Journey Forward: Partnering with Plasticity</strong></h2>
+                                        <p>Neuroplasticity turns the old, grim narrative of "permanent damage" on
+                                            its head. The journey is undoubtedly demanding. It requires consistency,
+                                            courage, and the right guidance. But the core message is one of profound
+                                            hope: your brain is on your team, waiting to be guided.</p>
+                                        <p>The key takeaways are simple but profound.</p>
+                                        <ol>
+                                            <li><span class="ck-list-bogus-paragraph">Your brain can rewire itself
+                                                    throughout life. This is a scientific fact, not wishful
+                                                    thinking.</span></li>
+                                            <li><span class="ck-list-bogus-paragraph">Specific, repetitive, and
+                                                    challenging practice is the primary driver of this
+                                                    change.</span></li>
+                                            <li><span class="ck-list-bogus-paragraph">True recovery leverages
+                                                    overlooked tools. These include advanced technology for perfect
+                                                    feedback and trained caregivers for 24/7 support. A positive
+                                                    mindset is also needed to fuel the brain's growth
+                                                    chemistry.</span></li>
+                                            <li><span class="ck-list-bogus-paragraph">You can participate actively
+                                                    every day. You can do this through mental practice, embracing
+                                                    challenge, prioritizing sleep, and engaging your senses.</span>
+                                            </li>
+                                        </ol>
+                                        <p>The question now is not&nbsp;<i>if</i> your brain can change. The
+                                            question is how will you guide that change today? Will you do five
+                                            minutes of mental practice? Will you focus on the sensation of your next
+                                            movement? Your next small, conscious effort is a direct instruction to
+                                            your neurons.</p>
+                                        <p>Are you ready to explore a rehabilitation program designed in partnership
+                                            with the principles of neuroplasticity? At&nbsp;<a
+                                                href="https://neurorehabilitationcentre.com/"><strong>Apricot
+                                                    Care</strong></a>, our approach to Robotic Neuro Rehabilitation
+                                            in Pune and personalized therapy is built from the ground up. It is
+                                            designed to strategically harness your brain's amazing ability to
+                                            heal.&nbsp;<a
+                                                href="https://neurorehabilitationcentre.com/contact"><strong>Let us
+                                                    have a conversation</strong></a>. We can discuss how to build a
+                                            recovery plan as unique and adaptable as your own brain.</p>
+                                    </div>
+                                </div><!-- /.blog-card-four__content -->
+                            </div><!-- /.blog-card -->
+                            <div class="author-box"
                                 style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
                                 <div style="min-width:80px;">
                                     <img src="../assets/images/doctors/Dr.-arpita - Copy.jpg" alt="Dr. Arpita Ganguly"
@@ -719,39 +941,44 @@
                                 </div>
                             </div>
 
-                            </div><!-- /.blog-details -->
+                        </div><!-- /.blog-details -->
 
 
-                        </div><!-- /.col-lg-8 -->
-                        <div class="col-lg-4">
+                    </div><!-- /.col-lg-8 -->
+                    <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -821,8 +1048,8 @@
                             </aside><!-- /.widget-area -->
                         </div><!-- /.sidebar -->
                     </div><!-- /.col-lg-4 -->
-                    </div><!-- /.row -->
-                </div><!-- /.container -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
         </section><!-- /.blog-details-page section-space -->
 
         <footer class="main-footer" style="background-color: teal;">
@@ -896,7 +1123,8 @@
                             <ul class="list-unstyled footer-widget__links">
                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune"
                                         class="text-white">Carniotomy Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Rehabilitation</a></li>
                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune"
                                         class="text-white">Tracheostomy Care</a></li>
@@ -904,6 +1132,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -919,7 +1150,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -929,7 +1161,8 @@
                                         class="text-white">Orthopedic Care</a></li>
                                 <li><a href="../medical-rehabilitation/postoperative-care-in-pune"
                                         class="text-white">Postoperative Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/neuro-care-in-pune" class="text-white">Neuro
                                         Care</a></li>
@@ -1056,7 +1289,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1097,8 +1330,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
@@ -1168,34 +1401,34 @@
             }
         }
     </style>
-        <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <script>
-            // Fallback in case Font Awesome doesn't load
-            window.addEventListener('DOMContentLoaded', function(){
-                var testDiv = document.createElement('div');
-                testDiv.innerHTML = '<i class="fa fa-check"></i>';
-                document.body.appendChild(testDiv);
-                var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
-                    window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
-                document.body.removeChild(testDiv);
-                if (!faLoaded) {
-                    var fallback = document.createElement('link');
-                    fallback.rel = 'stylesheet';
-                    fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
-                    document.head.appendChild(fallback);
-                }
-            });
-        </script>
-        <div class="mobile-bottom-bar">
-            <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
-                aria-label="Contact via WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
-                <i class="fa-solid fa-phone"></i> Call
-            </a>
-        </div>
+    <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        // Fallback in case Font Awesome doesn't load
+        window.addEventListener('DOMContentLoaded', function () {
+            var testDiv = document.createElement('div');
+            testDiv.innerHTML = '<i class="fa fa-check"></i>';
+            document.body.appendChild(testDiv);
+            var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
+                window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
+            document.body.removeChild(testDiv);
+            if (!faLoaded) {
+                var fallback = document.createElement('link');
+                fallback.rel = 'stylesheet';
+                fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
+                document.head.appendChild(fallback);
+            }
+        });
+    </script>
+    <div class="mobile-bottom-bar">
+        <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
+            aria-label="Contact via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
+            <i class="fa-solid fa-phone"></i> Call
+        </a>
+    </div>
     <!-- Font Awesome 6 CDN -->
 
     <script src="../assets/vendors/jquery/jquery-3.7.0.min.js"></script>

@@ -101,7 +101,216 @@
             }
         }
     </style>
-  
+    <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
+        }
+    </style>
+
 </head>
 
 <body class="custom-cursor">
@@ -191,9 +400,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -203,7 +414,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -236,8 +448,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -254,7 +465,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -268,8 +479,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -278,6 +488,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -305,7 +518,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -335,7 +548,8 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <div class="page-header__content">
-                    <h1 class="page-header__title">Robotic vs. Traditional Physiotherapy: Which is Better for Stroke Rehabilitation?
+                    <h1 class="page-header__title">Robotic vs. Traditional Physiotherapy: Which is Better for Stroke
+                        Rehabilitation?
                         and Safety
                     </h1>
                     <ul class="sifoxen-breadcrumb list-unstyled">
@@ -357,8 +571,8 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img
-                                        src="../assets/images/blogs/robotic-vs-traditional-physiotherapy-stroke-rehabilitation.webp" alt="Robotic vs Traditional Physiotherapy Stroke Rehabilitation">
+                                    <img src="../assets/images/blogs/robotic-vs-traditional-physiotherapy-stroke-rehabilitation.webp"
+                                        alt="Robotic vs Traditional Physiotherapy Stroke Rehabilitation">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">23</span>
                                         <span class="blog-card__date__month">JAN</span>
@@ -367,14 +581,16 @@
                                 <div class="blog-card__content">
                                     <div class="blog-meta">
                                         <div class="blog-meta-item">
-                                            <div class="author-avatar my-auto" style="width:40px;height:40px;margin-right:5px;">
+                                            <div class="author-avatar my-auto"
+                                                style="width:40px;height:40px;margin-right:5px;">
                                                 <img src="../assets/images/doctors/Dr.-AMOL - Copy.jpg" alt="admin">
                                             </div>
                                             <span style="font-size:13px; line-height:16px;">
                                                 <b>Medically Reviewed By</b><br>
                                                 <a href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a><br>
                                                 <span style="font-size:12px; color:#666;">
-                                                    MPT (Neuro), 3.5+ years clinical <br> experience in neurological rehabilitation
+                                                    MPT (Neuro), 3.5+ years clinical <br> experience in neurological
+                                                    rehabilitation
                                                 </span>
                                             </span>
                                         </div>
@@ -481,107 +697,121 @@
                                         <h3><strong>3. Practical Realities: Cost, Access, and Data</strong></h3>
                                         <p>Here is a frank look at factors that greatly affect your rehabilitation
                                             journey but are rarely discussed so openly.</p>
-                                            <section class="rehabilitation-therapy-table">
-                                                <style>
-                                                    .rehabilitation-therapy-table {
-                                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                                                        margin: 20px 0;
-                                                        overflow-x: auto;
-                                                    }
-                                                    
+                                        <section class="rehabilitation-therapy-table">
+                                            <style>
+                                                .rehabilitation-therapy-table {
+                                                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                                    margin: 20px 0;
+                                                    overflow-x: auto;
+                                                }
+
+                                                .rehabilitation-therapy-table table {
+                                                    width: 100%;
+                                                    border-collapse: collapse;
+                                                    background: white;
+                                                    border: 1px solid #000;
+                                                }
+
+                                                .rehabilitation-therapy-table th {
+                                                    background: #000;
+                                                    color: white;
+                                                    font-weight: 600;
+                                                    padding: 16px 12px;
+                                                    text-align: left;
+                                                    border-bottom: 2px solid #000;
+                                                }
+
+                                                .rehabilitation-therapy-table td {
+                                                    padding: 14px 12px;
+                                                    border-bottom: 1px solid #ddd;
+                                                    vertical-align: top;
+                                                }
+
+                                                .rehabilitation-therapy-table tr:nth-child(even) {
+                                                    background: #f9f9f9;
+                                                }
+
+                                                .rehabilitation-therapy-table tr:hover {
+                                                    background: #f0f0f0;
+                                                }
+
+                                                .rehabilitation-therapy-table .consideration-name {
+                                                    font-weight: 600;
+                                                    background: #f5f5f5;
+                                                }
+
+                                                @media (max-width: 768px) {
                                                     .rehabilitation-therapy-table table {
-                                                        width: 100%;
-                                                        border-collapse: collapse;
-                                                        background: white;
-                                                        border: 1px solid #000;
+                                                        font-size: 0.9em;
                                                     }
-                                                    
-                                                    .rehabilitation-therapy-table th {
-                                                        background: #000;
-                                                        color: white;
-                                                        font-weight: 600;
-                                                        padding: 16px 12px;
-                                                        text-align: left;
-                                                        border-bottom: 2px solid #000;
-                                                    }
-                                                    
+
+                                                    .rehabilitation-therapy-table th,
                                                     .rehabilitation-therapy-table td {
-                                                        padding: 14px 12px;
-                                                        border-bottom: 1px solid #ddd;
-                                                        vertical-align: top;
+                                                        padding: 10px 8px;
                                                     }
-                                                    
-                                                    .rehabilitation-therapy-table tr:nth-child(even) {
-                                                        background: #f9f9f9;
-                                                    }
-                                                    
-                                                    .rehabilitation-therapy-table tr:hover {
-                                                        background: #f0f0f0;
-                                                    }
-                                                    
-                                                    .rehabilitation-therapy-table .consideration-name {
-                                                        font-weight: 600;
+
+                                                    .rehabilitation-therapy-table th:nth-child(1),
+                                                    .rehabilitation-therapy-table td:nth-child(1) {
+                                                        position: sticky;
+                                                        left: 0;
                                                         background: #f5f5f5;
+                                                        z-index: 1;
                                                     }
-                                                    
-                                                    @media (max-width: 768px) {
-                                                        .rehabilitation-therapy-table table {
-                                                            font-size: 0.9em;
-                                                        }
-                                                        
-                                                        .rehabilitation-therapy-table th, 
-                                                        .rehabilitation-therapy-table td {
-                                                            padding: 10px 8px;
-                                                        }
-                                                        
-                                                        .rehabilitation-therapy-table th:nth-child(1),
-                                                        .rehabilitation-therapy-table td:nth-child(1) {
-                                                            position: sticky;
-                                                            left: 0;
-                                                            background: #f5f5f5;
-                                                            z-index: 1;
-                                                        }
+                                                }
+
+                                                @media (max-width: 480px) {
+                                                    .rehabilitation-therapy-table table {
+                                                        font-size: 0.82em;
                                                     }
-                                                    
-                                                    @media (max-width: 480px) {
-                                                        .rehabilitation-therapy-table table {
-                                                            font-size: 0.82em;
-                                                        }
-                                                        
-                                                        .rehabilitation-therapy-table th, 
-                                                        .rehabilitation-therapy-table td {
-                                                            padding: 8px 6px;
-                                                        }
+
+                                                    .rehabilitation-therapy-table th,
+                                                    .rehabilitation-therapy-table td {
+                                                        padding: 8px 6px;
                                                     }
-                                                </style>
-                                                
-                                                <table>
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Consideration</th>
-                                                            <th>Robotic-Assisted Therapy</th>
-                                                            <th>Traditional Hands-On Therapy</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="consideration-name">Access & Availability</td>
-                                                            <td>Limited. Requires major investment by the clinic. Typically found only in specialized neuro rehabilitation centres in Pune.</td>
-                                                            <td>Widely available. Offered at most physiotherapy clinics and can be provided at home.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="consideration-name">The Therapist's Evolving Role</td>
-                                                            <td>Becomes a strategist and data analyst. Their skill is in programming the robot correctly and interpreting the data it produces.</td>
-                                                            <td>Is the primary instrument of therapy. Recovery relies on their hands-on guidance, observation, and immediate tactile feedback.</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="consideration-name">The "Black Box" Data</td>
-                                                            <td>The Hidden Factor: Machines collect thousands of precise movement data points. The critical question is: Who interprets this data to meaningfully adjust your care plan? Without expert analysis, it's just numbers.</td>
-                                                            <td>Data is functional and observational. Progress is measured in real-world tasks: "You walked to the kitchen with less help today." The feedback is immediate and easy to understand.</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </section>
+                                                }
+                                            </style>
+
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Consideration</th>
+                                                        <th>Robotic-Assisted Therapy</th>
+                                                        <th>Traditional Hands-On Therapy</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="consideration-name">Access & Availability</td>
+                                                        <td>Limited. Requires major investment by the clinic. Typically
+                                                            found only in specialized neuro rehabilitation centres in
+                                                            Pune.</td>
+                                                        <td>Widely available. Offered at most physiotherapy clinics and
+                                                            can be provided at home.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="consideration-name">The Therapist's Evolving Role
+                                                        </td>
+                                                        <td>Becomes a strategist and data analyst. Their skill is in
+                                                            programming the robot correctly and interpreting the data it
+                                                            produces.</td>
+                                                        <td>Is the primary instrument of therapy. Recovery relies on
+                                                            their hands-on guidance, observation, and immediate tactile
+                                                            feedback.</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="consideration-name">The "Black Box" Data</td>
+                                                        <td>The Hidden Factor: Machines collect thousands of precise
+                                                            movement data points. The critical question is: Who
+                                                            interprets this data to meaningfully adjust your care plan?
+                                                            Without expert analysis, it's just numbers.</td>
+                                                        <td>Data is functional and observational. Progress is measured
+                                                            in real-world tasks: "You walked to the kitchen with less
+                                                            help today." The feedback is immediate and easy to
+                                                            understand.</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </section>
                                         <p><br data-cke-filler="true"></p>
                                         <p><strong>The Cost Conversation:</strong> Robotic therapy has a high upfront
                                             cost for clinics. This can make sessions more expensive or harder to find.
@@ -631,7 +861,8 @@
                                         <p><span class="image-inline ck-widget" contenteditable="false"><img
                                                     style="aspect-ratio:624/416;"
                                                     src="../assets/images/blogs/clear-winner-smart-partnership.webp"
-                                                    width="100%" height="416" alt="Clear Winner Smart Partnership"></span></p>
+                                                    width="100%" height="416"
+                                                    alt="Clear Winner Smart Partnership"></span></p>
                                         <p>The debate is not Robot vs. Human. It is Robot &amp; Human vs. the Stroke.
                                         </p>
                                         <p>Robotic therapy offers unmatched precision, repetition, and measurable data.
@@ -651,78 +882,83 @@
                                 </div><!-- /.blog-card-four__content -->
                             </div><!-- /.blog-card -->
                             <div class="author-box"
-                            style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
-                            <div style="min-width:80px;">
-                                <img src="../assets/images/doctors/Dr.-AMOL - Copy.jpg" alt="Dr Amol Kathar"
-                                    style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
-                            </div>
-                            <div>
-                                <span
-                                    style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
-                                    author</span>
-                                <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
-                                        href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a></div>
-                                <div style="font-size:14px;font-weight:500;color:#136C53;">
-                                    Dr. Amol Kathar is the Clinical Head and Neurophysiotherapist at Apricot Care,
-                                    Pune. <br> With 3.5 years of experience, he specializes in personalized
-                                    rehabilitation for stroke, spinal cord injuries, and mobility training to help
-                                    patients regain independence.
+                                style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
+                                <div style="min-width:80px;">
+                                    <img src="../assets/images/doctors/Dr.-AMOL - Copy.jpg" alt="Dr Amol Kathar"
+                                        style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
                                 </div>
+                                <div>
+                                    <span
+                                        style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
+                                        author</span>
+                                    <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
+                                            href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a></div>
+                                    <div style="font-size:14px;font-weight:500;color:#136C53;">
+                                        Dr. Amol Kathar is the Clinical Head and Neurophysiotherapist at Apricot Care,
+                                        Pune. <br> With 3.5 years of experience, he specializes in personalized
+                                        rehabilitation for stroke, spinal cord injuries, and mobility training to help
+                                        patients regain independence.
+                                    </div>
 
-                                <div style="margin-top:8px;">
-                                    <a href="https://www.facebook.com/apricotcare">
-                                        <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                            class="sr-only">Facebook</span>
-                                    </a>
-                                    <a href="https://x.com/care_apricot">
-                                        <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                            class="sr-only">Twitter</span>
-                                    </a>
-                                    <a href="https://www.instagram.com/the_brain_rehab/">
-                                        <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                            class="sr-only">Instagram</span>
-                                    </a>
-                                    <a href="https://www.youtube.com/@ApricotCare">
-                                        <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                            class="sr-only">Youtube</span>
-                                    </a>
+                                    <div style="margin-top:8px;">
+                                        <a href="https://www.facebook.com/apricotcare">
+                                            <i class="fab fa-facebook-f" aria-hidden="true"></i><span
+                                                class="sr-only">Facebook</span>
+                                        </a>
+                                        <a href="https://x.com/care_apricot">
+                                            <i class="fab fa-twitter" aria-hidden="true"></i><span
+                                                class="sr-only">Twitter</span>
+                                        </a>
+                                        <a href="https://www.instagram.com/the_brain_rehab/">
+                                            <i class="fab fa-instagram" aria-hidden="true"></i><span
+                                                class="sr-only">Instagram</span>
+                                        </a>
+                                        <a href="https://www.youtube.com/@ApricotCare">
+                                            <i class="fab fa-youtube" aria-hidden="true"></i><span
+                                                class="sr-only">Youtube</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div><!-- /.blog-details -->
 
 
                     </div><!-- /.col-lg-8 -->
-                     <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -867,7 +1103,8 @@
                             <ul class="list-unstyled footer-widget__links">
                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune"
                                         class="text-white">Carniotomy Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Rehabilitation</a></li>
                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune"
                                         class="text-white">Tracheostomy Care</a></li>
@@ -875,6 +1112,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -890,7 +1130,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -900,7 +1141,8 @@
                                         class="text-white">Orthopedic Care</a></li>
                                 <li><a href="../medical-rehabilitation/postoperative-care-in-pune"
                                         class="text-white">Postoperative Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/neuro-care-in-pune" class="text-white">Neuro
                                         Care</a></li>
@@ -1027,7 +1269,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1068,8 +1310,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
@@ -1139,34 +1381,34 @@
             }
         }
     </style>
-        <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <script>
-            // Fallback in case Font Awesome doesn't load
-            window.addEventListener('DOMContentLoaded', function(){
-                var testDiv = document.createElement('div');
-                testDiv.innerHTML = '<i class="fa fa-check"></i>';
-                document.body.appendChild(testDiv);
-                var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
-                    window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
-                document.body.removeChild(testDiv);
-                if (!faLoaded) {
-                    var fallback = document.createElement('link');
-                    fallback.rel = 'stylesheet';
-                    fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
-                    document.head.appendChild(fallback);
-                }
-            });
-        </script>
-        <div class="mobile-bottom-bar">
-            <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
-                aria-label="Contact via WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
-                <i class="fa-solid fa-phone"></i> Call
-            </a>
-        </div>
+    <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        // Fallback in case Font Awesome doesn't load
+        window.addEventListener('DOMContentLoaded', function () {
+            var testDiv = document.createElement('div');
+            testDiv.innerHTML = '<i class="fa fa-check"></i>';
+            document.body.appendChild(testDiv);
+            var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
+                window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
+            document.body.removeChild(testDiv);
+            if (!faLoaded) {
+                var fallback = document.createElement('link');
+                fallback.rel = 'stylesheet';
+                fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
+                document.head.appendChild(fallback);
+            }
+        });
+    </script>
+    <div class="mobile-bottom-bar">
+        <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
+            aria-label="Contact via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
+            <i class="fa-solid fa-phone"></i> Call
+        </a>
+    </div>
     <!-- Font Awesome 6 CDN -->
 
     <script src="../assets/vendors/jquery/jquery-3.7.0.min.js"></script>

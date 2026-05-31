@@ -5,7 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Physiotherapy for Parkinson's Disease | Balance Exercises</title>
-    <meta name="description" content="Evidence-based physiotherapy exercises for Parkinson's disease to improve balance and walking. Expert neuro rehabilitation centre in Pune. Book a consultation" />
+    <meta name="description"
+        content="Evidence-based physiotherapy exercises for Parkinson's disease to improve balance and walking. Expert neuro rehabilitation centre in Pune. Book a consultation" />
     <meta name="author" content="Dr. Amol Kathar">
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/home/Logo/AC logo.png" />
@@ -82,6 +83,215 @@
         }
     </style>
     <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
+        }
+    </style>
+    <style>
         .blog-card__content__inner p {
             text-align: justify !important;
             text-justify: inter-word;
@@ -89,27 +299,37 @@
             margin-bottom: 1.5rem;
             hyphens: auto;
         }
-        .blog-card__content__inner h1, .blog-card__content__inner h2, .blog-card__content__inner h3 {
+
+        .blog-card__content__inner h1,
+        .blog-card__content__inner h2,
+        .blog-card__content__inner h3 {
             text-align: left;
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
-        .blog-card__content__inner ul, .blog-card__content__inner ol {
+
+        .blog-card__content__inner ul,
+        .blog-card__content__inner ol {
             text-align: left;
             margin-bottom: 1.5rem;
         }
+
         .blog-card__content__inner li {
             margin-bottom: 0.5rem;
             line-height: 1.6;
             text-align: left;
         }
+
         .blog-card__content__inner table {
             text-align: left;
         }
-        .blog-card__content__inner table td, .blog-card__content__inner table th {
+
+        .blog-card__content__inner table td,
+        .blog-card__content__inner table th {
             text-align: left;
             vertical-align: top;
         }
+
         .blog-card__content__inner {
             text-align: justify;
             text-justify: inter-word;
@@ -204,9 +424,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -216,7 +438,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -249,8 +472,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -267,7 +489,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -281,8 +503,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -291,6 +512,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -318,7 +542,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -348,11 +572,13 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <div class="page-header__content">
-                    <h1 class="page-header__title">Physiotherapy for Parkinson's Disease: Exercises That Help With Balance and Walking</h1>
+                    <h1 class="page-header__title">Physiotherapy for Parkinson's Disease: Exercises That Help With
+                        Balance and Walking</h1>
                     <ul class="sifoxen-breadcrumb list-unstyled">
                         <li><a href="/">Home</a></li>
                         <li><span>our blog</span></li>
-                        <li><span>Physiotherapy for Parkinson's Disease: Exercises That Help With Balance and Walking</span>
+                        <li><span>Physiotherapy for Parkinson's Disease: Exercises That Help With Balance and
+                                Walking</span>
                         </li>
                     </ul><!-- /.thm-breadcrumb list-unstyled -->
                 </div><!-- /.page-header__content -->
@@ -368,8 +594,7 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img
-                                        src="../assets/images/blogs/Physiotherapy-for-Parkinson's-Disease.webp">
+                                    <img src="../assets/images/blogs/Physiotherapy-for-Parkinson's-Disease.webp">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">26</span>
                                         <span class="blog-card__date__month">Mar</span>
@@ -381,7 +606,7 @@
                                             <div class="author-avatar my-auto"
                                                 style="width:40px;height:40px;margin-right:5px;">
                                                 <img src="../assets/images/home/Logo/AC logo.png" alt="admin">
-                                            </div> 
+                                            </div>
                                             <span style="font-size:13px; line-height:16px;">
                                                 <b>Medically Reviewed By</b><br>
                                                 <a href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a><br>
@@ -401,290 +626,539 @@
                                     </div>
                                     <!-- /.blog-card__title -->
                                     <div class="blog-card__content__inner">
-                                        <h2><strong>Physiotherapy for Parkinson's Disease: Exercises That Help With Balance and Walking</strong></h2>
-                                        
-                                        <p>Kamala aunty used to walk to the vegetable market near Kharadi every morning. It was her routine for twenty years. Then, one Tuesday, her feet refused to move. She stood frozen in the middle of the street, legs trembling, cars honking. Her daughter watched from the balcony, helpless. That was the day their family learned what Parkinson's disease really does to the body.</p>
-                                        
-                                        <p>Three months later, Kamala was walking again. Not because a new medicine fixed everything. Because a physiotherapist taught her body to move differently.</p>
-                                        
-                                        <p>Parkinson's disease is a brain condition that slowly damages the nerve cells controlling movement, balance, and coordination. It affects over
-                                            <a href="https://www.parkinson.org/understanding-parkinsons/statistics"><strong> 10 million people worldwide</strong></a>, and India may carry the highest absolute number of patients globally. Yet most families discover physiotherapy too late, long after falls and injuries have already stolen their loved one's confidence.</p>
-                                        
-                                        <p>This blog breaks down the exercises that actually help with balance and walking. We will cover what works, what most websites leave out, and how to start today.</p>
-                                        
+                                        <h2><strong>Physiotherapy for Parkinson's Disease: Exercises That Help With
+                                                Balance and Walking</strong></h2>
+
+                                        <p>Kamala aunty used to walk to the vegetable market near Kharadi every morning.
+                                            It was her routine for twenty years. Then, one Tuesday, her feet refused to
+                                            move. She stood frozen in the middle of the street, legs trembling, cars
+                                            honking. Her daughter watched from the balcony, helpless. That was the day
+                                            their family learned what Parkinson's disease really does to the body.</p>
+
+                                        <p>Three months later, Kamala was walking again. Not because a new medicine
+                                            fixed everything. Because a physiotherapist taught her body to move
+                                            differently.</p>
+
+                                        <p>Parkinson's disease is a brain condition that slowly damages the nerve cells
+                                            controlling movement, balance, and coordination. It affects over
+                                            <a href="https://www.parkinson.org/understanding-parkinsons/statistics"><strong>
+                                                    10 million people worldwide</strong></a>, and India may carry the
+                                            highest absolute number of patients globally. Yet most families discover
+                                            physiotherapy too late, long after falls and injuries have already stolen
+                                            their loved one's confidence.
+                                        </p>
+
+                                        <p>This blog breaks down the exercises that actually help with balance and
+                                            walking. We will cover what works, what most websites leave out, and how to
+                                            start today.</p>
+
                                         <h2><strong>Why Does Parkinson's Affect Balance and Walking?</strong></h2>
-                                        
-                                        <p>Most people think Parkinson's is about trembling hands. The truth is, balance and gait problems cause far more damage to daily life than tremors ever do.</p>
-                                        
-                                        <p>Here's what happens inside the brain. Parkinson's destroys cells that produce dopamine, a chemical your brain needs to control smooth, automatic movements. When dopamine drops, the basal ganglia (the brain region responsible for balance reflexes) stops working properly. The result? Your body loses its ability to make quick, automatic corrections when you stumble, lean, or turn. According to the <a href="https://www.parkinson.org/blog/awareness/freezing-fall-prevention"><strong>Parkinson's Foundation</strong></a>, approximately 60% of people with PD fall at least once every year, and the risk of hip fracture becomes four times higher than the general population.</p>
+
+                                        <p>Most people think Parkinson's is about trembling hands. The truth is, balance
+                                            and gait problems cause far more damage to daily life than tremors ever do.
+                                        </p>
+
+                                        <p>Here's what happens inside the brain. Parkinson's destroys cells that produce
+                                            dopamine, a chemical your brain needs to control smooth, automatic
+                                            movements. When dopamine drops, the basal ganglia (the brain region
+                                            responsible for balance reflexes) stops working properly. The result? Your
+                                            body loses its ability to make quick, automatic corrections when you
+                                            stumble, lean, or turn. According to the <a
+                                                href="https://www.parkinson.org/blog/awareness/freezing-fall-prevention"><strong>Parkinson's
+                                                    Foundation</strong></a>, approximately 60% of people with PD fall at
+                                            least once every year, and the risk of hip fracture becomes four times
+                                            higher than the general population.</p>
                                         <h2><strong>The Problem Nobody Talks About: Your Brain Lies to You</strong></h2>
-                                        
-                                        <p>What most people don't realize is that Parkinson's creates a perception mismatch. Your brain tells you that you're taking big, normal steps. But in reality, your steps have become tiny and shuffling. Research published in <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7353788/"><strong>PMC</strong></a> calls this proprioceptive dysfunction. It's the reason patients say, "But I thought I was walking fine!" This mismatch is exactly what specific physiotherapy programs like LSVT BIG are designed to fix.</p>
-                                        
+
+                                        <p>What most people don't realize is that Parkinson's creates a perception
+                                            mismatch. Your brain tells you that you're taking big, normal steps. But in
+                                            reality, your steps have become tiny and shuffling. Research published in <a
+                                                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7353788/"><strong>PMC</strong></a>
+                                            calls this proprioceptive dysfunction. It's the reason patients say, "But I
+                                            thought I was walking fine!" This mismatch is exactly what specific
+                                            physiotherapy programs like LSVT BIG are designed to fix.</p>
+
                                         <h3>Freezing of Gait: When Your Feet Get "Stuck" to the Floor</h3>
-                                        
-                                        <p>Freezing of gait (FOG) is one of the most frightening syclimptoms. You try to walk, but your feet won't move. It happens most often during turns, in narrow doorways, and in crowded spaces. <a href="https://www.parkinson.org/blog/awareness/freezing"><strong>The Parkinson's Foundation</strong></a> reports that about 80% of PD falls are caused by postural instability and freezing episodes. Research from Oregon Health & Science University found that people with PD turn more than 1,000 times a day, and the way they turn predicts whether they will fall.</p>
-                                        
-                                        <h2><strong>How Physiotherapy Changes the Game for Parkinson's Patients</strong></h2>
-                                        
+
+                                        <p>Freezing of gait (FOG) is one of the most frightening syclimptoms. You try to
+                                            walk, but your feet won't move. It happens most often during turns, in
+                                            narrow doorways, and in crowded spaces. <a
+                                                href="https://www.parkinson.org/blog/awareness/freezing"><strong>The
+                                                    Parkinson's Foundation</strong></a> reports that about 80% of PD
+                                            falls are caused by postural instability and freezing episodes. Research
+                                            from Oregon Health & Science University found that people with PD turn more
+                                            than 1,000 times a day, and the way they turn predicts whether they will
+                                            fall.</p>
+
+                                        <h2><strong>How Physiotherapy Changes the Game for Parkinson's Patients</strong>
+                                        </h2>
+
                                         <div class="blog-card__image">
-                                            <img src="../assets/images/blogs/How Physiotherapy Changes the Game for Parkinson's Patients.webp" alt="Physiotherapy for Parkinson's Disease">
+                                            <img src="../assets/images/blogs/How Physiotherapy Changes the Game for Parkinson's Patients.webp"
+                                                alt="Physiotherapy for Parkinson's Disease">
                                         </div><!-- /.blog-card__image -->
-                                        
-                                        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/40185529/"><strong> 2025 study published in Neurologic Clinics</strong></a> (Baylor College of Medicine) confirms that clinical guidelines now recommend early and regular physiotherapy referrals for Parkinson's. This is a big shift. Doctors used to wait until patients could barely walk before suggesting PT. Today, starting physiotherapy early builds what researchers call a "motor reserve," a buffer of strength and coordination that protects you as the disease progresses.</p>
-                                        
+
+                                        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/40185529/"><strong> 2025 study
+                                                    published in Neurologic Clinics</strong></a> (Baylor College of
+                                            Medicine) confirms that clinical guidelines now recommend early and regular
+                                            physiotherapy referrals for Parkinson's. This is a big shift. Doctors used
+                                            to wait until patients could barely walk before suggesting PT. Today,
+                                            starting physiotherapy early builds what researchers call a "motor reserve,"
+                                            a buffer of strength and coordination that protects you as the disease
+                                            progresses.</p>
+
                                         <p>Here's what the numbers show:</p>
                                         <ul>
-                                            <li>A large meta-analysis of <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7564288/"><strong>191 trials with 7,998 participants</strong></a> found that conventional physiotherapy significantly improved motor symptoms, gait, and quality of life.</li>
-                                            <li>Balance training effects <a href="https://pubmed.ncbi.nlm.nih.gov/31607351/" ><strong>carry over to at least 12 months</strong></a> after training ends.</li>
-                                            <li>The most effective prescription studied is 60-minute sessions, twice a week, for at least 12 weeks.</li>
-                                            <li>Intensive exercise may not just manage symptoms. Growing evidence from <a href="https://www.nature.com/articles/s41531-026-01326-7"><strong>Parkinson's Disease</strong></a> suggests it promotes neuroplasticity, meaning the brain actually rewires itself in response to exercise.</li>
+                                            <li>A large meta-analysis of <a
+                                                    href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7564288/"><strong>191
+                                                        trials with 7,998 participants</strong></a> found that
+                                                conventional physiotherapy significantly improved motor symptoms, gait,
+                                                and quality of life.</li>
+                                            <li>Balance training effects <a
+                                                    href="https://pubmed.ncbi.nlm.nih.gov/31607351/"><strong>carry over
+                                                        to at least 12 months</strong></a> after training ends.</li>
+                                            <li>The most effective prescription studied is 60-minute sessions, twice a
+                                                week, for at least 12 weeks.</li>
+                                            <li>Intensive exercise may not just manage symptoms. Growing evidence from
+                                                <a href="https://www.nature.com/articles/s41531-026-01326-7"><strong>Parkinson's
+                                                        Disease</strong></a> suggests it promotes neuroplasticity,
+                                                meaning the brain actually rewires itself in response to exercise.
+                                            </li>
                                         </ul>
-                                        
-                                        <p>In simple words, physiotherapy is not a "nice to have." It is one of the most powerful tools a Parkinson's patient can use alongside medication.</p>
-                                        
-                                        <h2><strong>Balance Exercises for Parkinson's Disease: A Step-by-Step Progression</strong></h2>
-                                        
+
+                                        <p>In simple words, physiotherapy is not a "nice to have." It is one of the most
+                                            powerful tools a Parkinson's patient can use alongside medication.</p>
+
+                                        <h2><strong>Balance Exercises for Parkinson's Disease: A Step-by-Step
+                                                Progression</strong></h2>
+
                                         <div class="blog-card__image">
-                                            <img src="../assets/images/blogs/Balance Exercises for Parkinson's Disease.webp" alt="Balance Exercises for Parkinson's">
+                                            <img src="../assets/images/blogs/Balance Exercises for Parkinson's Disease.webp"
+                                                alt="Balance Exercises for Parkinson's">
                                         </div><!-- /.blog-card__image -->
-                                        
-                                        <p>Balance training for Parkinson's follows a clear progression: start with static (standing still), move to dynamic (moving), and then add cognitive challenges. Here's exactly how.</p>
-                                        
+
+                                        <p>Balance training for Parkinson's follows a clear progression: start with
+                                            static (standing still), move to dynamic (moving), and then add cognitive
+                                            challenges. Here's exactly how.</p>
+
                                         <h2><strong>Level 1: Static Balance (Foundation)</strong></h2>
-                                        <p>These exercises train your body to hold steady. Always stand near a sturdy chair or countertop for safety.</p>
+                                        <p>These exercises train your body to hold steady. Always stand near a sturdy
+                                            chair or countertop for safety.</p>
                                         <ul>
-                                            <li><strong>Feet shoulder-width stance hold:</strong> Stand with both feet flat on the floor, arms at your sides. Hold for 30 seconds. Focus on keeping your weight centered.</li>
-                                            <li><strong>Tandem standing:</strong> Place one foot directly in front of the other, heel touching toes. Hold for 30 seconds. Switch the leading foot.</li>
-                                            <li><strong>Single-leg stand:</strong> Lift one foot slightly off the ground. Hold for 10 seconds. Switch sides. Use a chair for support if needed.</li>
-                                            <li><strong>Weight shifting:</strong> Stand with feet apart and slowly shift your weight from left to right, then forward to back. Do 10 shifts each direction.</li>
+                                            <li><strong>Feet shoulder-width stance hold:</strong> Stand with both feet
+                                                flat on the floor, arms at your sides. Hold for 30 seconds. Focus on
+                                                keeping your weight centered.</li>
+                                            <li><strong>Tandem standing:</strong> Place one foot directly in front of
+                                                the other, heel touching toes. Hold for 30 seconds. Switch the leading
+                                                foot.</li>
+                                            <li><strong>Single-leg stand:</strong> Lift one foot slightly off the
+                                                ground. Hold for 10 seconds. Switch sides. Use a chair for support if
+                                                needed.</li>
+                                            <li><strong>Weight shifting:</strong> Stand with feet apart and slowly shift
+                                                your weight from left to right, then forward to back. Do 10 shifts each
+                                                direction.</li>
                                         </ul>
-                                        
+
                                         <h2><strong>Level 2: Dynamic Balance (Progression)</strong></h2>
                                         <p>Once static balance feels comfortable, these exercises add movement.</p>
                                         <ul>
-                                            <li><strong>Tandem walking:</strong> Walk heel-to-toe in a straight line for 20 steps. Keep your eyes on a fixed point ahead.</li>
-                                            <li><strong>Figure-of-8 walking:</strong> Set up two chairs about 10 feet apart. Walk in a figure-8 pattern around them. This trains turning balance.</li>
-                                            <li><strong>Side-stepping:</strong> Take 10 steps to the left, then 10 steps to the right. Keep your hips level.</li>
-                                            <li><strong>Backward walking:</strong> Walk backward slowly along a hallway wall. Have someone nearby for safety.</li>
-                                            <li><strong>Sit-to-stand:</strong> Rise from a chair without using your hands. Sit down slowly. Repeat 10 times. Try chairs of different heights.</li>
+                                            <li><strong>Tandem walking:</strong> Walk heel-to-toe in a straight line for
+                                                20 steps. Keep your eyes on a fixed point ahead.</li>
+                                            <li><strong>Figure-of-8 walking:</strong> Set up two chairs about 10 feet
+                                                apart. Walk in a figure-8 pattern around them. This trains turning
+                                                balance.</li>
+                                            <li><strong>Side-stepping:</strong> Take 10 steps to the left, then 10 steps
+                                                to the right. Keep your hips level.</li>
+                                            <li><strong>Backward walking:</strong> Walk backward slowly along a hallway
+                                                wall. Have someone nearby for safety.</li>
+                                            <li><strong>Sit-to-stand:</strong> Rise from a chair without using your
+                                                hands. Sit down slowly. Repeat 10 times. Try chairs of different
+                                                heights.</li>
                                         </ul>
-                                        
-                                        <h2><strong>Level 3: Dual-Task Balance (Advanced, and Often Overlooked)</strong></h2>
-                                        <p>Here's the surprising truth about falling in Parkinson's. Most falls don't happen during exercise. They happen during everyday moments, when you're walking and talking, carrying a cup, or turning to answer someone. The <a href="https://www.parkinson.org/blog/awareness/freezing"><strong>Parkinson's Foundation</strong></a> explains that PD increases the "dual-task cost," meaning your brain struggles to handle two things at once. Training for this is critical.</p>
+
+                                        <h2><strong>Level 3: Dual-Task Balance (Advanced, and Often Overlooked)</strong>
+                                        </h2>
+                                        <p>Here's the surprising truth about falling in Parkinson's. Most falls don't
+                                            happen during exercise. They happen during everyday moments, when you're
+                                            walking and talking, carrying a cup, or turning to answer someone. The <a
+                                                href="https://www.parkinson.org/blog/awareness/freezing"><strong>Parkinson's
+                                                    Foundation</strong></a> explains that PD increases the "dual-task
+                                            cost," meaning your brain struggles to handle two things at once. Training
+                                            for this is critical.</p>
                                         <ul>
                                             <li>Walk while counting backward from 100 by threes.</li>
                                             <li>Carry a tray with a cup of water while walking across a room.</li>
-                                            <li>Walk through a simple obstacle course (rolled towels on the floor) while naming animals.</li>
-                                            <li>Walk with deliberate head turns left and right, simulating looking at traffic.</li>
+                                            <li>Walk through a simple obstacle course (rolled towels on the floor) while
+                                                naming animals.</li>
+                                            <li>Walk with deliberate head turns left and right, simulating looking at
+                                                traffic.</li>
                                         </ul>
-                                        
-                                        <p><strong>Safety first:</strong> always start dual-task exercises with a therapist or caregiver nearby. Stop if balance feels unstable.</p>
-                                        
-                                        <p>➤ Need a personalized balance exercise plan? <a href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune">Explore our Physiotherapy services in Pune</a> to see how our expert neurophysiotherapists design stage-specific programs for Parkinson's patients.</p>
-                                        
+
+                                        <p><strong>Safety first:</strong> always start dual-task exercises with a
+                                            therapist or caregiver nearby. Stop if balance feels unstable.</p>
+
+                                        <p>➤ Need a personalized balance exercise plan? <a
+                                                href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune">Explore
+                                                our Physiotherapy services in Pune</a> to see how our expert
+                                            neurophysiotherapists design stage-specific programs for Parkinson's
+                                            patients.</p>
+
                                         <h2><strong>Walking Exercises and Gait Training Strategies</strong></h2>
-                                        
+
                                         <h2><strong>Cueing Techniques: The Secret Weapon Against Freezing</strong></h2>
-                                        <p>Most blogs mention freezing of gait. Very few tell you how to actually break through it. <a href="https://www.sciencedirect.com/science/article/pii/S1877065717304049"><strong> Research in ScienceDirect</strong></a> shows that external cueing strategies can significantly reduce freezing severity. Here are the four types that work:</p>
+                                        <p>Most blogs mention freezing of gait. Very few tell you how to actually break
+                                            through it. <a
+                                                href="https://www.sciencedirect.com/science/article/pii/S1877065717304049"><strong>
+                                                    Research in ScienceDirect</strong></a> shows that external cueing
+                                            strategies can significantly reduce freezing severity. Here are the four
+                                            types that work:</p>
                                         <ul>
-                                            <li><strong>Auditory cues:</strong> Use a metronome app on your phone, or simply count "1-2-1-2" out loud while walking. Clapping a rhythm also works. The beat gives your brain an external signal to replace the broken internal one.</li>
-                                            <li><strong>Visual cues:</strong> Place colored tape strips on the floor at regular intervals. Laser pointer attachments on walkers project a line to step over. Even imagining you're stepping over a crack can restart frozen feet.</li>
-                                            <li><strong>Tactile cues:</strong> Tap your thigh rhythmically before and during walking. This physical prompt helps the brain reconnect with the stepping pattern.</li>
-                                            <li><strong>Cognitive cues:</strong> Before taking the first step, mentally picture the movement. Think "lift, step, land" before you move. This conscious focus bypasses the faulty automatic system.</li>
+                                            <li><strong>Auditory cues:</strong> Use a metronome app on your phone, or
+                                                simply count "1-2-1-2" out loud while walking. Clapping a rhythm also
+                                                works. The beat gives your brain an external signal to replace the
+                                                broken internal one.</li>
+                                            <li><strong>Visual cues:</strong> Place colored tape strips on the floor at
+                                                regular intervals. Laser pointer attachments on walkers project a line
+                                                to step over. Even imagining you're stepping over a crack can restart
+                                                frozen feet.</li>
+                                            <li><strong>Tactile cues:</strong> Tap your thigh rhythmically before and
+                                                during walking. This physical prompt helps the brain reconnect with the
+                                                stepping pattern.</li>
+                                            <li><strong>Cognitive cues:</strong> Before taking the first step, mentally
+                                                picture the movement. Think "lift, step, land" before you move. This
+                                                conscious focus bypasses the faulty automatic system.</li>
                                         </ul>
-                                        
+
                                         <h2><strong>Gait Training Exercises That Build Confidence</strong></h2>
                                         <ul>
-                                            <li><strong>Exaggerated marching in place:</strong> Lift your knees high and swing your arms big. This counteracts the natural tendency toward smaller movements.</li>
-                                            <li><strong>Treadmill walking with auditory cueing:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/31607351/"> <strong>Studies show</strong></a> that treadmill gait training improves walking performance with effects lasting 3 to 6 months.</li>
-                                            <li><strong>Turning practice:</strong> Instead of pivoting on one foot, practice wide-arc turns by picking up both feet and taking small deliberate steps through the turn. Never shuffle.</li>
-                                            <li><strong>Nordic walking:</strong> Using poles while walking engages your upper body and naturally increases step length. Meta-analyses confirm it improves motor symptoms, balance, and gait.</li>
+                                            <li><strong>Exaggerated marching in place:</strong> Lift your knees high and
+                                                swing your arms big. This counteracts the natural tendency toward
+                                                smaller movements.</li>
+                                            <li><strong>Treadmill walking with auditory cueing:</strong> <a
+                                                    href="https://pubmed.ncbi.nlm.nih.gov/31607351/"> <strong>Studies
+                                                        show</strong></a> that treadmill gait training improves walking
+                                                performance with effects lasting 3 to 6 months.</li>
+                                            <li><strong>Turning practice:</strong> Instead of pivoting on one foot,
+                                                practice wide-arc turns by picking up both feet and taking small
+                                                deliberate steps through the turn. Never shuffle.</li>
+                                            <li><strong>Nordic walking:</strong> Using poles while walking engages your
+                                                upper body and naturally increases step length. Meta-analyses confirm it
+                                                improves motor symptoms, balance, and gait.</li>
                                         </ul>
-                                        
-                                        <h2><strong>LSVT BIG: The "Think Big" Therapy Most Indian Patients Haven't Heard Of</strong></h2>
-                                        <p>Remember the brain's perception mismatch we discussed earlier? LSVT BIG is a <a href="https://www.lsvtglobal.com/LSVTBig"><strong>specialized 4-week therapy program</strong></a> (16 individual sessions) that directly targets this problem. Developed from over 25 years of research, it trains patients to make exaggerated, large movements until the brain recalibrates what "normal" feels like.</p>
-                                        
-                                        <p>A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7353788/"><strong>randomized controlled trial</strong></a> found LSVT BIG produced significant improvements in motor function scores, outperforming Nordic walking and standard home exercises. The key insight is that LSVT BIG doesn't just strengthen muscles. It retrains the brain's sensory system to accurately gauge movement size.</p>
-                                        
-                                        <p>Who benefits most? Patients in early to mid stages of PD see the best results. But even those with advanced symptoms can gain meaningful improvements. Ask your physiotherapist whether they are LSVT BIG certified.</p>
-                                        
-                                        <h2><strong>Exercise by Parkinson's Stage: A Practical Quick Reference</strong></h2>
-                                        
+
+                                        <h2><strong>LSVT BIG: The "Think Big" Therapy Most Indian Patients Haven't Heard
+                                                Of</strong></h2>
+                                        <p>Remember the brain's perception mismatch we discussed earlier? LSVT BIG is a
+                                            <a href="https://www.lsvtglobal.com/LSVTBig"><strong>specialized 4-week
+                                                    therapy program</strong></a> (16 individual sessions) that directly
+                                            targets this problem. Developed from over 25 years of research, it trains
+                                            patients to make exaggerated, large movements until the brain recalibrates
+                                            what "normal" feels like.
+                                        </p>
+
+                                        <p>A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7353788/"><strong>randomized
+                                                    controlled trial</strong></a> found LSVT BIG produced significant
+                                            improvements in motor function scores, outperforming Nordic walking and
+                                            standard home exercises. The key insight is that LSVT BIG doesn't just
+                                            strengthen muscles. It retrains the brain's sensory system to accurately
+                                            gauge movement size.</p>
+
+                                        <p>Who benefits most? Patients in early to mid stages of PD see the best
+                                            results. But even those with advanced symptoms can gain meaningful
+                                            improvements. Ask your physiotherapist whether they are LSVT BIG certified.
+                                        </p>
+
+                                        <h2><strong>Exercise by Parkinson's Stage: A Practical Quick Reference</strong>
+                                        </h2>
+
                                         <div class="blog-card__image">
-                                            <img src="../assets/images/blogs/Exercise by Parkinson's Stage.webp" alt="Exercise by Parkinson's Stage">
+                                            <img src="../assets/images/blogs/Exercise by Parkinson's Stage.webp"
+                                                alt="Exercise by Parkinson's Stage">
                                         </div><!-- /.blog-card__image -->
-                                        
-                                        <p>Not every exercise suits every patient. The <a href="https://www.parkinson.org/understanding-parkinsons/what-is-parkinsons/stages"><strong>Hoehn and Yahr scale</strong></a> helps physiotherapists match exercises to disease severity. Here's a simplified guide:</p>
-                                        
+
+                                        <p>Not every exercise suits every patient. The <a
+                                                href="https://www.parkinson.org/understanding-parkinsons/what-is-parkinsons/stages"><strong>Hoehn
+                                                    and Yahr scale</strong></a> helps physiotherapists match exercises
+                                            to disease severity. Here's a simplified guide:</p>
+
                                         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
                                             <thead>
-                                                    <tr>
-                                                                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Stage</th>
-                                                                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Main Goal</th>
-                                                                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Best Exercises</th>
-                                                                <th style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">Frequency</th>
-                                                            </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">1-2 (Mild)</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Build fitness, create motor reserve, slow progression</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Brisk walking, cycling, dance, tai chi, LSVT BIG, resistance training</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">4-5x/week, 30-60 min</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">3 (Moderate)</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Prevent falls, improve gait, train dual-task ability</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Balance progressions, treadmill with cueing, sit-to-stand drills, turning practice</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">3-4x/week, 45-60 min</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">4-5 (Advanced)</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Maintain mobility, prevent complications, support caregivers</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Chair-based exercises, assisted standing, gentle stretching, seated marching, respiratory exercises</td>
-                                                                <td style="border: 1px solid #ddd; padding: 8px;">Daily, 20-30 min</td>
-                                                            </tr>
-                                                        </tbody>
-                                            </table>
-                                        
-                                        <p><strong>Pro tip:</strong> Always exercise during your medication "On" period, typically 30 to 60 minutes after taking your levodopa dose. Your body responds better to exercise when the medicine is active.</p>
-                                        
-                                        <p>➤ Looking for dedicated Parkinson's rehabilitation in Pune? <a href="https://neurorehabilitationcentre.com/advanced-care-programs/parkinsons-care-in-pune">Learn about our Parkinson's Care program</a> that combines robotic gait training, VR-based therapy, and 24/7 nursing support under one roof.</p>
-                                        
-                                        <h2><strong>What Families and Caregivers Need to Know (and Nobody Tells Them)</strong></h2>
-                                        
-                                        <p>Here is something almost no Parkinson's blog addresses: the biggest barrier to exercise is not the disease itself. It's the invisible symptoms around it. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10585979/"><strong> 2021 survey published in Movement Disorders Clinical Practice</strong></a> found that low energy, physical symptoms, and fear of falling were the top reasons PD patients avoid exercise. Apathy, a recognized non-motor symptom of PD, makes patients feel like they simply don't care about exercising.</p>
-                                        
+                                                <tr>
+                                                    <th
+                                                        style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">
+                                                        Stage</th>
+                                                    <th
+                                                        style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">
+                                                        Main Goal</th>
+                                                    <th
+                                                        style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">
+                                                        Best Exercises</th>
+                                                    <th
+                                                        style="border: 1px solid #ddd; padding: 8px; background-color: #f2f2f2;">
+                                                        Frequency</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">1-2 (Mild)</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Build fitness,
+                                                        create motor reserve, slow progression</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Brisk walking,
+                                                        cycling, dance, tai chi, LSVT BIG, resistance training</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">4-5x/week, 30-60
+                                                        min</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">3 (Moderate)</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Prevent falls,
+                                                        improve gait, train dual-task ability</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Balance
+                                                        progressions, treadmill with cueing, sit-to-stand drills,
+                                                        turning practice</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">3-4x/week, 45-60
+                                                        min</td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">4-5 (Advanced)
+                                                    </td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Maintain mobility,
+                                                        prevent complications, support caregivers</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Chair-based
+                                                        exercises, assisted standing, gentle stretching, seated
+                                                        marching, respiratory exercises</td>
+                                                    <td style="border: 1px solid #ddd; padding: 8px;">Daily, 20-30 min
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <p><strong>Pro tip:</strong> Always exercise during your medication "On" period,
+                                            typically 30 to 60 minutes after taking your levodopa dose. Your body
+                                            responds better to exercise when the medicine is active.</p>
+
+                                        <p>➤ Looking for dedicated Parkinson's rehabilitation in Pune? <a
+                                                href="https://neurorehabilitationcentre.com/advanced-care-programs/parkinsons-care-in-pune">Learn
+                                                about our Parkinson's Care program</a> that combines robotic gait
+                                            training, VR-based therapy, and 24/7 nursing support under one roof.</p>
+
+                                        <h2><strong>What Families and Caregivers Need to Know (and Nobody Tells
+                                                Them)</strong></h2>
+
+                                        <p>Here is something almost no Parkinson's blog addresses: the biggest barrier
+                                            to exercise is not the disease itself. It's the invisible symptoms around
+                                            it. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10585979/"><strong>
+                                                    2021 survey published in Movement Disorders Clinical
+                                                    Practice</strong></a> found that low energy, physical symptoms, and
+                                            fear of falling were the top reasons PD patients avoid exercise. Apathy, a
+                                            recognized non-motor symptom of PD, makes patients feel like they simply
+                                            don't care about exercising.</p>
+
                                         <p>This is where families make all the difference.</p>
                                         <ul>
-                                            <li><strong>Be the exercise partner:</strong> Walk alongside your loved one. Count the steps together. Your presence provides both safety and motivation.</li>
-                                            <li><strong>Time exercises with medication:</strong> Know when the levodopa kicks in (usually 30 to 60 minutes after the dose) and plan exercise during that window.</li>
-                                            <li><strong>Make the home fall-proof:</strong> Remove loose rugs, add grab bars near the bathroom, keep pathways clear, and ensure good lighting. These changes save lives.</li>
-                                            <li><strong>Celebrate small wins:</strong> Standing up from a chair without help. Walking to the kitchen without freezing. These are victories. Treat them that way.</li>
+                                            <li><strong>Be the exercise partner:</strong> Walk alongside your loved one.
+                                                Count the steps together. Your presence provides both safety and
+                                                motivation.</li>
+                                            <li><strong>Time exercises with medication:</strong> Know when the levodopa
+                                                kicks in (usually 30 to 60 minutes after the dose) and plan exercise
+                                                during that window.</li>
+                                            <li><strong>Make the home fall-proof:</strong> Remove loose rugs, add grab
+                                                bars near the bathroom, keep pathways clear, and ensure good lighting.
+                                                These changes save lives.</li>
+                                            <li><strong>Celebrate small wins:</strong> Standing up from a chair without
+                                                help. Walking to the kitchen without freezing. These are victories.
+                                                Treat them that way.</li>
                                         </ul>
-                                        
-                                        <h2><strong>Beyond Traditional PT: Dance, Tai Chi, Yoga, and Music Therapy</strong></h2>
-                                        
-                                        <p>Physiotherapy in Pune and across India is evolving beyond clinic walls. Several complementary approaches have strong evidence behind them:</p>
+
+                                        <h2><strong>Beyond Traditional PT: Dance, Tai Chi, Yoga, and Music
+                                                Therapy</strong></h2>
+
+                                        <p>Physiotherapy in Pune and across India is evolving beyond clinic walls.
+                                            Several complementary approaches have strong evidence behind them:</p>
                                         <ul>
-                                            <li><strong>Tai Chi:</strong> A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10585979/"><strong>study referenced in PMC</strong></a> found Tai Chi was associated with fewer falls compared to strength training or stretching. Sustained practice for 6 months showed lasting benefits.</li>
-                                            <li><strong>Dance therapy:</strong> A <a href="https://www.physio-pedia.com/Parkinson%27s_-_Physiotherapy_Management_and_Interventions"><strong>2021 meta-analysis</strong></a> found music-based movement therapy significantly improves motor function, balance, freezing, and walking speed. Twelve months of regular dance can alleviate PD motor symptoms.</li>
-                                            <li><strong>Yoga adaptations:</strong> For Indian families comfortable with yogic practices, seated Surya Namaskar and chair-supported Vrikshasana (tree pose) offer balance training in a familiar cultural format. Always modify poses with a physiotherapist's guidance.</li>
-                                            <li><strong>Music therapy:</strong> Playing rhythmic music during walking practice acts as an auditory cue. It's simple, free, and effective. Pick a song with a steady beat matching your target step speed.</li>
+                                            <li><strong>Tai Chi:</strong> A <a
+                                                    href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10585979/"><strong>study
+                                                        referenced in PMC</strong></a> found Tai Chi was associated with
+                                                fewer falls compared to strength training or stretching. Sustained
+                                                practice for 6 months showed lasting benefits.</li>
+                                            <li><strong>Dance therapy:</strong> A <a
+                                                    href="https://www.physio-pedia.com/Parkinson%27s_-_Physiotherapy_Management_and_Interventions"><strong>2021
+                                                        meta-analysis</strong></a> found music-based movement therapy
+                                                significantly improves motor function, balance, freezing, and walking
+                                                speed. Twelve months of regular dance can alleviate PD motor symptoms.
+                                            </li>
+                                            <li><strong>Yoga adaptations:</strong> For Indian families comfortable with
+                                                yogic practices, seated Surya Namaskar and chair-supported Vrikshasana
+                                                (tree pose) offer balance training in a familiar cultural format. Always
+                                                modify poses with a physiotherapist's guidance.</li>
+                                            <li><strong>Music therapy:</strong> Playing rhythmic music during walking
+                                                practice acts as an auditory cue. It's simple, free, and effective. Pick
+                                                a song with a steady beat matching your target step speed.</li>
                                         </ul>
-                                        
-                                        <h2><strong>The Indian Reality: Why Early Physiotherapy Matters Even More Here</strong></h2>
-                                        
-                                        <p>India faces a unique Parkinson's challenge. According to the <a href="https://www.movementdisorders.org/MDS/Moving-Along/2023-issue-2/EOPD-in-India-vs-Western-populations"><strong>Movement Disorders Society</strong></a>, with a prevalence rate of 15 to 43 per 100,000 population, India is likely to have the highest absolute number of PD patients in the world. What makes it worse is that 40 to 45% of Indian PD patients experience early onset, with symptoms starting between ages 22 and 49. That is decades earlier than in Western countries.</p>
-                                        
-                                        <p>A <a href="https://movementdisorders.onlinelibrary.wiley.com/doi/full/10.1002/mds.30310"><strong> 2025 pan-India study</strong></a> involving 3,320 cases confirmed a mean age-at-onset of just 54.2 years, with male predominance. Gender discrimination still delays treatment for women, and awareness gaps mean many families do not seek help until the disease has progressed significantly.</p>
-                                        
-                                        <p>For anyone searching for a neuro rehabilitation centre in Pune or any major Indian city, the message is clear: do not wait. Early physiotherapy referral at the time of diagnosis, not years later, gives patients the best chance of maintaining independence.</p>
-                                        
+
+                                        <h2><strong>The Indian Reality: Why Early Physiotherapy Matters Even More
+                                                Here</strong></h2>
+
+                                        <p>India faces a unique Parkinson's challenge. According to the <a
+                                                href="https://www.movementdisorders.org/MDS/Moving-Along/2023-issue-2/EOPD-in-India-vs-Western-populations"><strong>Movement
+                                                    Disorders Society</strong></a>, with a prevalence rate of 15 to 43
+                                            per 100,000 population, India is likely to have the highest absolute number
+                                            of PD patients in the world. What makes it worse is that 40 to 45% of Indian
+                                            PD patients experience early onset, with symptoms starting between ages 22
+                                            and 49. That is decades earlier than in Western countries.</p>
+
+                                        <p>A <a
+                                                href="https://movementdisorders.onlinelibrary.wiley.com/doi/full/10.1002/mds.30310"><strong>
+                                                    2025 pan-India study</strong></a> involving 3,320 cases confirmed a
+                                            mean age-at-onset of just 54.2 years, with male predominance. Gender
+                                            discrimination still delays treatment for women, and awareness gaps mean
+                                            many families do not seek help until the disease has progressed
+                                            significantly.</p>
+
+                                        <p>For anyone searching for a neuro rehabilitation centre in Pune or any major
+                                            Indian city, the message is clear: do not wait. Early physiotherapy referral
+                                            at the time of diagnosis, not years later, gives patients the best chance of
+                                            maintaining independence.</p>
+
                                         <h2><strong>Key Takeaways</strong></h2>
-                                        
-                                        <p>Parkinson's disease takes away the movements you never thought about: stepping, turning, standing up from a chair. Physiotherapy gives them back, one exercise at a time.</p>
-                                        
-                                        <p>The science is clear. Balance training that progresses from static to dynamic to dual-task makes a measurable difference. Cueing techniques break through freezing episodes. LSVT BIG retrains your brain to move big again. And starting early, right from diagnosis, builds the motor reserve your body will need in the years ahead.</p>
-                                        
-                                        <p>For families in Pune looking for specialized support, <a href="https://neurorehabilitationcentre.com/"><strong>Apricot Care Assisted Living and Rehabilitation</strong></a> offers personalized Parkinson's physiotherapy with advanced robotic and VR-assisted equipment, home therapy options, and a team that celebrates every small victory with you.</p>
-                                        
-                                        <p>So here's the question that matters: what is one step you can take today to help yourself or your loved one move with more confidence tomorrow?</p>
-                                        
-                                        <p>➤ Take the first step today. <a href="https://neurorehabilitationcentre.com/contact">Book a free consultation</a> with our neurophysiotherapists at Apricot Care, Kharadi, Pune. Call +91 7387641462 or visit us online to schedule your appointment.</p>
-                                        
+
+                                        <p>Parkinson's disease takes away the movements you never thought about:
+                                            stepping, turning, standing up from a chair. Physiotherapy gives them back,
+                                            one exercise at a time.</p>
+
+                                        <p>The science is clear. Balance training that progresses from static to dynamic
+                                            to dual-task makes a measurable difference. Cueing techniques break through
+                                            freezing episodes. LSVT BIG retrains your brain to move big again. And
+                                            starting early, right from diagnosis, builds the motor reserve your body
+                                            will need in the years ahead.</p>
+
+                                        <p>For families in Pune looking for specialized support, <a
+                                                href="https://neurorehabilitationcentre.com/"><strong>Apricot Care
+                                                    Assisted Living and Rehabilitation</strong></a> offers personalized
+                                            Parkinson's physiotherapy with advanced robotic and VR-assisted equipment,
+                                            home therapy options, and a team that celebrates every small victory with
+                                            you.</p>
+
+                                        <p>So here's the question that matters: what is one step you can take today to
+                                            help yourself or your loved one move with more confidence tomorrow?</p>
+
+                                        <p>➤ Take the first step today. <a
+                                                href="https://neurorehabilitationcentre.com/contact">Book a free
+                                                consultation</a> with our neurophysiotherapists at Apricot Care,
+                                            Kharadi, Pune. Call +91 7387641462 or visit us online to schedule your
+                                            appointment.</p>
+
                                         <h2><strong>Frequently Asked Questions</strong></h2>
-                                        
+
                                         <h2><strong>Can physiotherapy cure Parkinson's disease?</strong></h2>
-                                        <p>No. Physiotherapy cannot cure PD. But strong evidence shows it improves balance, gait, motor function, and quality of life. Recent research suggests intensive exercise may slow disease progression by promoting brain neuroplasticity.</p>
-                                        
-                                        <h2><strong>How often should a Parkinson's patient do physiotherapy?</strong></h2>
-                                        <p>The most studied prescription is 60-minute sessions, twice per week, for at least 12 weeks. Balance exercises should happen 2 to 3 times per week. Aerobic exercise should be done 3 to 4 times per week at moderate intensity.</p>
-                                        
+                                        <p>No. Physiotherapy cannot cure PD. But strong evidence shows it improves
+                                            balance, gait, motor function, and quality of life. Recent research suggests
+                                            intensive exercise may slow disease progression by promoting brain
+                                            neuroplasticity.</p>
+
+                                        <h2><strong>How often should a Parkinson's patient do physiotherapy?</strong>
+                                        </h2>
+                                        <p>The most studied prescription is 60-minute sessions, twice per week, for at
+                                            least 12 weeks. Balance exercises should happen 2 to 3 times per week.
+                                            Aerobic exercise should be done 3 to 4 times per week at moderate intensity.
+                                        </p>
+
                                         <h3>What is the best time of day to exercise with Parkinson's?</h3>
-                                        <p>Exercise works best during your medication "On" period, typically 30 to 60 minutes after taking your levodopa dose. Your movement, reaction time, and balance are all better during this window.</p>
-                                        
-                                        <h2><strong>Are home exercises enough, or do I need to visit a clinic?</strong></h2>
-                                        <p>Both matter. A physiotherapist should assess you and design a personalized program. After that, you can perform many exercises safely at home with caregiver support. Some advanced therapies like robotic gait training and LSVT BIG require clinical supervision.</p>
-                                        <h2><strong>Is it safe for elderly patients to do balance exercises?</strong></h2>
-                                        <p>Yes, with proper guidance. Start with chair-based or supported exercises. Always have a sturdy surface nearby. A qualified physiotherapist will match exercise difficulty to your ability level.</p>
+                                        <p>Exercise works best during your medication "On" period, typically 30 to 60
+                                            minutes after taking your levodopa dose. Your movement, reaction time, and
+                                            balance are all better during this window.</p>
+
+                                        <h2><strong>Are home exercises enough, or do I need to visit a clinic?</strong>
+                                        </h2>
+                                        <p>Both matter. A physiotherapist should assess you and design a personalized
+                                            program. After that, you can perform many exercises safely at home with
+                                            caregiver support. Some advanced therapies like robotic gait training and
+                                            LSVT BIG require clinical supervision.</p>
+                                        <h2><strong>Is it safe for elderly patients to do balance exercises?</strong>
+                                        </h2>
+                                        <p>Yes, with proper guidance. Start with chair-based or supported exercises.
+                                            Always have a sturdy surface nearby. A qualified physiotherapist will match
+                                            exercise difficulty to your ability level.</p>
                                     </div><!-- /.blog-card__content__inner -->
                                 </div><!-- /.blog-card-four__content -->
                             </div><!-- /.blog-card -->
                         </div><!-- /.blog-details -->
 
 
-                          <div class="author-box"
-                                style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
-                                <div style="min-width:80px;">
-                                    <img src="../assets/images/doctors/Dr.-AMOL - Copy.jpg" alt="Dr Amol Kathar"
-                                        style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
+                        <div class="author-box"
+                            style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
+                            <div style="min-width:80px;">
+                                <img src="../assets/images/doctors/Dr.-AMOL - Copy.jpg" alt="Dr Amol Kathar"
+                                    style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
+                            </div>
+                            <div>
+                                <span
+                                    style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
+                                    author</span>
+                                <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
+                                        href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a></div>
+                                <div style="font-size:14px;font-weight:500;color:#136C53;">
+                                    Dr. Amol Kathar is the Clinical Head and Neurophysiotherapist at Apricot Care,
+                                    Pune. <br> With 3.5 years of experience, he specializes in personalized
+                                    rehabilitation for stroke, spinal cord injuries, and mobility training to help
+                                    patients regain independence.
                                 </div>
-                                <div>
-                                    <span
-                                        style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
-                                        author</span>
-                                    <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
-                                            href="../doctor/dr-amol-kathar">Dr. Amol Kathar</a></div>
-                                    <div style="font-size:14px;font-weight:500;color:#136C53;">
-                                        Dr. Amol Kathar is the Clinical Head and Neurophysiotherapist at Apricot Care,
-                                        Pune. <br> With 3.5 years of experience, he specializes in personalized
-                                        rehabilitation for stroke, spinal cord injuries, and mobility training to help
-                                        patients regain independence.
-                                    </div>
 
-                                    <div style="margin-top:8px;">
-                                        <a href="https://www.facebook.com/apricotcare">
-                                            <i class="fab fa-facebook-f" aria-hidden="true"></i><span
-                                                class="sr-only">Facebook</span>
-                                        </a>
-                                        <a href="https://x.com/care_apricot">
-                                            <i class="fab fa-twitter" aria-hidden="true"></i><span
-                                                class="sr-only">Twitter</span>
-                                        </a>
-                                        <a href="https://www.instagram.com/the_brain_rehab/">
-                                            <i class="fab fa-instagram" aria-hidden="true"></i><span
-                                                class="sr-only">Instagram</span>
-                                        </a>
-                                        <a href="https://www.youtube.com/@ApricotCare">
-                                            <i class="fab fa-youtube" aria-hidden="true"></i><span
-                                                class="sr-only">Youtube</span>
-                                        </a>
-                                    </div>
+                                <div style="margin-top:8px;">
+                                    <a href="https://www.facebook.com/apricotcare">
+                                        <i class="fab fa-facebook-f" aria-hidden="true"></i><span
+                                            class="sr-only">Facebook</span>
+                                    </a>
+                                    <a href="https://x.com/care_apricot">
+                                        <i class="fab fa-twitter" aria-hidden="true"></i><span
+                                            class="sr-only">Twitter</span>
+                                    </a>
+                                    <a href="https://www.instagram.com/the_brain_rehab/">
+                                        <i class="fab fa-instagram" aria-hidden="true"></i><span
+                                            class="sr-only">Instagram</span>
+                                    </a>
+                                    <a href="https://www.youtube.com/@ApricotCare">
+                                        <i class="fab fa-youtube" aria-hidden="true"></i><span
+                                            class="sr-only">Youtube</span>
+                                    </a>
                                 </div>
                             </div>
+                        </div>
 
                     </div><!-- /.col-lg-8 -->
                     <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -829,7 +1303,8 @@
                             <ul class="list-unstyled footer-widget__links">
                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune"
                                         class="text-white">Carniotomy Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Rehabilitation</a></li>
                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune"
                                         class="text-white">Tracheostomy Care</a></li>
@@ -837,6 +1312,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -852,7 +1330,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -862,7 +1341,8 @@
                                         class="text-white">Orthopedic Care</a></li>
                                 <li><a href="../medical-rehabilitation/postoperative-care-in-pune"
                                         class="text-white">Postoperative Care</a></li>
-                                <li><a href="../medical-rehabilitation/oncology-care-in-pune" class="text-white">Oncology
+                                <li><a href="../medical-rehabilitation/oncology-care-in-pune"
+                                        class="text-white">Oncology
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/neuro-care-in-pune" class="text-white">Neuro
                                         Care</a></li>
@@ -989,7 +1469,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1030,8 +1510,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
@@ -1101,34 +1581,34 @@
             }
         }
     </style>
-        <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-        <script>
-            // Fallback in case Font Awesome doesn't load
-            window.addEventListener('DOMContentLoaded', function(){
-                var testDiv = document.createElement('div');
-                testDiv.innerHTML = '<i class="fa fa-check"></i>';
-                document.body.appendChild(testDiv);
-                var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
-                    window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
-                document.body.removeChild(testDiv);
-                if (!faLoaded) {
-                    var fallback = document.createElement('link');
-                    fallback.rel = 'stylesheet';
-                    fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
-                    document.head.appendChild(fallback);
-                }
-            });
-        </script>
-        <div class="mobile-bottom-bar">
-            <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
-                aria-label="Contact via WhatsApp">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
-                <i class="fa-solid fa-phone"></i> Call
-            </a>
-        </div>
+    <!-- Fix: Ensure Font Awesome loads earlier and fallback to CDNJS if needed -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <script>
+        // Fallback in case Font Awesome doesn't load
+        window.addEventListener('DOMContentLoaded', function () {
+            var testDiv = document.createElement('div');
+            testDiv.innerHTML = '<i class="fa fa-check"></i>';
+            document.body.appendChild(testDiv);
+            var faLoaded = window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('FontAwesome') ||
+                window.getComputedStyle(testDiv.firstChild).getPropertyValue('font-family').includes('Font Awesome');
+            document.body.removeChild(testDiv);
+            if (!faLoaded) {
+                var fallback = document.createElement('link');
+                fallback.rel = 'stylesheet';
+                fallback.href = 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/all.min.css';
+                document.head.appendChild(fallback);
+            }
+        });
+    </script>
+    <div class="mobile-bottom-bar">
+        <a class="mobile-bar-btn whatsapp" href="https://wa.me/917387641462" target="_blank" rel="noopener"
+            aria-label="Contact via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="mobile-bar-btn call" href="tel:+917387641462" aria-label="Call Now">
+            <i class="fa-solid fa-phone"></i> Call
+        </a>
+    </div>
     <!-- Font Awesome 6 CDN -->
 
     <script src="../assets/vendors/jquery/jquery-3.7.0.min.js"></script>
@@ -1153,23 +1633,23 @@
     <script src="../assets/vendors/jquery-lettering/jquery.lettering.min.js"></script>
     <!-- template js -->
     <script src="../assets/js/sifoxen.js"></script>
-   <script>
-            // Show locations only when toggled
-            (function() {
-                var btn = document.getElementById('footerLocationToggleBtn');
-                var list = document.getElementById('footerLocationList');
-                var chevron = document.getElementById('footerLocationChevron');
-                btn.addEventListener('click', function() {
-                    var isOpen = list.style.display === "block";
-                    // Toggle display
-                    list.style.display = isOpen ? "none" : "block";
-                    // Toggle aria
-                    btn.setAttribute('aria-expanded', !isOpen);
-                    // Animate chevron
-                    chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
-                });
-            })();
-        </script>
+    <script>
+        // Show locations only when toggled
+        (function () {
+            var btn = document.getElementById('footerLocationToggleBtn');
+            var list = document.getElementById('footerLocationList');
+            var chevron = document.getElementById('footerLocationChevron');
+            btn.addEventListener('click', function () {
+                var isOpen = list.style.display === "block";
+                // Toggle display
+                list.style.display = isOpen ? "none" : "block";
+                // Toggle aria
+                btn.setAttribute('aria-expanded', !isOpen);
+                // Animate chevron
+                chevron.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+            });
+        })();
+    </script>
 </body>
 
 </html>

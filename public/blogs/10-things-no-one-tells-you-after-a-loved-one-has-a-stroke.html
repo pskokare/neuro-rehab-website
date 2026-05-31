@@ -5,23 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10 Things No One Tells You After a Loved One Has a Stroke</title>
-    <meta name="description" content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre.">
+    <meta name="description"
+        content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre.">
     <meta name="author" content="Dr. Krutika Bhadane">
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
-    <link rel="canonical" href="https://neurorehabilitationcentre.com/blogs/10-things-no-one-tells-you-after-a-loved-one-has-a-stroke">
+    <link rel="canonical"
+        href="https://neurorehabilitationcentre.com/blogs/10-things-no-one-tells-you-after-a-loved-one-has-a-stroke">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="10 Things No One Tells You After a Loved One Has a Stroke" />
-    <meta property="og:description" content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre." />
+    <meta property="og:description"
+        content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre." />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="https://neurorehabilitationcentre.com/blogs/10-things-no-one-tells-you-after-a-loved-one-has-a-stroke" />
+    <meta property="og:url"
+        content="https://neurorehabilitationcentre.com/blogs/10-things-no-one-tells-you-after-a-loved-one-has-a-stroke" />
     <meta property="og:image" content="../assets/images/blogs/06aprblog1.png" />
     <meta name="twitter:card" content="../assets/images/blogs/06aprblog1.png" />
     <meta name="twitter:title" content="10 Things No One Tells You After a Loved One Has a Stroke" />
-    <meta name="twitter:description" content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre." />
+    <meta name="twitter:description"
+        content="From pseudobulbar affect to caregiver burnout: discover what hospitals rarely tell families after a stroke. A guide by Apricot Care, Pune's neurorehabilitation centre." />
     <meta name="twitter:image" content="../assets/images/blogs/06aprblog1.png" />
 
     <!-- fonts -->
@@ -89,7 +94,7 @@
                 margin: 0 auto 20px;
             }
         }
-        
+
         /* Author Box Responsive Styles */
         @media (max-width: 991px) {
             .author-box {
@@ -100,66 +105,286 @@
                 margin: 30px auto !important;
                 max-width: 100% !important;
             }
+
             .author-box div:first-child {
                 min-width: auto !important;
                 margin: 0 auto !important;
             }
+
             .author-box div:nth-child(2) {
                 text-align: center !important;
             }
         }
-        
+
         @media (max-width: 767px) {
             .author-box {
                 padding: 15px !important;
                 margin: 25px auto !important;
                 gap: 12px !important;
             }
+
             .author-box img {
                 width: 80px !important;
                 height: 80px !important;
             }
+
             .author-box div:nth-child(2) div:first-child {
                 font-size: 17px !important;
                 line-height: 22px !important;
             }
+
             .author-box div:nth-child(2) div:nth-child(2) {
                 font-size: 13px !important;
             }
         }
-        
+
         @media (max-width: 576px) {
             .author-box {
                 padding: 12px !important;
                 margin: 20px auto !important;
                 gap: 10px !important;
             }
+
             .author-box img {
                 width: 70px !important;
                 height: 70px !important;
             }
+
             .author-box div:nth-child(2) span {
                 font-size: 12px !important;
                 padding: 2px 10px !important;
             }
+
             .author-box div:nth-child(2) div:first-child {
                 font-size: 16px !important;
                 line-height: 20px !important;
             }
+
             .author-box div:nth-child(2) div:nth-child(2) {
                 font-size: 12px !important;
             }
         }
-        
+
         @media (max-width: 480px) {
             .author-box {
                 padding: 10px !important;
                 margin: 15px auto !important;
             }
+
             .author-box img {
                 width: 60px !important;
                 height: 60px !important;
             }
+        }
+    </style>
+
+    <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
         }
     </style>
 
@@ -331,9 +556,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -343,7 +570,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -376,8 +604,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -394,7 +621,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -408,8 +635,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -418,6 +644,11 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
+
+                                                 
                                             </ul>
                                         </li>
                                     </ul>
@@ -445,7 +676,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -494,7 +725,8 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img src="../assets/images/blogs/10-Things-No-One-Tells-You-After-a-Loved-One-Has-a-Stroke.webp">
+                                    <img
+                                        src="../assets/images/blogs/10-Things-No-One-Tells-You-After-a-Loved-One-Has-a-Stroke.webp">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">06</span>
                                         <span class="blog-card__date__month">APR</span>
@@ -505,13 +737,15 @@
                                         <div class="blog-meta-item">
                                             <div class="author-avatar my-auto"
                                                 style="width:40px;height:40px;margin-right:5px;">
-                                                <img src="../assets/images/doctor/dr-krutika.webp" alt="Dr. Krutika Bhadane">
+                                                <img src="../assets/images/doctor/dr-krutika.webp"
+                                                    alt="Dr. Krutika Bhadane">
                                             </div>
                                             <span style="font-size:13px; line-height:16px;">
                                                 <b>Medically Reviewed By</b><br>
                                                 <a href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a><br>
                                                 <span style="font-size:12px; color:#666;">
-                                                    PT (Neuro), BPTh, MPTh (Neurosciences), 3+ years clinical <br> experience in neurological rehabilitation
+                                                    PT (Neuro), BPTh, MPTh (Neurosciences), 3+ years clinical <br>
+                                                    experience in neurological rehabilitation
                                                 </span>
                                             </span>
                                         </div>
@@ -524,166 +758,384 @@
 
                                     </div>
                                     <div class="blog-card__content__inner" style="text-align: justify;">
-                                        <h2><strong>10 Things No One Tells You After a Loved One Has a Stroke</strong></h2>
-                                        <p>It was a Tuesday morning when Priya's phone rang at 2:47 AM. Her father, a 58-year-old retired schoolteacher who could recite Hindi poetry, argue cricket statistics, and cook a full Sunday lunch, had collapsed in the bathroom. By the time she reached the hospital, the doctors were calm and efficient. The clot was caught early. The scans looked "manageable." A week later, she brought him home.</p>
+                                        <h2><strong>10 Things No One Tells You After a Loved One Has a Stroke</strong>
+                                        </h2>
+                                        <p>It was a Tuesday morning when Priya's phone rang at 2:47 AM. Her father, a
+                                            58-year-old retired schoolteacher who could recite Hindi poetry, argue
+                                            cricket statistics, and cook a full Sunday lunch, had collapsed in the
+                                            bathroom. By the time she reached the hospital, the doctors were calm and
+                                            efficient. The clot was caught early. The scans looked "manageable." A week
+                                            later, she brought him home.</p>
                                         <p>That's when nobody warned her about anything that actually mattered.</p>
-                                        <p>Nobody told her that her father would laugh at the wrong moments. Loudly, helplessly. Nobody told her she would quietly grieve the man who used to call her every Sunday, even though he was sitting right there in the next room. Nobody told her that the hardest part of a stroke isn't the hospital. It's everything after.</p>
-                                        <p>If you are reading this, you are probably living something similar. You may have a parent, spouse, or sibling who has recently had a stroke, and you are trying to figure out what comes next. According to the <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11786524/"><strong>World Stroke Organization Fact Sheet 2025</strong></a>, the global cost of stroke is over US$890 billion annually. The emotional cost carried by millions of families is impossible to price.</p>
-                                        <p>In India,<a href="https://www.nature.com/articles/s41598-024-72551-4"><strong> stroke is the fourth leading cause of death and the fifth leading cause of disability</strong></a>, with 119 to 145 new cases per 100,000 people every year. Most families walk out of hospitals with a discharge summary, a list of medications, and almost no roadmap for what comes next. This blog is that roadmap.</p>
-                                        <p>Here are 10 things that hospitals rarely tell families but that every caregiver needs to know.</p><br><br>
-                                        
+                                        <p>Nobody told her that her father would laugh at the wrong moments. Loudly,
+                                            helplessly. Nobody told her she would quietly grieve the man who used to
+                                            call her every Sunday, even though he was sitting right there in the next
+                                            room. Nobody told her that the hardest part of a stroke isn't the hospital.
+                                            It's everything after.</p>
+                                        <p>If you are reading this, you are probably living something similar. You may
+                                            have a parent, spouse, or sibling who has recently had a stroke, and you are
+                                            trying to figure out what comes next. According to the <a
+                                                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11786524/"><strong>World
+                                                    Stroke Organization Fact Sheet 2025</strong></a>, the global cost of
+                                            stroke is over US$890 billion annually. The emotional cost carried by
+                                            millions of families is impossible to price.</p>
+                                        <p>In India,<a
+                                                href="https://www.nature.com/articles/s41598-024-72551-4"><strong>
+                                                    stroke is the fourth leading cause of death and the fifth leading
+                                                    cause of disability</strong></a>, with 119 to 145 new cases per
+                                            100,000 people every year. Most families walk out of hospitals with a
+                                            discharge summary, a list of medications, and almost no roadmap for what
+                                            comes next. This blog is that roadmap.</p>
+                                        <p>Here are 10 things that hospitals rarely tell families but that every
+                                            caregiver needs to know.</p><br><br>
+
                                         <h2><strong>What Most Articles Get Wrong</strong></h2>
-                                        <p><img src="../assets/images/blogs/What-Most-Articles-Get-Wrong.webp" alt="What Most Articles Get Wrong" style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
-                                        <p>Before we get into the 10 points, here is a quick look at what top websites say versus what they consistently leave out:</p>
-                                        
+                                        <p><img src="../assets/images/blogs/What-Most-Articles-Get-Wrong.webp"
+                                                alt="What Most Articles Get Wrong"
+                                                style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
+                                        <p>Before we get into the 10 points, here is a quick look at what top websites
+                                            say versus what they consistently leave out:</p>
+
                                         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
                                             <tr>
-                                                <th style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">What Most Websites Cover</th>
-                                                <th style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">What This Blog Covers That Others Miss</th>
+                                                <th
+                                                    style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">
+                                                    What Most Websites Cover</th>
+                                                <th
+                                                    style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">
+                                                    What This Blog Covers That Others Miss</th>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Post-stroke depression</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Pseudobulbar Affect (PBA): laughing/crying with no trigger</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Post-stroke
+                                                    depression</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Pseudobulbar Affect
+                                                    (PBA): laughing/crying with no trigger</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Recovery takes months</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">The Plateau Illusion: brain still rewires after progress seems to stop</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Recovery takes months
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">The Plateau Illusion:
+                                                    brain still rewires after progress seems to stop</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Hire a physiotherapist</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Overstimulation causes setbacks: too many visitors, TV noise, chaos</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Hire a
+                                                    physiotherapist</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Overstimulation
+                                                    causes setbacks: too many visitors, TV noise, chaos</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Caregiver stress is real</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Ambiguous grief: mourning someone who is still alive</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Caregiver stress is
+                                                    real</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Ambiguous grief:
+                                                    mourning someone who is still alive</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Second stroke risk exists</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">How Indian dietary habits directly increase relapse risk</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Second stroke risk
+                                                    exists</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">How Indian dietary
+                                                    habits directly increase relapse risk</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Personality may change</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Why survivors seem selfish, it is brain damage, not character</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Personality may
+                                                    change</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Why survivors seem
+                                                    selfish, it is brain damage, not character</td>
                                             </tr>
                                         </table>
-                                        
-                                        <h2><strong>1. The Person You Brought Home May Seem Like a Stranger</strong></h2>
-                                        <h3><em>This Is Not Who They Chose to Be. It Is What the Brain Damage Did.</em></h3>
-                                        <p>This is the one thing almost no website explains clearly. After a stroke, your loved one may become suddenly short-tempered, emotionally distant, or surprisingly self-centered. They may stop asking how you are. They may seem unaware that you are exhausted.</p>
-                                        <p>Here is the surprising truth: this is not a personality flaw. It is a neurological consequence. According to <a href="https://www.geisinger.org/health-and-wellness/wellness-articles/2024/05/10/15/00/personality-changes-after-stroke"><strong>Geisinger Health (2024)</strong></a>, stroke can damage areas of the brain responsible for empathy, including the right supramarginal gyrus and anterior insula. The survivor is not choosing to be dismissive. The parts of their brain that process other people's feelings have been physically injured.</p>
-                                        <p><strong>What you can do:</strong> do not take it personally, and do not compare them to who they were. Talk to the rehabilitation team about behavioral therapy options. This is treatable, not permanent in most cases.</p>
-                                        
-                                        <h2><strong>2. Laughing at the Wrong Moment Is Not Rudeness. It Is a Medical Condition.</strong></h2>
+
+                                        <h2><strong>1. The Person You Brought Home May Seem Like a Stranger</strong>
+                                        </h2>
+                                        <h3><em>This Is Not Who They Chose to Be. It Is What the Brain Damage Did.</em>
+                                        </h3>
+                                        <p>This is the one thing almost no website explains clearly. After a stroke,
+                                            your loved one may become suddenly short-tempered, emotionally distant, or
+                                            surprisingly self-centered. They may stop asking how you are. They may seem
+                                            unaware that you are exhausted.</p>
+                                        <p>Here is the surprising truth: this is not a personality flaw. It is a
+                                            neurological consequence. According to <a
+                                                href="https://www.geisinger.org/health-and-wellness/wellness-articles/2024/05/10/15/00/personality-changes-after-stroke"><strong>Geisinger
+                                                    Health (2024)</strong></a>, stroke can damage areas of the brain
+                                            responsible for empathy, including the right supramarginal gyrus and
+                                            anterior insula. The survivor is not choosing to be dismissive. The parts of
+                                            their brain that process other people's feelings have been physically
+                                            injured.</p>
+                                        <p><strong>What you can do:</strong> do not take it personally, and do not
+                                            compare them to who they were. Talk to the rehabilitation team about
+                                            behavioral therapy options. This is treatable, not permanent in most cases.
+                                        </p>
+
+                                        <h2><strong>2. Laughing at the Wrong Moment Is Not Rudeness. It Is a Medical
+                                                Condition.</strong></h2>
                                         <h3><em>Most Families Have Never Heard of Pseudobulbar Affect (PBA)</em></h3>
-                                        <p>Imagine your loved one laughing uncontrollably at a solemn moment, or bursting into tears when watching a casual TV commercial. This is not emotional instability. It is a neurological condition called Pseudobulbar Affect (PBA).</p>
-                                        <p>According to the <a href="https://www.stroke.org/en/about-stroke/effects-of-stroke/emotional-effects/pseudobulbar-affect"><strong>American Stroke Association</strong></a>, PBA causes involuntary, uncontrollable bouts of crying, laughter, or anger that occur without any emotional trigger, or wildly out of proportion to what triggered them.</p>
-                                        <p>A <a href="https://journals.sagepub.com/doi/10.1177/17474930241242952"><strong>2024 study published in Sage Journals</strong></a> found that post-stroke emotionalism affects roughly 1 in 5 stroke survivors at six months post-stroke. Yet it remains one of the most underdiagnosed conditions in Indian rehab settings.</p>
-                                        <p><strong>Key triggers for PBA episodes:</strong> Fatigue, stress, anxiety, crowded environments, background noise, and emotional conversations.</p>
-                                        <p><strong>What you can do:</strong> ask the neurologist specifically about PBA. It is treatable with medication, including low-dose antidepressants, and with behavioral therapy. The first step is naming it.</p>
-                                        
+                                        <p>Imagine your loved one laughing uncontrollably at a solemn moment, or
+                                            bursting into tears when watching a casual TV commercial. This is not
+                                            emotional instability. It is a neurological condition called Pseudobulbar
+                                            Affect (PBA).</p>
+                                        <p>According to the <a
+                                                href="https://www.stroke.org/en/about-stroke/effects-of-stroke/emotional-effects/pseudobulbar-affect"><strong>American
+                                                    Stroke Association</strong></a>, PBA causes involuntary,
+                                            uncontrollable bouts of crying, laughter, or anger that occur without any
+                                            emotional trigger, or wildly out of proportion to what triggered them.</p>
+                                        <p>A <a href="https://journals.sagepub.com/doi/10.1177/17474930241242952"><strong>2024
+                                                    study published in Sage Journals</strong></a> found that post-stroke
+                                            emotionalism affects roughly 1 in 5 stroke survivors at six months
+                                            post-stroke. Yet it remains one of the most underdiagnosed conditions in
+                                            Indian rehab settings.</p>
+                                        <p><strong>Key triggers for PBA episodes:</strong> Fatigue, stress, anxiety,
+                                            crowded environments, background noise, and emotional conversations.</p>
+                                        <p><strong>What you can do:</strong> ask the neurologist specifically about PBA.
+                                            It is treatable with medication, including low-dose antidepressants, and
+                                            with behavioral therapy. The first step is naming it.</p>
+
                                         <h2><strong>3. Silence Is Actually a Healing Tool</strong></h2>
                                         <h3><em>Stop Filling the Gaps. It Is Making Communication Harder.</em></h3>
-                                        <p>When your loved one struggles to find a word mid-sentence, every instinct tells you to jump in and complete it for them. It feels helpful. It is actually harmful.</p>
-                                        <p>According to <a href="https://www.cedars-sinai.org/stories-and-insights/expert-advice/how-to-support-a-loved-one-after-a-stroke"><strong>Cedars-Sinai neurologists</strong></a>, interrupting or finishing sentences creates confusion for stroke survivors with aphasia. It disrupts the brain's retrieval process and makes the communication harder, not easier. "People feel the need to fill up the silence," their experts note, "but it gets worse when someone is shouting at you as if you can't hear."</p>
-                                        <p>The damaged brain needs extra time to retrieve language from memory. Giving it that time, even 15 to 30 uncomfortable seconds of silence, is a form of therapy.</p>
-                                        <p><strong>What you can do:</strong> practice waiting. Ask one question at a time. Lower your voice, not raise it. And never finish their sentence unless they specifically ask you to.</p>
-                                        
+                                        <p>When your loved one struggles to find a word mid-sentence, every instinct
+                                            tells you to jump in and complete it for them. It feels helpful. It is
+                                            actually harmful.</p>
+                                        <p>According to <a
+                                                href="https://www.cedars-sinai.org/stories-and-insights/expert-advice/how-to-support-a-loved-one-after-a-stroke"><strong>Cedars-Sinai
+                                                    neurologists</strong></a>, interrupting or finishing sentences
+                                            creates confusion for stroke survivors with aphasia. It disrupts the brain's
+                                            retrieval process and makes the communication harder, not easier. "People
+                                            feel the need to fill up the silence," their experts note, "but it gets
+                                            worse when someone is shouting at you as if you can't hear."</p>
+                                        <p>The damaged brain needs extra time to retrieve language from memory. Giving
+                                            it that time, even 15 to 30 uncomfortable seconds of silence, is a form of
+                                            therapy.</p>
+                                        <p><strong>What you can do:</strong> practice waiting. Ask one question at a
+                                            time. Lower your voice, not raise it. And never finish their sentence unless
+                                            they specifically ask you to.</p>
+
                                         <h2><strong>4. Too Many Visitors Can Set Recovery Back</strong></h2>
                                         <h3><em>The Brain After a Stroke Is Easily Overwhelmed, Even by Love</em></h3>
-                                        <p>Extended family arriving to offer support. The TV running in the background all day. Multiple conversations happening at once in the hospital room. All of this feels warm and caring. But for the recovering brain, it is an energy drain.</p>
-                                        <p>According to <a href="https://www.flintrehab.com/what-every-stroke-survivor-wished-you-knew/"><strong>Flint Rehab</strong></a>, the healing brain does not tolerate too much noise, light, or overstimulation. Even background noise, which healthy brains filter out automatically, drains the limited energy reserve of a healing brain, leaving less capacity for actual recovery.</p>
-                                        <p>In Indian households especially, where recovery tends to happen in shared family spaces with constant movement and noise, this is one of the biggest invisible barriers to healing.</p>
+                                        <p>Extended family arriving to offer support. The TV running in the background
+                                            all day. Multiple conversations happening at once in the hospital room. All
+                                            of this feels warm and caring. But for the recovering brain, it is an energy
+                                            drain.</p>
+                                        <p>According to <a
+                                                href="https://www.flintrehab.com/what-every-stroke-survivor-wished-you-knew/"><strong>Flint
+                                                    Rehab</strong></a>, the healing brain does not tolerate too much
+                                            noise, light, or overstimulation. Even background noise, which healthy
+                                            brains filter out automatically, drains the limited energy reserve of a
+                                            healing brain, leaving less capacity for actual recovery.</p>
+                                        <p>In Indian households especially, where recovery tends to happen in shared
+                                            family spaces with constant movement and noise, this is one of the biggest
+                                            invisible barriers to healing.</p>
                                         <ul>
                                             <li>Limit visits to 2 to 3 close family members at a time</li>
                                             <li>Keep the TV off or at very low volume during rest hours</li>
-                                            <li>Ask visitors to speak one at a time and avoid multiple conversations</li>
+                                            <li>Ask visitors to speak one at a time and avoid multiple conversations
+                                            </li>
                                             <li>Create a quiet, structured daily routine with defined rest periods</li>
                                         </ul>
-                                        <p style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;"><em>Is your loved one recovering at home in a noisy environment? <a href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune"><strong> Explore Apricot Care's structured physiotherapy programs in Pune</strong></a> designed to create the right healing environment for faster recovery.</em></p>
-                                        
+                                        <p
+                                            style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                                            <em>Is your loved one recovering at home in a noisy environment? <a
+                                                    href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune"><strong>
+                                                        Explore Apricot Care's structured physiotherapy programs in
+                                                        Pune</strong></a> designed to create the right healing
+                                                environment for faster recovery.</em>
+                                        </p>
+
                                         <h2><strong>5. The 3-Month Mark Is Not the Finish Line</strong></h2>
-                                        <h3><em>The Plateau Illusion Is One of the Most Costly Mistakes Families Make</em></h3>
-                                        <p>Here is what most families are told: the first three months are the most critical window for recovery. Here is what most families are not told: recovery does not stop at three months.</p>
-                                        <p>The <a href="https://www.stroke.org/en/help-and-support/for-family-caregivers/15-things-caregivers-should-know-after-a-loved-one-has-had-a-stroke"><strong> American Stroke Association</strong></a> confirms that some survivors continue to recover well into the first and second year. The brain is rewiring itself through neuroplasticity, forming new neural connections to compensate for damaged ones. But this process requires structured, consistent stimulation.</p>
-                                        <p>What happens too often: families stop aggressive physiotherapy and occupational therapy at three months, thinking recovery has plateaued. The brain is still capable of progress, it just needs continued, expert-guided input.</p>
-                                        <p style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">What most people do not realize is that stopping rehabilitation at three months is like stopping antibiotics halfway through the course. The window has not closed. You have just stopped using it.</p>
-                                        
-                                        <h2><strong>6. You Are Allowed to Grieve, Even Though They Are Still Here</strong></h2>
+                                        <h3><em>The Plateau Illusion Is One of the Most Costly Mistakes Families
+                                                Make</em></h3>
+                                        <p>Here is what most families are told: the first three months are the most
+                                            critical window for recovery. Here is what most families are not told:
+                                            recovery does not stop at three months.</p>
+                                        <p>The <a
+                                                href="https://www.stroke.org/en/help-and-support/for-family-caregivers/15-things-caregivers-should-know-after-a-loved-one-has-had-a-stroke"><strong>
+                                                    American Stroke Association</strong></a> confirms that some
+                                            survivors continue to recover well into the first and second year. The brain
+                                            is rewiring itself through neuroplasticity, forming new neural connections
+                                            to compensate for damaged ones. But this process requires structured,
+                                            consistent stimulation.</p>
+                                        <p>What happens too often: families stop aggressive physiotherapy and
+                                            occupational therapy at three months, thinking recovery has plateaued. The
+                                            brain is still capable of progress, it just needs continued, expert-guided
+                                            input.</p>
+                                        <p
+                                            style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                                            What most people do not realize is that stopping rehabilitation at three
+                                            months is like stopping antibiotics halfway through the course. The window
+                                            has not closed. You have just stopped using it.</p>
+
+                                        <h2><strong>6. You Are Allowed to Grieve, Even Though They Are Still
+                                                Here</strong></h2>
                                         <h3><em>Ambiguous Loss Is Real, and It Has a Name</em></h3>
-                                        <p>This is perhaps the most emotionally honest point in this entire article, and the one that almost no stroke recovery website addresses.</p>
-                                        <p>You may find yourself grieving the person your loved one used to be: the way they laughed, the way they made decisions, the role they played in the family. And then you feel guilty, because they are still alive. They are right there.</p>
-                                        <p>This experience is called ambiguous loss, a term from psychological research describing grief that occurs when someone is physically present but psychologically changed. It is completely normal. And left unaddressed, it leads directly to caregiver burnout.</p>
-                                        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/32055120/"><strong>PubMed-published Indian hospital study</strong></a> found a strong correlation (0.72) between caregiver burden and depression, meaning caregivers who do not process their grief are at serious risk of developing clinical depression themselves.</p>
-                                        <p><strong>What you can do:</strong> acknowledge that you are carrying two kinds of weight: practical and emotional. Seek caregiver-specific counseling. This is not a luxury. It is part of the recovery plan.</p>
-                                        
-                                        <h2><strong>7. Another Stroke Can Happen, and Prevention Starts at Home</strong></h2>
+                                        <p>This is perhaps the most emotionally honest point in this entire article, and
+                                            the one that almost no stroke recovery website addresses.</p>
+                                        <p>You may find yourself grieving the person your loved one used to be: the way
+                                            they laughed, the way they made decisions, the role they played in the
+                                            family. And then you feel guilty, because they are still alive. They are
+                                            right there.</p>
+                                        <p>This experience is called ambiguous loss, a term from psychological research
+                                            describing grief that occurs when someone is physically present but
+                                            psychologically changed. It is completely normal. And left unaddressed, it
+                                            leads directly to caregiver burnout.</p>
+                                        <p>A <a href="https://pubmed.ncbi.nlm.nih.gov/32055120/"><strong>PubMed-published
+                                                    Indian hospital study</strong></a> found a strong correlation (0.72)
+                                            between caregiver burden and depression, meaning caregivers who do not
+                                            process their grief are at serious risk of developing clinical depression
+                                            themselves.</p>
+                                        <p><strong>What you can do:</strong> acknowledge that you are carrying two kinds
+                                            of weight: practical and emotional. Seek caregiver-specific counseling. This
+                                            is not a luxury. It is part of the recovery plan.</p>
+
+                                        <h2><strong>7. Another Stroke Can Happen, and Prevention Starts at Home</strong>
+                                        </h2>
                                         <h3><em>This Is the Conversation Discharge Summaries Rarely Have</em></h3>
-                                        <p><img src="../assets/images/blogs/Another-Stroke-Can-Happen.webp" alt="Stroke Prevention" style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
-                                        <p>Stroke survivors face a significantly elevated risk of a second stroke. <a href="https://www.stroke.org/en/help-and-support/for-family-caregivers/15-things-caregivers-should-know-after-a-loved-one-has-had-a-stroke"><strong>The American Stroke Association</strong></a> is clear: diet, exercise, medication compliance, and regular specialist visits are non-negotiable after a first stroke.</p>
-                                        <p>In India, the challenge is compounded. A <a href="https://www.nature.com/articles/s41598-024-72551-4"><strong>2024 GBD Analysis published in Scientific Reports </strong></a> identified dietary risks and hypertension as major contributors to stroke burden in Maharashtra specifically. High-salt cooking, oil-heavy diets, irregular medication routines, these are everyday realities in Indian households that directly fuel relapse risk.</p>
-                                        
+                                        <p><img src="../assets/images/blogs/Another-Stroke-Can-Happen.webp"
+                                                alt="Stroke Prevention"
+                                                style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
+                                        <p>Stroke survivors face a significantly elevated risk of a second stroke. <a
+                                                href="https://www.stroke.org/en/help-and-support/for-family-caregivers/15-things-caregivers-should-know-after-a-loved-one-has-had-a-stroke"><strong>The
+                                                    American Stroke Association</strong></a> is clear: diet, exercise,
+                                            medication compliance, and regular specialist visits are non-negotiable
+                                            after a first stroke.</p>
+                                        <p>In India, the challenge is compounded. A <a
+                                                href="https://www.nature.com/articles/s41598-024-72551-4"><strong>2024
+                                                    GBD Analysis published in Scientific Reports </strong></a>
+                                            identified dietary risks and hypertension as major contributors to stroke
+                                            burden in Maharashtra specifically. High-salt cooking, oil-heavy diets,
+                                            irregular medication routines, these are everyday realities in Indian
+                                            households that directly fuel relapse risk.</p>
+
                                         <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
                                             <tr>
-                                                <th style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">Risk Factor</th>
-                                                <th style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">Why It Matters Post-Stroke</th>
-                                                <th style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">What Families Can Do</th>
+                                                <th
+                                                    style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">
+                                                    Risk Factor</th>
+                                                <th
+                                                    style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">
+                                                    Why It Matters Post-Stroke</th>
+                                                <th
+                                                    style="border: 1px solid #ddd; padding: 12px; background-color: #f2f2f2; text-align: left;">
+                                                    What Families Can Do</th>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">High blood pressure</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Primary driver of recurrent stroke</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Daily BP monitoring at home</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">High blood pressure
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Primary driver of
+                                                    recurrent stroke</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Daily BP monitoring
+                                                    at home</td>
                                             </tr>
                                             <tr>
                                                 <td style="border: 1px solid #ddd; padding: 12px;">Salt-heavy diet</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Elevates BP and vascular stress</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Work with a nutrition therapist</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Elevates BP and
+                                                    vascular stress</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Work with a nutrition
+                                                    therapist</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Missed medications</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Anticoagulants are critical</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Use pill organizers, set alarms</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Missed medications
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Anticoagulants are
+                                                    critical</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Use pill organizers,
+                                                    set alarms</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Physical inactivity</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Increases clot formation risk</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Structured physiotherapy plan</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Physical inactivity
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Increases clot
+                                                    formation risk</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Structured
+                                                    physiotherapy plan</td>
                                             </tr>
                                             <tr>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Smoking / tobacco</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Directly increases stroke incidence</td>
-                                                <td style="border: 1px solid #ddd; padding: 12px;">Enlist medical support to quit</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Smoking / tobacco
+                                                </td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Directly increases
+                                                    stroke incidence</td>
+                                                <td style="border: 1px solid #ddd; padding: 12px;">Enlist medical
+                                                    support to quit</td>
                                             </tr>
                                         </table>
-                                        
-                                        <p style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;"><em>Worried about your loved one having another stroke? <a href="https://neurorehabilitationcentre.com/medical-rehabilitation/stroke-treatment-rehab-physiotherapy"><strong>See how our stroke care and rehabilitation program</strong></a> helps survivors in Pune manage risk factors and build a safer recovery plan at home.</em></p>
-                                        
-                                        <h2><strong>8. The Financial Shock Is Real, and Nobody Prepares You for It</strong></h2>
+
+                                        <p
+                                            style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                                            <em>Worried about your loved one having another stroke? <a
+                                                    href="https://neurorehabilitationcentre.com/medical-rehabilitation/stroke-treatment-rehab-physiotherapy"><strong>See
+                                                        how our stroke care and rehabilitation program</strong></a>
+                                                helps survivors in Pune manage risk factors and build a safer recovery
+                                                plan at home.</em>
+                                        </p>
+
+                                        <h2><strong>8. The Financial Shock Is Real, and Nobody Prepares You for
+                                                It</strong></h2>
                                         <h3><em>Here Is a Framework to Plan Before the Bills Pile Up</em></h3>
-                                        <p>A <a href="https://www.nature.com/articles/s41598-023-43977-z"><strong> study published in Nature Scientific Reports</strong></a> found that stroke patients in India can face up to INR 50,000 in direct medical costs. This number does not include the indirect costs that quietly accumulate afterward.</p>
-                                        <p>According to <a href="https://www.aarp.org/caregiving/health/info-2023/stroke-recovery-what-to-know.html"><strong>AARP caregiving research</strong></a>, calculating the true cost of caregiving must include income lost from the patient being unable to work, as well as the working hours the primary caregiver has to sacrifice, a double financial hit that most Indian families are completely unprepared for.</p>
+                                        <p>A <a href="https://www.nature.com/articles/s41598-023-43977-z"><strong> study
+                                                    published in Nature Scientific Reports</strong></a> found that
+                                            stroke patients in India can face up to INR 50,000 in direct medical costs.
+                                            This number does not include the indirect costs that quietly accumulate
+                                            afterward.</p>
+                                        <p>According to <a
+                                                href="https://www.aarp.org/caregiving/health/info-2023/stroke-recovery-what-to-know.html"><strong>AARP
+                                                    caregiving research</strong></a>, calculating the true cost of
+                                            caregiving must include income lost from the patient being unable to work,
+                                            as well as the working hours the primary caregiver has to sacrifice, a
+                                            double financial hit that most Indian families are completely unprepared
+                                            for.</p>
                                         <ul>
-                                            <li><strong>Direct costs:</strong> Hospitalization, ICU, medications, follow-up scans</li>
-                                            <li><strong>Rehabilitation costs:</strong> Physiotherapy sessions, occupational therapy, speech therapy</li>
-                                            <li><strong>Home modification costs:</strong> Grab bars, wheelchair ramps, bathroom safety aids</li>
-                                            <li><strong>Caregiver income loss:</strong> Time off work, reduced hours, career interruptions</li>
-                                            <li><strong>Long-term care costs:</strong> In-home nursing, ICU-at-home services if needed</li>
+                                            <li><strong>Direct costs:</strong> Hospitalization, ICU, medications,
+                                                follow-up scans</li>
+                                            <li><strong>Rehabilitation costs:</strong> Physiotherapy sessions,
+                                                occupational therapy, speech therapy</li>
+                                            <li><strong>Home modification costs:</strong> Grab bars, wheelchair ramps,
+                                                bathroom safety aids</li>
+                                            <li><strong>Caregiver income loss:</strong> Time off work, reduced hours,
+                                                career interruptions</li>
+                                            <li><strong>Long-term care costs:</strong> In-home nursing, ICU-at-home
+                                                services if needed</li>
                                         </ul>
-                                        <p><strong>What you can do:</strong> request a detailed cost projection from your rehabilitation team early. Know what your insurance covers. Plan for at least 12 to 18 months of rehabilitation-related expenses.</p>
-                                        
+                                        <p><strong>What you can do:</strong> request a detailed cost projection from
+                                            your rehabilitation team early. Know what your insurance covers. Plan for at
+                                            least 12 to 18 months of rehabilitation-related expenses.</p>
+
                                         <h2><strong>9. Your Loved One's Intelligence Is Fully Intact</strong></h2>
                                         <h3><em>Do Not Talk Down to Them, Even If They Cannot Talk Back</em></h3>
-                                        <p>This one matters enormously in Indian families, and it is almost never said aloud.</p>
-                                        <p>When a stroke survivor cannot speak clearly, or struggles to find words, or needs help with basic tasks, well-meaning family members begin speaking to them in simplified sentences. Baby talk. Or worse, they start making decisions on their behalf without asking.</p>
-                                        <p>What most people do not realize is that a stroke does not affect intelligence. According to <a href="https://www.flintrehab.com/what-every-stroke-survivor-wished-you-knew/"><strong>Flint Rehab</strong></a>, stroke is a brain attack that deprives specific areas of oxygen. The damage impairs skills like language or movement, but the person's full intelligence, life experience, and self-awareness remain intact. They understand everything happening around them. They hear how you speak to them.</p>
-                                        <p>The psychological damage of being treated as incapable can be as destructive to recovery as the stroke itself.</p>
-                                        <p><strong>What you can do:</strong> always speak to them as the adult they are. Ask for their opinion. Give them choices. Include them in conversations, even if their response is slow or limited. Dignity is not optional, it is therapeutic.</p>
-                                        
-                                        <h2><strong>10. Caregiver Burnout Is Not Weakness. It Is a Medical Signal.</strong></h2>
+                                        <p>This one matters enormously in Indian families, and it is almost never said
+                                            aloud.</p>
+                                        <p>When a stroke survivor cannot speak clearly, or struggles to find words, or
+                                            needs help with basic tasks, well-meaning family members begin speaking to
+                                            them in simplified sentences. Baby talk. Or worse, they start making
+                                            decisions on their behalf without asking.</p>
+                                        <p>What most people do not realize is that a stroke does not affect
+                                            intelligence. According to <a
+                                                href="https://www.flintrehab.com/what-every-stroke-survivor-wished-you-knew/"><strong>Flint
+                                                    Rehab</strong></a>, stroke is a brain attack that deprives specific
+                                            areas of oxygen. The damage impairs skills like language or movement, but
+                                            the person's full intelligence, life experience, and self-awareness remain
+                                            intact. They understand everything happening around them. They hear how you
+                                            speak to them.</p>
+                                        <p>The psychological damage of being treated as incapable can be as destructive
+                                            to recovery as the stroke itself.</p>
+                                        <p><strong>What you can do:</strong> always speak to them as the adult they are.
+                                            Ask for their opinion. Give them choices. Include them in conversations,
+                                            even if their response is slow or limited. Dignity is not optional, it is
+                                            therapeutic.</p>
+
+                                        <h2><strong>10. Caregiver Burnout Is Not Weakness. It Is a Medical
+                                                Signal.</strong></h2>
                                         <h3><em>If the Caregiver Collapses, the Survivor Suffers Too</em></h3>
-                                        <p><img src="../assets/images/blogs/Caregiver-Burnout-Is-Not-Weakness.webp" alt="Caregiver Burnout" style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
-                                        <p>The final thing nobody tells you is this: you cannot pour from an empty cup. And stroke caregiving empties cups faster than almost any other caregiving role.</p>
-                                        <p>An <a href="https://pubmed.ncbi.nlm.nih.gov/32055120/"><strong>Indian hospital-based study on caregiver burd</strong></a> found a strong correlation (0.84) between caregiver burden and both depression and anxiety. The study concluded that a structured caregiver intervention is urgently needed in the Indian healthcare setting, because caregivers are quietly becoming secondary patients.</p>
-                                        <p>The <a href="https://www.caregiveraction.org/strokecare/"><strong> Caregiver Action Network</strong></a> recommends that caregivers prioritize daily self-care, attend support group meetings, and explore respite care options to manage stress before it becomes a clinical problem.</p>
+                                        <p><img src="../assets/images/blogs/Caregiver-Burnout-Is-Not-Weakness.webp"
+                                                alt="Caregiver Burnout"
+                                                style="width: 100%; height: auto; margin: 20px 0; display: block;"></p>
+                                        <p>The final thing nobody tells you is this: you cannot pour from an empty cup.
+                                            And stroke caregiving empties cups faster than almost any other caregiving
+                                            role.</p>
+                                        <p>An <a href="https://pubmed.ncbi.nlm.nih.gov/32055120/"><strong>Indian
+                                                    hospital-based study on caregiver burd</strong></a> found a strong
+                                            correlation (0.84) between caregiver burden and both depression and anxiety.
+                                            The study concluded that a structured caregiver intervention is urgently
+                                            needed in the Indian healthcare setting, because caregivers are quietly
+                                            becoming secondary patients.</p>
+                                        <p>The <a href="https://www.caregiveraction.org/strokecare/"><strong> Caregiver
+                                                    Action Network</strong></a> recommends that caregivers prioritize
+                                            daily self-care, attend support group meetings, and explore respite care
+                                            options to manage stress before it becomes a clinical problem.</p>
                                         <ul>
                                             <li>Tell people specifically what help you need, not "I'm fine"</li>
                                             <li>Schedule one hour per day that is yours, non-negotiable</li>
@@ -691,61 +1143,119 @@
                                             <li>Request a psychological check-in as part of the rehab program</li>
                                             <li>Accept respite care or professional help without guilt</li>
                                         </ul>
-                                        <p style="background-color: #ffb387; padding: 15px; border-radius: 5px; margin: 20px 0;">Here is the surprising truth: studies show that the quality of caregiver health directly predicts the quality of survivor recovery. Taking care of yourself is not selfish. It is clinically necessary.</p>
-                                        
-                                        <p style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;"><em>Feeling overwhelmed as a caregiver? <a href="https://neurorehabilitationcentre.com/caregiver-services"><strong>Apricot Care's professional caregiver support services</strong></a> in Pune are built to help both the survivor and the family heal together.</em></p>
-                                        
+                                        <p
+                                            style="background-color: #ffb387; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                                            Here is the surprising truth: studies show that the quality of caregiver
+                                            health directly predicts the quality of survivor recovery. Taking care of
+                                            yourself is not selfish. It is clinically necessary.</p>
+
+                                        <p
+                                            style="border: 1px solid #e49292; background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;">
+                                            <em>Feeling overwhelmed as a caregiver? <a
+                                                    href="https://neurorehabilitationcentre.com/caregiver-services"><strong>Apricot
+                                                        Care's professional caregiver support services</strong></a> in
+                                                Pune are built to help both the survivor and the family heal
+                                                together.</em>
+                                        </p>
+
                                         <h2><strong>How Apricot Care Helps Families Navigate All of This</strong></h2>
-                                        <p>At <a href="https://neurorehabilitationcentre.com/"><strong>Apricot Care Assisted Living and Rehabilitation in Pune</strong></a>, we work with both stroke survivors and their families, because we know that recovery is never a solo journey. Our multidisciplinary team addresses the clinical, emotional, and practical sides of post-stroke life: from neurophysiotherapy and speech therapy to psychological rehab and structured caregiver training.</p>
-                                        <p>We offer in-clinic care, home visits, and online therapy, because every family's situation is different. If your loved one has recently had a stroke and you are trying to figure out where to begin, our team in Kharadi, Pune can help you build a plan that actually works.</p><br><br>
-                                        
+                                        <p>At <a href="https://neurorehabilitationcentre.com/"><strong>Apricot Care
+                                                    Assisted Living and Rehabilitation in Pune</strong></a>, we work
+                                            with both stroke survivors and their families, because we know that recovery
+                                            is never a solo journey. Our multidisciplinary team addresses the clinical,
+                                            emotional, and practical sides of post-stroke life: from neurophysiotherapy
+                                            and speech therapy to psychological rehab and structured caregiver training.
+                                        </p>
+                                        <p>We offer in-clinic care, home visits, and online therapy, because every
+                                            family's situation is different. If your loved one has recently had a stroke
+                                            and you are trying to figure out where to begin, our team in Kharadi, Pune
+                                            can help you build a plan that actually works.</p><br><br>
+
                                         <h2><strong>Final Thoughts</strong></h2>
-                                        <p>A stroke changes everything in one moment. But recovery, real and meaningful, happens over months and years, with the right information, the right support, and the right team around you.</p>
+                                        <p>A stroke changes everything in one moment. But recovery, real and meaningful,
+                                            happens over months and years, with the right information, the right
+                                            support, and the right team around you.</p>
                                         <p>Here is a quick summary of the 10 things this article covered:</p>
                                         <ul>
                                             <li>Personality changes are neurological, not a character shift</li>
-                                            <li>PBA (uncontrollable laughing or crying) is a diagnosable, treatable condition</li>
+                                            <li>PBA (uncontrollable laughing or crying) is a diagnosable, treatable
+                                                condition</li>
                                             <li>Silence during communication is a therapy tool, not a gap to fill</li>
-                                            <li>Overstimulation from noise and visitors actively slows brain recovery</li>
-                                            <li>Recovery does not plateau at 3 months. Neuroplasticity continues with the right input.</li>
+                                            <li>Overstimulation from noise and visitors actively slows brain recovery
+                                            </li>
+                                            <li>Recovery does not plateau at 3 months. Neuroplasticity continues with
+                                                the right input.</li>
                                             <li>Caregiver grief is real, valid, and needs to be addressed</li>
-                                            <li>Second stroke prevention starts with daily habits at home, not just medications</li>
-                                            <li>Financial planning for at least 12 to 18 months is essential from day one</li>
-                                            <li>Intelligence is fully intact. Treat your loved one with full dignity.</li>
+                                            <li>Second stroke prevention starts with daily habits at home, not just
+                                                medications</li>
+                                            <li>Financial planning for at least 12 to 18 months is essential from day
+                                                one</li>
+                                            <li>Intelligence is fully intact. Treat your loved one with full dignity.
+                                            </li>
                                             <li>Caregiver burnout is a medical signal, not a personal failure</li>
                                         </ul>
-                                        <p>Which of these 10 points surprised you the most? And what is the one thing you wish someone had told you on the day you brought your loved one home from the hospital? Share your experience, because every story helps another family feel less alone.</p><br><br>
-                                        
+                                        <p>Which of these 10 points surprised you the most? And what is the one thing
+                                            you wish someone had told you on the day you brought your loved one home
+                                            from the hospital? Share your experience, because every story helps another
+                                            family feel less alone.</p><br><br>
+
                                         <h2><strong>Frequently Asked Questions (FAQ)</strong></h2>
                                         <p><strong>How long does stroke recovery take in India?</strong><br>
-                                        Recovery timelines vary widely depending on the severity of the stroke, the areas of the brain affected, and the intensity of rehabilitation. While the fastest gains often happen in the first three to four months, meaningful recovery can continue into the first and second year with consistent, structured therapy.</p>
-                                        
-                                        <p><strong>What is pseudobulbar affect and is it common after stroke?</strong><br>
-                                        Pseudobulbar affect (PBA) is a neurological condition causing involuntary, uncontrollable episodes of laughing or crying that are disconnected from the person's actual emotional state. It affects approximately 1 in 5 stroke survivors at six months post-stroke and is treatable with medication and behavioral therapy.</p>
-                                        
+                                            Recovery timelines vary widely depending on the severity of the stroke, the
+                                            areas of the brain affected, and the intensity of rehabilitation. While the
+                                            fastest gains often happen in the first three to four months, meaningful
+                                            recovery can continue into the first and second year with consistent,
+                                            structured therapy.</p>
+
+                                        <p><strong>What is pseudobulbar affect and is it common after
+                                                stroke?</strong><br>
+                                            Pseudobulbar affect (PBA) is a neurological condition causing involuntary,
+                                            uncontrollable episodes of laughing or crying that are disconnected from the
+                                            person's actual emotional state. It affects approximately 1 in 5 stroke
+                                            survivors at six months post-stroke and is treatable with medication and
+                                            behavioral therapy.</p>
+
                                         <p><strong>How can I prevent a second stroke at home?</strong><br>
-                                        Key prevention steps include daily blood pressure monitoring, strict medication adherence, a low-salt diet, regular physical activity (guided by a physiotherapist), no tobacco use, and regular follow-ups with a neurologist. In Maharashtra specifically, managing dietary risks and hypertension is particularly critical.</p>
-                                        
-                                        <p><strong>When should a stroke patient start physiotherapy in Pune?</strong><br>
-                                        Physiotherapy should ideally begin within the first 24 to 48 hours after a stroke, under medical supervision. Early mobilization is strongly associated with better recovery outcomes. Once discharged, a structured outpatient or home physiotherapy program should begin immediately.</p>
-                                        
-                                        <p><strong>How does Apricot Care support stroke survivor families in Pune?</strong><br>
-                                        Apricot Care provides a full multidisciplinary rehabilitation program including neurophysiotherapy, occupational therapy, speech and swallow therapy, psychological rehabilitation, nutrition therapy, and caregiver training. Services are available in-clinic, at home, and online across multiple Pune locations.</p>
-                                        
+                                            Key prevention steps include daily blood pressure monitoring, strict
+                                            medication adherence, a low-salt diet, regular physical activity (guided by
+                                            a physiotherapist), no tobacco use, and regular follow-ups with a
+                                            neurologist. In Maharashtra specifically, managing dietary risks and
+                                            hypertension is particularly critical.</p>
+
+                                        <p><strong>When should a stroke patient start physiotherapy in
+                                                Pune?</strong><br>
+                                            Physiotherapy should ideally begin within the first 24 to 48 hours after a
+                                            stroke, under medical supervision. Early mobilization is strongly associated
+                                            with better recovery outcomes. Once discharged, a structured outpatient or
+                                            home physiotherapy program should begin immediately.</p>
+
+                                        <p><strong>How does Apricot Care support stroke survivor families in
+                                                Pune?</strong><br>
+                                            Apricot Care provides a full multidisciplinary rehabilitation program
+                                            including neurophysiotherapy, occupational therapy, speech and swallow
+                                            therapy, psychological rehabilitation, nutrition therapy, and caregiver
+                                            training. Services are available in-clinic, at home, and online across
+                                            multiple Pune locations.</p>
+
                                         <div class="author-box"
                                             style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
                                             <div style="min-width:80px;">
-                                                <img src="../assets/images/doctor/dr-krutika.webp" alt="Dr. Krutika Bhadane"
+                                                <img src="../assets/images/doctor/dr-krutika.webp"
+                                                    alt="Dr. Krutika Bhadane"
                                                     style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
                                             </div>
                                             <div>
                                                 <span
                                                     style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
                                                     author</span>
-                                                <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
-                                                        href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a></div>
+                                                <div
+                                                    style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;">
+                                                    <a href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a>
+                                                </div>
                                                 <div style="font-size:14px;font-weight:500;color:#136C53;">
-                                                    Dr. Krutika Bhadane is a Neurophysiotherapist and Clinical Physiotherapist at Apricot Care, Kharadi, Pune, with 3 years of experience in adult neurological rehabilitation.
+                                                    Dr. Krutika Bhadane is a Neurophysiotherapist and Clinical
+                                                    Physiotherapist at Apricot Care, Kharadi, Pune, with 3 years of
+                                                    experience in adult neurological rehabilitation.
                                                 </div>
 
                                                 <div style="margin-top:8px;">
@@ -768,7 +1278,7 @@
                                     </div>
                                 </div><!-- /.blog-card-four__content -->
                             </div><!-- /.blog-card -->
-                         
+
                         </div><!-- /.blog-details -->
 
 
@@ -776,32 +1286,37 @@
                     <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -955,6 +1470,7 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune" class="text-white">Transitional Care</a></li>
 
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
@@ -970,7 +1486,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -1108,7 +1625,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -1149,8 +1666,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>

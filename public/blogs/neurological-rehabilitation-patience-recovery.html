@@ -5,23 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neurological Rehabilitation Needs Patience and Progress</title>
-    <meta name="description" content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
+    <meta name="description"
+        content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
     <meta name="author" content="Dr. Krutika Bhadane">
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/home/Logo/AC logo.png" />
     <link rel="manifest" href="../assets/images/favicons/site.webmanifest" />
-    <link rel="canonical" href="https://neurorehabilitationcentre.com/blogs/neurological-rehabilitation-patience-recovery">
+    <link rel="canonical"
+        href="https://neurorehabilitationcentre.com/blogs/neurological-rehabilitation-patience-recovery">
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Neurological Rehabilitation Needs Patience and Progress" />
-    <meta property="og:description" content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
+    <meta property="og:description"
+        content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
     <meta property="og:type" content="blog" />
-    <meta property="og:url" content="https://neurorehabilitationcentre.com/blogs/neurological-rehabilitation-patience-recovery" />
+    <meta property="og:url"
+        content="https://neurorehabilitationcentre.com/blogs/neurological-rehabilitation-patience-recovery" />
     <meta property="og:image" content="../assets/images/blogs/blog2.1.png" />
     <meta name="twitter:card" content="../assets/images/blogs/blog2.1.png" />
     <meta name="twitter:title" content="Neurological Rehabilitation Needs Patience and Progress" />
-    <meta name="twitter:description" content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
+    <meta name="twitter:description"
+        content="Learn why neurological rehabilitation takes patience, steady effort, and family support, and how small milestones lead to meaningful recovery" />
     <meta name="twitter:image" content="../assets/images/blogs/blog2.1.png" />
 
     <!-- fonts -->
@@ -89,7 +94,7 @@
                 margin: 0 auto 20px;
             }
         }
-        
+
         /* Author Box Responsive Styles */
         @media (max-width: 991px) {
             .author-box {
@@ -100,66 +105,286 @@
                 margin: 30px auto !important;
                 max-width: 100% !important;
             }
+
             .author-box div:first-child {
                 min-width: auto !important;
                 margin: 0 auto !important;
             }
+
             .author-box div:nth-child(2) {
                 text-align: center !important;
             }
         }
-        
+
         @media (max-width: 767px) {
             .author-box {
                 padding: 15px !important;
                 margin: 25px auto !important;
                 gap: 12px !important;
             }
+
             .author-box img {
                 width: 80px !important;
                 height: 80px !important;
             }
+
             .author-box div:nth-child(2) div:first-child {
                 font-size: 17px !important;
                 line-height: 22px !important;
             }
+
             .author-box div:nth-child(2) div:nth-child(2) {
                 font-size: 13px !important;
             }
         }
-        
+
         @media (max-width: 576px) {
             .author-box {
                 padding: 12px !important;
                 margin: 20px auto !important;
                 gap: 10px !important;
             }
+
             .author-box img {
                 width: 70px !important;
                 height: 70px !important;
             }
+
             .author-box div:nth-child(2) span {
                 font-size: 12px !important;
                 padding: 2px 10px !important;
             }
+
             .author-box div:nth-child(2) div:first-child {
                 font-size: 16px !important;
                 line-height: 20px !important;
             }
+
             .author-box div:nth-child(2) div:nth-child(2) {
                 font-size: 12px !important;
             }
         }
-        
+
         @media (max-width: 480px) {
             .author-box {
                 padding: 10px !important;
                 margin: 15px auto !important;
             }
+
             .author-box img {
                 width: 60px !important;
                 height: 60px !important;
             }
+        }
+    </style>
+
+    <style>
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-size: 14px;
+        }
+
+        .blog-meta-item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .blog-meta-item i {
+            margin-right: 8px;
+            color: var(--primary);
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .author-avatar {
+                margin: 0 auto 20px;
+            }
+        }
+
+        /* ── Blog scroll fix (unchanged) ───────────────── */
+        @media (min-width: 992px) {
+            .blog-details-page .row.gutter-y-60 {
+                align-items: flex-start;
+            }
+
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                overflow-y: scroll;
+            }
+        }
+
+        @media (max-width: 991.98px) {
+            .blog-details-page .row.gutter-y-60>.col-lg-8 {
+                height: auto !important;
+                overflow-y: visible !important;
+            }
+        }
+
+        /* ══════════════════════════════════════════════════
+           SIDEBAR STYLING — col-lg-4 only
+           Nothing outside .col-lg-4 .sidebar is changed.
+        ══════════════════════════════════════════════════ */
+
+        /* ── Contact form widget ────────────────────────── */
+        .col-lg-4 .sidebar .sidebar__single:first-child {
+            background: #ffffff !important;
+            border-radius: 14px !important;
+            box-shadow: 0 6px 30px rgba(19, 108, 83, 0.12) !important;
+            border-top: 4px solid #136C53 !important;
+            padding: 26px 22px !important;
+            margin-bottom: 28px !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child h4 {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #136C53 !important;
+            margin-bottom: 20px !important;
+            letter-spacing: 0.2px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child label {
+            font-size: 11px !important;
+            font-weight: 700 !important;
+            color: #555 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.6px !important;
+            margin-bottom: 5px !important;
+            display: block !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="text"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="tel"],
+        .col-lg-4 .sidebar .sidebar__single:first-child input[type="email"],
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea {
+            width: 100% !important;
+            padding: 10px 13px !important;
+            border: 1.5px solid #e2e2e2 !important;
+            border-radius: 8px !important;
+            font-size: 13px !important;
+            background: #f8f9fa !important;
+            color: #333 !important;
+            transition: border-color 0.25s, box-shadow 0.25s !important;
+            outline: none !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child input:focus,
+        .col-lg-4 .sidebar .sidebar__single:first-child textarea:focus {
+            border-color: #136C53 !important;
+            box-shadow: 0 0 0 3px rgba(19, 108, 83, 0.10) !important;
+            background: #fff !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"] {
+            background: linear-gradient(135deg, #136C53 0%, #1aaa78 100%) !important;
+            color: #fff !important;
+            padding: 12px 20px !important;
+            border: none !important;
+            border-radius: 8px !important;
+            font-size: 14px !important;
+            font-weight: 700 !important;
+            cursor: pointer !important;
+            width: 100% !important;
+            letter-spacing: 0.3px !important;
+            box-shadow: 0 4px 16px rgba(19, 108, 83, 0.28) !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__single:first-child button[type="submit"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 8px 24px rgba(19, 108, 83, 0.36) !important;
+        }
+
+        /* ── Latest Posts widget ──────────────────────────   */
+        .col-lg-4 .sidebar .sidebar__posts-wrapper {
+            background: #ffffff;
+            border-radius: 14px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+            border-top: 4px solid #ff8700;
+            padding: 22px 18px;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts-title {
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            color: #1a1a1a !important;
+            margin-bottom: 16px !important;
+            padding-bottom: 12px !important;
+            border-bottom: 2px solid #f0f0f0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 8px;
+            border-radius: 8px;
+            margin-bottom: 2px;
+            border-bottom: 1px solid #f4f4f4;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover {
+            background: #f0faf6;
+            transform: translateX(4px);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image {
+            flex-shrink: 0;
+            width: 70px;
+            height: 60px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__item:hover .sidebar__posts__image img {
+            transform: scale(1.07);
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            line-height: 1.5 !important;
+            margin: 0 !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a {
+            color: #2d2d2d !important;
+            text-decoration: none !important;
+            transition: color 0.2s !important;
+        }
+
+        .col-lg-4 .sidebar .sidebar__posts__title a:hover {
+            color: #136C53 !important;
         }
     </style>
 </head>
@@ -250,9 +475,11 @@
                                         <li class="dropdown">
                                             <a href="#">Medical Rehabilitation</a>
                                             <ul class="sub-menu drpdwn-container">
-                                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
+                                                <li><a
+                                                        href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy">Stroke
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine Care</a>
+                                                <li><a href="../medical-rehabilitation/spine-care-in-pune">Spine
+                                                        Care</a>
                                                 </li>
                                                 <li><a href="../medical-rehabilitation/trauma-care-in-pune">Trauma
                                                         Care</a></li>
@@ -262,7 +489,8 @@
                                                         Care</a></li>
                                                 <li><a href="../medical-rehabilitation/oncology-care-in-pune">Oncology
                                                         Care</a></li>
-                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro Care</a>
+                                                <li><a href="../medical-rehabilitation/neuro-care-in-pune">Neuro
+                                                        Care</a>
                                                 </li>
                                             </ul>
                                         </li>
@@ -295,8 +523,7 @@
                                                         Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/spinal-cord-injury-in-pune">Spinal
                                                         Cord Injury</a></li>
-                                                <li><a
-                                                        href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                <li><a href="../condition-based-recovery/brain-injury-recovery-in-pune">Brain
                                                         Injury Recovery</a></li>
                                                 <li><a href="../condition-based-recovery/multiple-sclerosis-in-pune">Multiple
                                                         Sclerosis</a></li>
@@ -313,7 +540,7 @@
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Advanced Care Programs</a>
-                                            <ul class="sub-menu drpdwn-container">
+                                            <ul class="sub-menu drpdwn-container adv-drop-dwn">
                                                 <li><a href="../advanced-care-programs/feeding-tube-care-in-pune">Feeding
                                                         Tube Care</a></li>
                                                 <li><a href="../advanced-care-programs/cardiac-rehabilitation-in-pune">Cardiac
@@ -327,8 +554,7 @@
                                                         Care</a></li>
                                                 <li><a href="../advanced-care-programs/craniotomy-care-in-pune">Craniotomy
                                                         Care</a></li>
-                                                <li><a
-                                                        href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
+                                                <li><a href="../advanced-care-programs/oncology-rehabilitation-in-pune">Oncology
                                                         Rehabilitation</a></li>
                                                 <li><a href="../advanced-care-programs/tracheostomy-care-in-pune">Tracheostomy
                                                         Care</a></li>
@@ -337,6 +563,9 @@
                                                         (Knee/Hip Replacement) Care</a></li>
                                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune">Bedsore
                                                         Management</a></li>
+
+                                                <li><a href="../advanced-care-programs/transitional-care-in-pune">Transitional
+                                                        Care in Pune</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -364,7 +593,7 @@
 
                                 <li class="dropdown">
                                     <a href="../about">About us </a>
-                                     <ul class="drpdwn-container">
+                                    <ul class="drpdwn-container">
                                         <li><a href="../neuro-physiotherapist-in-pune">Our Experts</a></li>
                                     </ul>
 
@@ -394,11 +623,13 @@
             <!-- /.page-header__bg -->
             <div class="container">
                 <div class="page-header__content">
-                    <h1 class="page-header__title">Neurological Rehabilitation Is All About Patience: Understanding the Real Recovery Journey</h1>
+                    <h1 class="page-header__title">Neurological Rehabilitation Is All About Patience: Understanding the
+                        Real Recovery Journey</h1>
                     <ul class="sifoxen-breadcrumb list-unstyled">
                         <li><a href="/">Home</a></li>
                         <li><span>our blog</span></li>
-                        <li><span>Neurological Rehabilitation Is All About Patience: Understanding the Real Recovery Journey</span></li>
+                        <li><span>Neurological Rehabilitation Is All About Patience: Understanding the Real Recovery
+                                Journey</span></li>
                     </ul><!-- /.thm-breadcrumb list-unstyled -->
                 </div><!-- /.page-header__content -->
             </div><!-- /.container -->
@@ -413,7 +644,8 @@
                             <div class="blog-card blog-card--four wow fadeInUp" data-wow-delay="00ms"
                                 data-wow-duration="1500ms">
                                 <div class="blog-card__image">
-                                    <img src="../assets/images/blogs/Neurological Rehabilitation Is All About Patience.webp" alt="Neurological Rehabilitation Is All About Patience">
+                                    <img src="../assets/images/blogs/Neurological Rehabilitation Is All About Patience.webp"
+                                        alt="Neurological Rehabilitation Is All About Patience">
                                     <div class="blog-card__date">
                                         <span class="blog-card__date__day">30</span>
                                         <span class="blog-card__date__month">MAR</span>
@@ -424,13 +656,15 @@
                                         <div class="blog-meta-item">
                                             <div class="author-avatar my-auto"
                                                 style="width:40px;height:40px;margin-right:5px;">
-                                                <img src="../assets/images/doctor/dr-krutika.webp" alt="Dr. Krutika Bhadane">
+                                                <img src="../assets/images/doctor/dr-krutika.webp"
+                                                    alt="Dr. Krutika Bhadane">
                                             </div>
                                             <span style="font-size:13px; line-height:16px;">
                                                 <b>Medically Reviewed By</b><br>
                                                 <a href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a><br>
                                                 <span style="font-size:12px; color:#666;">
-                                                    PT (Neuro), BPTh, MPTh (Neurosciences), 3+ years clinical <br> experience in neurological rehabilitation
+                                                    PT (Neuro), BPTh, MPTh (Neurosciences), 3+ years clinical <br>
+                                                    experience in neurological rehabilitation
                                                 </span>
                                             </span>
                                         </div>
@@ -443,46 +677,89 @@
 
                                     </div>
                                     <div class="blog-card__content__inner" style="text-align: justify;">
-                                        <p>One of the most common questions asked in <a href="https://neurorehabilitationcentre.com/medical-rehabilitation/neuro-care-in-pune"><strong>neurological rehabilitation</strong></a> is,
+                                        <p>One of the most common questions asked in <a
+                                                href="https://neurorehabilitationcentre.com/medical-rehabilitation/neuro-care-in-pune"><strong>neurological
+                                                    rehabilitation</strong></a> is,
                                             "Doctor, when will recovery happen?"</p>
-                                        <p>It is a very natural question. Sometimes a patient asks it with hope. Sometimes a family member asks it with concern, fear, or helplessness. Everyone wants to know when improvement will begin, when movement will return, and when life will feel normal again.</p>
-                                        <p>But neurological rehabilitation is different from many other forms of recovery.</p>
-                                        <p>There is no fixed calendar. There is no exact date that can be promised. Recovery after a neurological condition is often slow, gradual, and deeply personal. It does not move in a straight line. It happens in small steps, and many of those steps are easy to miss unless you understand the journey closely.</p>
-                                        <p>That is why one of the biggest lessons in <a href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune"><strong>neuro physiotherapy</strong></a> is this: patience is not just helpful, it is essential.</p>
+                                        <p>It is a very natural question. Sometimes a patient asks it with hope.
+                                            Sometimes a family member asks it with concern, fear, or helplessness.
+                                            Everyone wants to know when improvement will begin, when movement will
+                                            return, and when life will feel normal again.</p>
+                                        <p>But neurological rehabilitation is different from many other forms of
+                                            recovery.</p>
+                                        <p>There is no fixed calendar. There is no exact date that can be promised.
+                                            Recovery after a neurological condition is often slow, gradual, and deeply
+                                            personal. It does not move in a straight line. It happens in small steps,
+                                            and many of those steps are easy to miss unless you understand the journey
+                                            closely.</p>
+                                        <p>That is why one of the biggest lessons in <a
+                                                href="https://neurorehabilitationcentre.com/specialized-therapies/physiotherapy-in-pune"><strong>neuro
+                                                    physiotherapy</strong></a> is this: patience is not just helpful, it
+                                            is essential.</p>
                                         <h2><strong>What Is Neurological Rehabilitation?</strong></h2>
-                                        <p>Neurological rehabilitation is a structured therapy process designed to help people recover function, mobility, balance, coordination, and independence after a neurological condition.</p>
+                                        <p>Neurological rehabilitation is a structured therapy process designed to help
+                                            people recover function, mobility, balance, coordination, and independence
+                                            after a neurological condition.</p>
                                         <p>This may include patients recovering from:</p>
                                         <ul>
-                                            <li><a href="https://neurorehabilitationcentre.com/medical-rehabilitation/stroke-treatment-rehab-physiotherapy">stroke rehabilitation</a></li>
-                                            <li><a href="https://neurorehabilitationcentre.com/medical-rehabilitation/paralysis-care-in-pune">paralysis care</a></li>
-                                            <li><a href="https://neurorehabilitationcentre.com/condition-based-recovery/brain-injury-recovery-in-pune">Brain injury</a></li>
-                                            <li><a href="https://neurorehabilitationcentre.com/medical-rehabilitation/spine-care-in-pune">spine care</a></li>
-                                            <li><a href="https://neurorehabilitationcentre.com/condition-based-recovery/parkinsons-disease-in-pune">Parkinson's disease</a></li>
+                                            <li><a
+                                                    href="https://neurorehabilitationcentre.com/medical-rehabilitation/stroke-treatment-rehab-physiotherapy">stroke
+                                                    rehabilitation</a></li>
+                                            <li><a
+                                                    href="https://neurorehabilitationcentre.com/medical-rehabilitation/paralysis-care-in-pune">paralysis
+                                                    care</a></li>
+                                            <li><a
+                                                    href="https://neurorehabilitationcentre.com/condition-based-recovery/brain-injury-recovery-in-pune">Brain
+                                                    injury</a></li>
+                                            <li><a
+                                                    href="https://neurorehabilitationcentre.com/medical-rehabilitation/spine-care-in-pune">spine
+                                                    care</a></li>
+                                            <li><a
+                                                    href="https://neurorehabilitationcentre.com/condition-based-recovery/parkinsons-disease-in-pune">Parkinson's
+                                                    disease</a></li>
                                             <li>Multiple sclerosis</li>
                                             <li>Neuropathy</li>
                                             <li>Other nervous system disorders</li>
                                         </ul>
-                                        <p>The goal of neurological rehabilitation is not only to improve movement, but also to help patients perform daily activities with more confidence and control. In many cases, it is about helping a person reconnect with their body and rebuild trust in their abilities.</p>
-                                        
+                                        <p>The goal of neurological rehabilitation is not only to improve movement, but
+                                            also to help patients perform daily activities with more confidence and
+                                            control. In many cases, it is about helping a person reconnect with their
+                                            body and rebuild trust in their abilities.</p>
+
                                         <h2><strong>Why Neurological Recovery Takes Time</strong></h2>
-                                        <p>Unlike a simple muscle injury or fracture, neurological recovery involves the brain, nerves, and muscles learning to work together again. This process is complex.</p>
-                                        <p>The nervous system heals and adapts differently in every individual. Two patients with the same diagnosis may show very different recovery patterns. One person may regain movement quickly, while another may need much longer to show small but meaningful changes.</p>
+                                        <p>Unlike a simple muscle injury or fracture, neurological recovery involves the
+                                            brain, nerves, and muscles learning to work together again. This process is
+                                            complex.</p>
+                                        <p>The nervous system heals and adapts differently in every individual. Two
+                                            patients with the same diagnosis may show very different recovery patterns.
+                                            One person may regain movement quickly, while another may need much longer
+                                            to show small but meaningful changes.</p>
                                         <p>Several factors affect the speed and extent of recovery, including:</p>
                                         <p><strong>1. Severity of the Condition</strong><br>
-                                        The more extensive the neurological damage, the more time rehabilitation may take.</p>
+                                            The more extensive the neurological damage, the more time rehabilitation may
+                                            take.</p>
                                         <p><strong>2. Early Start of Therapy</strong><br>
-                                        Patients who begin therapy early often have better chances of functional improvement, especially in conditions such as stroke rehabilitation and paralysis recovery.</p>
+                                            Patients who begin therapy early often have better chances of functional
+                                            improvement, especially in conditions such as stroke rehabilitation and
+                                            paralysis recovery.</p>
                                         <p><strong>3. Age and Overall Health</strong><br>
-                                        General health, muscle strength, nutrition, and coexisting medical conditions all influence recovery.</p>
+                                            General health, muscle strength, nutrition, and coexisting medical
+                                            conditions all influence recovery.</p>
                                         <p><strong>4. Consistency of Treatment</strong><br>
-                                        Regular therapy sessions and home exercise practice are critical for progress.</p>
+                                            Regular therapy sessions and home exercise practice are critical for
+                                            progress.</p>
                                         <p><strong>5. Emotional and Family Support</strong><br>
-                                        Motivation, encouragement, and a positive environment make a major difference during long recovery periods.</p>
-                                        <p>Because of these variables, neurological rehabilitation cannot be measured by a universal timeline. It is a journey that unfolds differently for every patient.</p>
-                                        
+                                            Motivation, encouragement, and a positive environment make a major
+                                            difference during long recovery periods.</p>
+                                        <p>Because of these variables, neurological rehabilitation cannot be measured by
+                                            a universal timeline. It is a journey that unfolds differently for every
+                                            patient.</p>
+
                                         <h2><strong>Progress in Neuro Physiotherapy Is Often Quiet</strong></h2>
-                                        <p>One of the most important things families need to understand is that progress in neurological rehabilitation is often not dramatic at first.</p>
-                                        <p>It may not begin with walking independently or using the hand normally. It may begin with something much smaller.</p>
+                                        <p>One of the most important things families need to understand is that progress
+                                            in neurological rehabilitation is often not dramatic at first.</p>
+                                        <p>It may not begin with walking independently or using the hand normally. It
+                                            may begin with something much smaller.</p>
                                         <p>It could be:</p>
                                         <ul>
                                             <li>A slight finger movement after weeks of effort</li>
@@ -493,22 +770,41 @@
                                             <li>Better control during transfers</li>
                                             <li>Reduced fear while trying to move</li>
                                         </ul>
-                                        <p>To an outsider, these changes may seem minor. But in neuro physiotherapy, these are major milestones. They show that the body is responding, adapting, and learning.</p>
-                                        <p>Recovery does not always arrive in big visible moments. Very often, it grows quietly through repetition, patience, and consistency.</p>
-                                        
+                                        <p>To an outsider, these changes may seem minor. But in neuro physiotherapy,
+                                            these are major milestones. They show that the body is responding, adapting,
+                                            and learning.</p>
+                                        <p>Recovery does not always arrive in big visible moments. Very often, it grows
+                                            quietly through repetition, patience, and consistency.</p>
+
                                         <h2><strong>The Emotional Side of Neurological Rehabilitation</strong></h2>
                                         <p>Neurological recovery is not only physical. It is also emotional.</p>
-                                        <p>Patients may feel frustrated when their body does not respond the way they want. They may compare themselves to how they were before the illness or injury. Some may feel angry, discouraged, or afraid that they will never improve.</p>
-                                        <p>Families also go through a difficult emotional journey. They want to help, but they may not know what to expect. They may feel anxious when progress seems slow. They may wonder whether therapy is working.</p>
-                                        <p>This is why neurological rehabilitation must be approached with empathy as much as expertise.</p>
-                                        <p>A neuro physiotherapist does more than guide exercises. The therapist also helps patients stay motivated, cope with difficult days, and understand that slow progress is still progress.</p>
+                                        <p>Patients may feel frustrated when their body does not respond the way they
+                                            want. They may compare themselves to how they were before the illness or
+                                            injury. Some may feel angry, discouraged, or afraid that they will never
+                                            improve.</p>
+                                        <p>Families also go through a difficult emotional journey. They want to help,
+                                            but they may not know what to expect. They may feel anxious when progress
+                                            seems slow. They may wonder whether therapy is working.</p>
+                                        <p>This is why neurological rehabilitation must be approached with empathy as
+                                            much as expertise.</p>
+                                        <p>A neuro physiotherapist does more than guide exercises. The therapist also
+                                            helps patients stay motivated, cope with difficult days, and understand that
+                                            slow progress is still progress.</p>
                                         <p>Encouragement matters. Reassurance matters. Belief matters.</p>
-                                        
+
                                         <h2><strong>Why Patience Matters So Much in Neuro Rehab</strong></h2>
-                                        <p>Patience is one of the most valuable parts of the rehabilitation process because neurological improvement usually takes repeated effort over time.</p>
-                                        <p>There may be good days when the patient walks better, lifts the arm higher, or responds more quickly during exercises. Then there may be difficult days when improvement is not visible. That does not always mean the recovery has stopped.</p>
-                                        <p>Sometimes the nervous system needs time. Sometimes the body is still learning. Sometimes today's repeated effort becomes tomorrow's breakthrough.</p>
-                                        <p>Patience helps everyone involved stay focused on the long term rather than becoming discouraged by daily fluctuations.</p>
+                                        <p>Patience is one of the most valuable parts of the rehabilitation process
+                                            because neurological improvement usually takes repeated effort over time.
+                                        </p>
+                                        <p>There may be good days when the patient walks better, lifts the arm higher,
+                                            or responds more quickly during exercises. Then there may be difficult days
+                                            when improvement is not visible. That does not always mean the recovery has
+                                            stopped.</p>
+                                        <p>Sometimes the nervous system needs time. Sometimes the body is still
+                                            learning. Sometimes today's repeated effort becomes tomorrow's breakthrough.
+                                        </p>
+                                        <p>Patience helps everyone involved stay focused on the long term rather than
+                                            becoming discouraged by daily fluctuations.</p>
                                         <p>In neurological rehabilitation, success is often built through:</p>
                                         <ul>
                                             <li>Repetition</li>
@@ -518,37 +814,53 @@
                                             <li>Emotional resilience</li>
                                             <li>Support from caregivers and family</li>
                                         </ul>
-                                        <p>This is why recovery is not only about speed. It is about staying committed to the process.</p>
-                                        
+                                        <p>This is why recovery is not only about speed. It is about staying committed
+                                            to the process.</p>
+
                                         <h2><strong>The Role of Family in Neurological Recovery</strong></h2>
-                                        <p>Family support plays an extremely important role in neurological rehabilitation.</p>
-                                        <p>A patient who feels supported is often more willing to continue exercises, attend therapy regularly, and stay hopeful during difficult phases. Families become part of the recovery environment.</p>
+                                        <p>Family support plays an extremely important role in neurological
+                                            rehabilitation.</p>
+                                        <p>A patient who feels supported is often more willing to continue exercises,
+                                            attend therapy regularly, and stay hopeful during difficult phases. Families
+                                            become part of the recovery environment.</p>
                                         <p>They can help by:</p>
                                         <p><strong>Offering Encouragement</strong><br>
-                                        Simple positive words can help the patient stay motivated.</p>
+                                            Simple positive words can help the patient stay motivated.</p>
                                         <p><strong>Being Patient with Slow Progress</strong><br>
-                                        Recovery can feel frustrating, but pressure and impatience can add emotional stress.</p>
+                                            Recovery can feel frustrating, but pressure and impatience can add emotional
+                                            stress.</p>
                                         <p><strong>Supporting Daily Practice</strong><br>
-                                        Helping with home exercises, positioning, mobility assistance, or routine can improve therapy outcomes.</p>
+                                            Helping with home exercises, positioning, mobility assistance, or routine
+                                            can improve therapy outcomes.</p>
                                         <p><strong>Celebrating Small Wins</strong><br>
-                                        A small change may be a very big achievement in the rehabilitation journey.</p>
+                                            A small change may be a very big achievement in the rehabilitation journey.
+                                        </p>
                                         <p><strong>Trusting the Process</strong><br>
-                                        Not all progress is instantly visible. Families who understand this often create a more positive healing environment.</p>
-                                        <p>Neurological rehabilitation is never a journey taken by the patient alone. It is shared by therapists, caregivers, and loved ones who walk every step together.</p>
-                                        
+                                            Not all progress is instantly visible. Families who understand this often
+                                            create a more positive healing environment.</p>
+                                        <p>Neurological rehabilitation is never a journey taken by the patient alone. It
+                                            is shared by therapists, caregivers, and loved ones who walk every step
+                                            together.</p>
+
                                         <h2><strong>Small Milestones Deserve Big Respect</strong></h2>
-                                        <p>In neuro rehabilitation, some of the most meaningful moments are the ones that others might overlook.</p>
+                                        <p>In neuro rehabilitation, some of the most meaningful moments are the ones
+                                            that others might overlook.</p>
                                         <p>The first time a patient shifts weight safely.<br>
-                                        The first supported stand.<br>
-                                        The first controlled step.<br>
-                                        The first attempt to hold balance independently.<br>
-                                        The first moment of renewed confidence.</p>
+                                            The first supported stand.<br>
+                                            The first controlled step.<br>
+                                            The first attempt to hold balance independently.<br>
+                                            The first moment of renewed confidence.</p>
                                         <p>These are not small moments. These are turning points.</p>
-                                        <p>They remind us that healing is happening, even when it feels slow. They remind patients that the body is capable of change. They remind families that effort is creating progress, even when the outcome is still unfolding.</p>
-                                        <p>This is one of the most beautiful parts of neurological rehabilitation. It teaches everyone to value progress in its purest form.</p>
-                                        
+                                        <p>They remind us that healing is happening, even when it feels slow. They
+                                            remind patients that the body is capable of change. They remind families
+                                            that effort is creating progress, even when the outcome is still unfolding.
+                                        </p>
+                                        <p>This is one of the most beautiful parts of neurological rehabilitation. It
+                                            teaches everyone to value progress in its purest form.</p>
+
                                         <h2><strong>What Patients and Families Should Remember</strong></h2>
-                                        <p>If you or your loved one is going through neurological rehabilitation, it is important to remember the following:</p>
+                                        <p>If you or your loved one is going through neurological rehabilitation, it is
+                                            important to remember the following:</p>
                                         <ul>
                                             <li>Recovery is different for every patient</li>
                                             <li>Improvement may be slow, but slow does not mean impossible</li>
@@ -557,35 +869,51 @@
                                             <li>Emotional support is part of treatment</li>
                                             <li>Therapy is a journey, not a one-time event</li>
                                         </ul>
-                                        <p>For patients recovering after surgery, injury, or cancer-related weakness, a guided rehabilitation plan may also involve postoperative care, trauma rehabilitation, or oncology rehabilitation depending on the individual's condition and recovery needs.</p>
-                                        <p>The most important thing is to keep moving forward, even when progress feels small.</p>
-                                        
+                                        <p>For patients recovering after surgery, injury, or cancer-related weakness, a
+                                            guided rehabilitation plan may also involve postoperative care, trauma
+                                            rehabilitation, or oncology rehabilitation depending on the individual's
+                                            condition and recovery needs.</p>
+                                        <p>The most important thing is to keep moving forward, even when progress feels
+                                            small.</p>
+
                                         <h2><strong>Recovery Begins with the First Step</strong></h2>
-                                        <p>When patients ask, "When will recovery happen?" the most honest answer is this:</p>
+                                        <p>When patients ask, "When will recovery happen?" the most honest answer is
+                                            this:</p>
                                         <p>Recovery begins the moment we start working towards it.</p>
-                                        <p>Every therapy session matters. Every attempt matters. Every repeated movement matters. Every day of effort becomes part of the recovery story.</p>
-                                        <p>Neurological rehabilitation is not only about regaining movement. It is about rebuilding confidence, restoring function, and helping patients discover that progress is possible, one step at a time.</p>
-                                        <p>Patience is not a passive part of this journey. It is an active strength. It helps patients continue. It helps families stay hopeful. It helps therapists guide recovery with compassion and realism.</p>
-                                        <p>And often, the most unforgettable moments in neuro physiotherapy are the ones that once seemed impossible.</p>
+                                        <p>Every therapy session matters. Every attempt matters. Every repeated movement
+                                            matters. Every day of effort becomes part of the recovery story.</p>
+                                        <p>Neurological rehabilitation is not only about regaining movement. It is about
+                                            rebuilding confidence, restoring function, and helping patients discover
+                                            that progress is possible, one step at a time.</p>
+                                        <p>Patience is not a passive part of this journey. It is an active strength. It
+                                            helps patients continue. It helps families stay hopeful. It helps therapists
+                                            guide recovery with compassion and realism.</p>
+                                        <p>And often, the most unforgettable moments in neuro physiotherapy are the ones
+                                            that once seemed impossible.</p>
                                         <p>A patient standing again.<br>
-                                        A patient stepping again.<br>
-                                        A patient believing again.</p>
+                                            A patient stepping again.<br>
+                                            A patient believing again.</p>
                                         <p>That is the true meaning of neurological rehabilitation.</p>
-                                        
+
                                         <div class="author-box"
                                             style="border-radius:8px;box-shadow:0 1px 7px rgba(80,80,80,0.12);background:#fff;padding:22px 28px;display:flex;align-items:center;gap:26px;margin:42px 0 30px 0;max-width:800px;">
                                             <div style="min-width:80px;">
-                                                <img src="../assets/images/doctor/dr-krutika.webp" alt="Dr. Krutika Bhadane"
+                                                <img src="../assets/images/doctor/dr-krutika.webp"
+                                                    alt="Dr. Krutika Bhadane"
                                                     style="width:100px;height:100px;border-radius:50%;border:2px solid #46bfa7;object-fit:cover;">
                                             </div>
                                             <div>
                                                 <span
                                                     style="display:inline-block;background:#ff8700;color:#fff;font-weight:600;padding:3px 13px;border-radius:5px;font-size:13px;margin-bottom:6px;">About
                                                     author</span>
-                                                <div style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;"><a
-                                                        href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a></div>
+                                                <div
+                                                    style="margin-bottom:7px;font-size:19px;font-weight:700;line-height:24px;">
+                                                    <a href="../doctor/dr-krutika-bhadane">Dr. Krutika Bhadane</a>
+                                                </div>
                                                 <div style="font-size:14px;font-weight:500;color:#136C53;">
-                                                    Dr. Krutika Bhadane is a Neurophysiotherapist and Clinical Physiotherapist at Apricot Care, Kharadi, Pune, with 3 years of experience in adult neurological rehabilitation.
+                                                    Dr. Krutika Bhadane is a Neurophysiotherapist and Clinical
+                                                    Physiotherapist at Apricot Care, Kharadi, Pune, with 3 years of
+                                                    experience in adult neurological rehabilitation.
                                                 </div>
 
                                                 <div style="margin-top:8px;">
@@ -608,7 +936,7 @@
                                     </div>
                                 </div><!-- /.blog-card-four__content -->
                             </div><!-- /.blog-card -->
-                         
+
                         </div><!-- /.blog-details -->
 
 
@@ -616,32 +944,37 @@
                     <div class="col-lg-4">
                         <div class="sidebar">
                             <aside class="widget-area">
+                                <div class="service-sidebar__contact wow fadeInLeft" data-wow-duration="1500ms"
+                                    data-wow-delay="100ms"
+                                    style="background-image: url('/../assets/images/Common-images/contact-image.webp'); margin-bottom: 30px;">
+                                    <div class="service-sidebar__contact__bg">
+                                        <div class="service-sidebar__contact__bg__inner"
+                                            style="background-image: url('../assets/images/shapes/service-sidebar-contact-bg-2.png');">
+                                        </div><!-- /.service-sidebar__contact__bg__inner -->
+                                    </div><!-- /.service-sidebar__contact__bg -->
+                                    <div class="service-sidebar__contact__inner">
+                                        <div class="service-sidebar__contact__icon">
+                                            <i class="icon-telephone"></i>
+                                        </div><!-- /.service-sidebar__contact__icon -->
+                                        <div class="service-sidebar__contact__content">
+                                            <h4 class="service-sidebar__contact__time">Mon to Sun&nbsp;&nbsp;
+                                                &nbsp;&nbsp;8:00am -&nbsp;&nbsp; 8:00pm</h4>
+                                            <!-- /.service-sidebar__contact__time -->
+                                            <h4 class="service-sidebar__contact__number">
+                                                <a href="tel:+917387641462">+917387641462</a>
+                                            </h4><!-- /.service-sidebar__contact__number -->
+                                        </div><!-- /.service-sidebar__contact__content -->
+                                    </div><!-- /.service-sidebar__contact__inner -->
+                                </div><!-- /.service-sidebar__contact -->
+                                <div class="sidebar__single"
+                                    style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
+                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞
+                                        Get A Quick Callback</h4>
+                                    <script src="https://js-na2.hsforms.net/forms/embed/243673368.js" defer></script>
+                                    <div class="hs-form-frame" data-region="na2"
+                                        data-form-id="50117587-18de-4141-9b1d-9165708ec878" data-portal-id="243673368">
+                                    </div>
 
-                                <div class="sidebar__single" style="background: #e6e4e4; padding: 25px;  border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 30px;">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: 20px; color: #333;">📞 Get A Quick Callback</h4>
-                                    <form style="display: flex; flex-direction: column; gap: 15px;">
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Full Name</label>
-                                            <input type="text" placeholder="Enter your full name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Mobile Number</label>
-                                            <input type="tel" placeholder="Enter your mobile number" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Email Address</label>
-                                            <input type="email" placeholder="Enter your email address" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <div>
-                                            <label style="display: block; font-size: 14px; font-weight: 500; margin-bottom: 5px; color: #555;">Message</label>
-                                            <textarea placeholder="Enter your query" rows="3" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: vertical;"></textarea>
-                                        </div>
-                                        <div style="display: flex; align-items: center; gap: 10px;">
-                                            <div style="background: #f0f0f0; padding: 10px 15px; border-radius: 5px; font-weight: 700; font-size: 16px; letter-spacing: 3px; user-select: none;">X7K9P</div>
-                                            <input type="text" placeholder="Enter captcha" style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
-                                        </div>
-                                        <button type="submit" style="background: #136C53; color: #fff; padding: 12px 20px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s;">✨ Submit Appointment</button>
-                                    </form>
                                 </div>
 
                                 <div class="sidebar__posts-wrapper sidebar__single">
@@ -795,7 +1128,9 @@
                                         class="text-white">TKR/THR(Knee/Hip/Replacement) Care</a></li>
                                 <li><a href="../advanced-care-programs/bedsore-management-in-pune"
                                         class="text-white">Bedsore Management</a></li>
-
+                                <li><a href="../advanced-care-programs/transitional-care-in-pune"
+                                        class="text-white">Transitional Care</a>
+                                </li>
 
                             </ul><!-- /.list-unstyled footer-widget__links -->
                         </div><!-- /.footer-widget -->
@@ -810,7 +1145,8 @@
                         <div class="footer-widget footer-widget--links">
                             <h2 class="footer-widget__title">Medical Rehabilitation</h2><!-- /.footer-widget__title -->
                             <ul class="list-unstyled footer-widget__links">
-                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy" class="text-white">Stroke
+                                <li><a href="../medical-rehabilitation/stroke-treatment-rehab-physiotherapy"
+                                        class="text-white">Stroke
                                         Care</a></li>
                                 <li><a href="../medical-rehabilitation/spine-care-in-pune" class="text-white">Spine
                                         Care</a></li>
@@ -948,7 +1284,7 @@
             <div class="logo-box logo-retina">
                 <a href="/" aria-label="logo image"><img
                         src="../assets/images/home/Logo/Apricot Care Physiotherapy & Wellness, Kharad Pune (1).webp"
-                        width="143" /></a>
+                        width="153" /></a>
             </div>
             <!-- /.logo-box -->
             <div class="mobile-nav__container"></div>
@@ -989,8 +1325,8 @@
         </div>
         <!-- /.mobile-nav__content -->
     </div>
-     
-     
+
+
 
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top">
         <span class="scroll-to-top__text">back top</span>
